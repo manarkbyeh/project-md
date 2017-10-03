@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Image;
 use App\Article;
 use App\Category;
+use Session;
 
 class articlesController extends Controller
 {
@@ -47,36 +48,34 @@ class articlesController extends Controller
     {
         
         
-        $rules = [
+        $this->validate($request, array(
         'pic' =>'image|mimes:jpeg,png,jpg,gif|',
         'title' => 'required|max:225',
         'category_id'   => 'required|integer',
         'text' => 'required',
-        ];
-        $validator = Validator::make($request->all(), $rules);
-        if ($validator->fails()) {
-            echo 'fielded';
-        } else {
-            $articles = new Article();
-            if ($request->hasFile('pic')) {
-                $pic = $request->file('pic');
-                
-                $fileName = time() . '.'.$pic->getClientOriginalExtension();
-                // 'images/cars/' . $filename;
-                if (Image::make($pic)->save(public_path('images/'.$fileName))) {
-                    $articles->pic = $fileName;
-                }
-            }
+        ));
+        
+        
+        $articles = new Article();
+        if ($request->hasFile('pic')) {
+            $pic = $request->file('pic');
             
-            $articles->title = $request->title;
-            $articles->text = $request->text;
-            $articles->category_id = $request->category_id;
-            
-            $articles->user_id = auth()->user()->id;
-            if ($articles->save()) {
-                echo 'sucess';
+            $fileName = time() . '.'.$pic->getClientOriginalExtension();
+            // 'images/cars/' . $filename;
+            if (Image::make($pic)->save(public_path('images/'.$fileName))) {
+                $articles->pic = $fileName;
             }
         }
+        
+        $articles->title = $request->title;
+        $articles->text = $request->text;
+        $articles->category_id = $request->category_id;
+        
+        $articles->user_id = auth()->user()->id;
+        if ($articles->save()) {
+            Session::flash('success', 'The blog articles was successfully save!');
+        }
+        
     }
     
     /**
@@ -117,45 +116,43 @@ class articlesController extends Controller
     */
     public function update(Request $request, $id)
     {
-        $rules = [
+        $this->validate($request, array(
         'pic' =>'image|mimes:jpeg,png,jpg,gif|',
         'title' => 'required|max:225',
         'text' => 'required',
         'category_id' => 'required|integer',
-        ];
-        $validator = Validator::make($request->all(),$rules);
-        if($validator->fails())
-        {
-            
-        }else{
-            
-            $articles = Article::find($id);
-            if($request->hasFile('pic')){
-                $pic = $request->file('pic');
-                $fileName = time() . '.'.$pic->getClientOriginalExtension();
-                // 'images/cars/' . $filename;
-                if(Image::make($pic)->save(public_path('images/'.$fileName))){
-                    $articles->pic = $fileName;
-                }
+        ));
+        
+        
+        $articles = Article::find($id);
+        if($request->hasFile('pic')){
+            $pic = $request->file('pic');
+            $fileName = time() . '.'.$pic->getClientOriginalExtension();
+            // 'images/cars/' . $filename;
+            if(Image::make($pic)->save(public_path('images/'.$fileName))){
+                $articles->pic = $fileName;
             }
-            
-            $articles->title = $request->title;
-            $articles->text = $request->text;
-            $articles->category_id = $request->input('category_id');
-            
-            $articles->user_id = Auth::user()->id;
-            if(  $articles->save()){
-                
-            }
-            
-            
-            
-            
-            
-            
-            
         }
+        
+        
+        $articles->title = $request->title;
+        $articles->text = $request->text;
+        $articles->category_id = $request->input('category_id');
+        
+        $articles->user_id = Auth::user()->id;
+        if(  $articles->save()){
+            Session::flash('success', 'This articles was successfully saved.');
+        }
+        
+        
+        
+        
+        
+        
+        
     }
+    
+    
     
     /**
     * Remove the specified resource from storage.
