@@ -5,12 +5,40 @@
 <title>Laravel Blog @yield('title')</title>
 <!-- CHANGE THIS TITLE FOR EACH PAGE -->
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> {{ Html::style('css/styles.css') }} @yield('stylesheets')
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<style>
+
+    body { padding-top: 4%; }
+
+    .container{
+        margin-top:3%;
+    }
+
+    .jumbotron h1, .jumbotron p{
+        text-align:center;
+
+    }
+
+    .billboard{
+        background-image: url("../../../public/images/hpfoto.jpeg");
+        margin-bottom: 0;
+        min-height: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .btn{
+        color:#FFFFFF;
+    }
+
+    .bg-dark{
+        background-color:#000000!important;
+    }
+</style>

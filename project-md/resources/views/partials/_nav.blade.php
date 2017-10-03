@@ -1,28 +1,44 @@
-<!-- Default Bootstrap Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Laravel Blog</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="{{ Request::is('/') ? " active " : " " }}"><a href="/">Home</a></li>
-        <li class="{{ Request::is('blog') ? " active " : " " }}"><a href="/blog">Blog</a></li>
-        <li class="{{ Request::is('about') ? " active " : " " }}"><a href="/about">About</a></li>
-        <li class="{{ Request::is('contact') ? " active " : " " }}"><a href="/contact">Contact</a></li>
-      </ul>
 
-    </div>
-    <!-- /.navbar-collapse -->
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">DailyMunch</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" class="{{ Request::is('/') ? "active" : " " }}">
+        <a class="nav-link" href="/"> Home </a>
+      </li>
+      <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
+        <a class="nav-link" href="/articles"> Article </a>
+      </li>
+
+
+
+          @guest
+            <li class="nav-item" class="{{ Request::is('/login') ? "active" : " " }}">
+              <a class="nav-link" href="/login"> Login </a>
+            </li>
+            <li class="nav-item" class="{{ Request::is('/register') ? "active" : " " }}">
+              <a class="nav-link" href="/register"> Register </a>
+            </li>
+
+          @else
+            <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
+              <a class="nav-link" href="/user/{id}"> Profile </a>
+            </li>
+          @endguest
+
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-  <!-- /.container-fluid -->
 </nav>

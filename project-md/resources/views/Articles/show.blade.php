@@ -19,15 +19,16 @@
               <div class="col-lg-12 col-md-12">
                 <div class="cource-box">
                   <div class="row cource-text">
-                    <div class="col-lg-4 col-md-4 image_box">
-                      <a href="#"><img src="{{url('/images/'.$article['pic'])}}" alt="" class="img-responsive detail_img"></a>
-                    </div>
-                    <div class="col-lg-8 col-md-8">
 
-                      <h4>{{$article->title}}</h4>
-                      <p>{{$article->text}}</p>
 
+                    <div class="col-lg-6">
+                      <a href="#"><img src="{{url('/images/'.$article['pic'])}}" alt="" class="img-fluid"></a>
+                        <h4>{{$article->title}}</h4>
+                        <p>{{$article->text}}</p>
+                        <p><a class="btn btn-warning" href="" role="button">Aanvraag doen</a></p>
                     </div>
+
+
                     <div class="pull-right">
                       @if(Auth::check() && Auth::user()->roles > 0 && Auth::user()->roles == 1)
                       <a href="{{route('article.edit',$article->id)}}" class="btn btn-primary btn-sm">
@@ -52,6 +53,12 @@ Active
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+</div>
+
+
         <script>
           $(document).ready(function() {
             var root = "{{ url('news/')}}" + "/";

@@ -12,8 +12,10 @@
 */
 Route::get('/', function () {
     return view('welcome');
+
 });
 Route::resource('/article', 'articlesController');
+Route::get('/articles', 'articlesController@index')->name('article.index');
 Route::POST('/article', 'articlesController@store')->name('article.store');
 Route::get('/article/create', 'articlesController@create')->name('article.create');
 Route::get('/article/{id}', 'articlesController@show')->name('article.show');
@@ -25,3 +27,7 @@ Route::resource('categories', 'CategoriesController', ['except' => ['create']]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/user/{id}','UsersController@show')->name('user.profile');
+
