@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    @include('partials._head')
-  </head>
-  
-  <body>
+<html lang="{{ app()->getLocale() }}">
 
-    @include('partials._nav')    
+<head>
+  @include('partials._head')
+</head>
 
-    <div class="container">
-      @include('partials._messages')
+<body>
 
-      @yield('content')
 
-      @include('partials._footer')
+  <div id="wrapper" class="toggled">
 
-    </div> <!-- end of .container --> 
 
-        @include('partials._javascript')
+    @include('partials._nav')
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
 
-        @yield('scripts')
+            @include('partials._messages') @yield('content')
+          </div>
+          <div class="col-md-4">
 
-  </body>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  {{-- @include('partials._footer') --}} @include('partials._javascript') @yield('scripts')
+
+</body>
+
 </html>

@@ -7,10 +7,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateArticlesTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
@@ -21,14 +21,15 @@ class CreateArticlesTable extends Migration
             $table->integer("user_id");
             $table->integer("active")->default(0);
             $table->timestamps();
+            
         });
     }
-
+    
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('articles');

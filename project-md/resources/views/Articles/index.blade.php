@@ -1,49 +1,18 @@
-@extends('main') @section('title', '| All Posts') @section('content')
+@extends('main') @section('title', '| View Post') @section('content')
 
-<div class="row">
-  <div class="col-md-10">
-    <h1>All Posts</h1>
+<h1 class="my-4">Home<small> page</small></h1>
+<!-- Blog Post -->
+@foreach($articles as $n)
+<div class="card mb-4">
+  <img class="card-img-top" src="{{url('/images/'.$n->pic)}}" alt="Card image cap" style="width: 100%;height: 300px">
+  <div class="card-body">
+    <h2 class="card-title">{{$n->title}}</h2>
+    <p class="card-text">{{strip_tags($n->text)}}</p>
+    <a href="{{url('/article/'.$n->id)}}" class="btn btn-primary">Read More &rarr;</a>
   </div>
-
-  <div class="col-md-2">
-    <a href="{{ route('article.create') }}" class="btn btn-lg btn-block btn-primary btn-h1-spacing">Create New Post</a>
-  </div>
-  <div class="col-md-12">
-    <hr>
-  </div>
-</div>
-<!-- end of .row -->
-
-<div class="row">
-  <div class="col-md-12">
-    <table class="table">
-      <thead>
-        <th>#</th>
-        <th>Title</th>
-        <th>Body</th>
-        <th>Created At</th>
-        <th></th>
-      </thead>
-
-      <tbody>
-
-        @foreach ($articles as $post)
-
-        <tr>
-          <th>{{ $post->id }}</th>
-          <td>{{ $post->title }}</td>
-          <td>{{ substr(strip_tags($post->body), 0, 50) }}{{ strlen(strip_tags($post->body)) > 50 ? "..." : "" }}</td>
-          <td>{{ date('M j, Y', strtotime($post->created_at)) }}</td>
-          <td><a href="{{ route('article.show', $post->id) }}" class="btn btn-default btn-sm">View</a> <a href="{{ route('article.edit', $post->id) }}" class="btn btn-default btn-sm">Edit</a></td>
-        </tr>
-
-        @endforeach
-
-      </tbody>
-    </table>
-
+  <div class="card-footer text-muted">
+    Posted on {{ date('M j, Y h:ia', strtotime($n->created_at)) }} by
 
   </div>
 </div>
-
-@stop
+@endforeach @endsection

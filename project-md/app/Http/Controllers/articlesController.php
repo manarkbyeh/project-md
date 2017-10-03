@@ -11,10 +11,12 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Image;
 use App\Article;
 use App\Category;
-use Session;
+use App\User;
+use App\Http\Requests\ArticleRequest;
 
 class articlesController extends Controller
 {
+    
     /**
     * Display a listing of the resource.
     *
@@ -24,8 +26,37 @@ class articlesController extends Controller
     {
         
         $articles = Article::all();
-        return view('Articles.index', compact('articles'));
+        $categories = Category::all();
+        return view('Articles.index')->withArticles($articles)->withCategories($categories);
     }
+    
+    
+    /**
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function myarticles()
+    {
+        
+        $articles = Article::where('user_id' , Auth::User()->id)->get();
+        $categories = Category::all();
+        return view('Articles.myarticles')->withArticles($articles)->withCategories($categories);
+    }
+    
+    
+    /**
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    
+    
+    /**
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
     
     /**
     * Show the form for creating a new resource.
@@ -44,24 +75,14 @@ class articlesController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        
-        
-        $this->validate($request, array(
-        'pic' =>'image|mimes:jpeg,png,jpg,gif|',
-        'title' => 'required|max:225',
-        'category_id'   => 'required|integer',
-        'text' => 'required',
-        ));
-        
         
         $articles = new Article();
         if ($request->hasFile('pic')) {
             $pic = $request->file('pic');
             
             $fileName = time() . '.'.$pic->getClientOriginalExtension();
-            // 'images/cars/' . $filename;
             if (Image::make($pic)->save(public_path('images/'.$fileName))) {
                 $articles->pic = $fileName;
             }
@@ -73,8 +94,12 @@ class articlesController extends Controller
         
         $articles->user_id = auth()->user()->id;
         if ($articles->save()) {
-            Session::flash('success', 'The blog articles was successfully save!');
+            
+            session()->flash('success','Article added successfuly !!');
+            return redirect('article/myarticles');
         }
+        
+        
         
     }
     
@@ -86,8 +111,9 @@ class articlesController extends Controller
     */
     public function show($id)
     {
-        $article = Article::findOrFail($id);
-        return view("Articles.show", compact("article"));
+        $articles = Article::findOrFail($id);
+        $categories = Category::all();
+        return view('Articles.show')->withArticles($articles)->withCategories($categories);
     }
     
     /**
@@ -99,12 +125,9 @@ class articlesController extends Controller
     public function edit($id)
     {
         $articles = Article::find($id);
+        $this->authorize('update',$articles);
         $categories = Category::all();
-        $cats = array();
-        foreach ($categories as $category) {
-            $cats[$category->id] = $category->name;
-        }
-        return view('Articles.edit')->withArticles($articles)->withCategories($cats);
+        return view('Articles.edit')->withArticles($articles)->withCategories($categories);
     }
     
     /**
@@ -114,15 +137,8 @@ class articlesController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
-        $this->validate($request, array(
-        'pic' =>'image|mimes:jpeg,png,jpg,gif|',
-        'title' => 'required|max:225',
-        'text' => 'required',
-        'category_id' => 'required|integer',
-        ));
-        
         
         $articles = Article::find($id);
         if($request->hasFile('pic')){
@@ -134,25 +150,17 @@ class articlesController extends Controller
             }
         }
         
-        
         $articles->title = $request->title;
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');
         
         $articles->user_id = Auth::user()->id;
         if(  $articles->save()){
-            Session::flash('success', 'This articles was successfully saved.');
+            session()->flash('success','Article Updated successfuly !!');
+            return redirect('myarticles');
         }
         
-        
-        
-        
-        
-        
-        
     }
-    
-    
     
     /**
     * Remove the specified resource from storage.
@@ -170,7 +178,8 @@ class articlesController extends Controller
         $articles = Article::find($id);
         $articles_id= $articles->id;
         $articles->delete();
-        
+        session()->flash('success','Article Deleted successfuly !!');
+        return redirect('myarticles');
         
         
     }

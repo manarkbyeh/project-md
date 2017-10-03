@@ -11,9 +11,9 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-Route::resource('/article', 'articlesController');
+
 Route::POST('/article', 'articlesController@store')->name('article.store');
 Route::get('/article/create', 'articlesController@create')->name('article.create');
 Route::get('/article/{id}', 'articlesController@show')->name('article.show');
@@ -21,16 +21,21 @@ Route::PATCH('/article/{id}', 'articlesController@update')->name('article.update
 Route::get('/article/{id}/delete',['uses'=>'articlesController@delete','as'=>'article.delete']);
 Route::delete('/article/{article}', 'articlesController@destroy')->name('article.destroy');
 Route::get('article/{id}/edit',['uses'=>'articlesController@edit','as'=>'article.edit']);
-Route::get('/article/search/{id}', 'articlesController@search')->name('article.search');
-Route::get('/article/{id}/active', 'articlesController@active')->name('article.active');
+
 Route::resource('categories', 'CategoriesController', ['except' => ['create']]);
 Auth::routes();
 
 
 
-Route::group(['middleware' => 'auth'], function () {
-    //rolees
-    Route::get('/roles', 'RolesController@index');
-    Route::get('roles/search/{search}',['uses'=>'RolesController@search','as'=>'roles.search']);
-    
-});
+
+
+
+
+Route::get('/article', 'articlesController@index')->name('article');
+
+Route::get('/myarticles', 'articlesController@myarticles')->name('article.myarticles');
+
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
