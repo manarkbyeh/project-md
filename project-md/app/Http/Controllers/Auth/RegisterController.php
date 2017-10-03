@@ -14,7 +14,7 @@ class RegisterController extends Controller
     | Register Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the registration of new users as well as their
+    | This controller handles the registration of new user as well as their
     | validation and creation. By default this controller uses a trait to
     | provide this functionality without requiring any additional code.
     |
@@ -23,12 +23,21 @@ class RegisterController extends Controller
     use RegistersUsers;
     
     /**
+<<<<<<< HEAD
     * Where to redirect users after registration.
     *
     * @var string
     */
     protected $redirectTo = '/article';
     
+=======
+     * Where to redirect user after registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
+
+>>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf
     /**
     * Create a new controller instance.
     *
@@ -48,9 +57,15 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+<<<<<<< HEAD
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:6|confirmed',
+=======
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:user',
+            'password' => 'required|string|min:6|confirmed',
+>>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf
         ]);
     }
     
