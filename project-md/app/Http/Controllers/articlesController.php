@@ -50,6 +50,13 @@ class articlesController extends Controller
     *
     * @return \Illuminate\Http\Response
     */
+    public function GetCat($id)
+    {
+        
+        $articles = Article::where('category_id' , $id)->get();
+        $categories = Category::all();
+        return view('Articles.index')->withArticles($articles)->withCategories($categories);
+    }
     
     
     /**
@@ -57,7 +64,15 @@ class articlesController extends Controller
     *
     * @return \Illuminate\Http\Response
     */
-    
+    public function search(Request $request)
+    {
+        
+        $articles = Article::where('title' ,'like','%'.$request->search.'%')
+        ->orWhere('category_id','=',Category::where('name'  ,'like','%'.$request->search.'%')->pluck('id')->first())->get();
+        session()->flash('success','results for '.$request->search);
+            $categories = Category::all();
+        return view('Articles.index')->withArticles($articles)->withCategories($categories);
+    }
     /**
     * Show the form for creating a new resource.
     *
@@ -96,7 +111,7 @@ class articlesController extends Controller
         if ($articles->save()) {
             
             session()->flash('success','Article added successfuly !!');
-            return redirect('article/myarticles');
+            return redirect('/myarticles');
         }
         
         
