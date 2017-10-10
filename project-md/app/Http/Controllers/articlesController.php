@@ -92,12 +92,6 @@ class articlesController extends Controller
     */
     public function store(ArticleRequest $request)
     {
-        $this->validate($request, array(
-        'title'         => 'required|max:255',
-        
-        'category_id'   => 'required|integer',
-        'text'          => 'required'
-        ));
         
         $articles = new Article();
         if ($request->hasFile('pic')) {
