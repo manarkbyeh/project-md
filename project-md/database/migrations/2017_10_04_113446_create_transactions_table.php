@@ -19,9 +19,9 @@ class CreateTransactionsTable extends Migration
             $table->integer("user_reciever_id");
             $table->integer("aantal");
             $table->integer("article_id");
-            $table->date('datum');
+            $table->string('datum');
             $table->string("comment");
-            $table->dateTime('uur');
+            $table->string('uur');
             $table->integer("status")->default(1);
             $table->timestamps();
         });

@@ -1,12 +1,12 @@
-@extends('main') @section('title', '| Create New Post') @section('content')
+@extends('main') @section('title', '| Create New Post') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
 <h2 class="page_title">Articles Toevoegen</h2> {!! Form::open(array('route' => 'article.store', 'data-parsley-validate' => '', 'files' => true)) !!}
 <div class="form-group  has-feedback">
   <label class=" control-label">Title : </label>
-  {{ Form::text('title',old('title'),array('class' =>'form-control ','maxlength'=>'255'))}}
+  {{ Form::text('title',old('title'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
 </div>
 <div class="form-group  has-feedback">
   <label class=" control-label">Inhoud: </label>
-  {{ Form::textarea('text',old('text'),array('class' =>'form-control'))}}
+  {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => ''))}}
 </div>
 <div class="form-group">
   <label class=" control-label">Category : </label>
@@ -30,4 +30,4 @@
 </div>
 {{ Form::submit('Toevoegen',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
 <center><i class="fa fa-spinner fa-spin fa-2x loading hidden"></i></center>
-{!! Form::close() !!} @endsection
+{!! Form::close() !!} @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection

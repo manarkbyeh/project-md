@@ -7,9 +7,7 @@
 <meta name="msapplication-tap-highlight" content="no">
 <link href="./assets/apple-icon-180x180.png" rel="apple-touch-icon">
 <link href="./assets/favicon.ico" rel="icon">
-<meta name="csrf-token" content="{{ csrf_token() }}"> {!! Html::style('css/bootstrap.min.css') !!} {!! Html::style('css/simple-sidebar.css') !!}
-
-
+<meta name="csrf-token" content="{{ csrf_token() }}"> {!! Html::style('css/bootstrap.min.css') !!} {!! Html::style('css/simple-sidebar.css') !!} @yield('stylesheets')
 <title>{{ config('app.name', 'Laravel') }} @yield('title')</title>
 
 
