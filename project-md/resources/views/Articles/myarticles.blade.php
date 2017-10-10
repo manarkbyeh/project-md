@@ -1,5 +1,4 @@
-@extends('main') @section('title', '| View Post') @section('content')
-
+@extends('main') @section('title', '| Edit Blog Post') @section('content')
 <div class="row ">
 
   @foreach($articles as $n)
@@ -15,9 +14,8 @@
         <form action="{{url('/article/'.$n->id)}}" method="post">
           {{csrf_field()}} {{method_field('DELETE')}}
           <a href="{{url('/article/'.$n->id)}}" class="btn btn-primary" title="">Show</a>
-          <a href="{{url('/article/'.$n->id.'/edit')}}" class="btn btn-warning" title="">Edite</a> {!! Form::open(['route' => ['article.destroy', $n->id], 'method' => 'DELETE']) !!} {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-          {!! Form::close() !!}
-
+          <a href="{{url('/article/'.$n->id.'/edit')}}" class="btn btn-warning" title="">Edite</a>
+          <button type="submit" class="btn btn-danger" title="">Delete</button>
         </form>
       </div>
     </div>

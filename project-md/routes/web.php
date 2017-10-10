@@ -11,17 +11,16 @@
 |
 */
 Route::get('/', function () {
-<<<<<<< HEAD
+    
     return view('auth.login');
 });
 
-=======
-    return view('welcome');
 
-});
 Route::resource('/article', 'articlesController');
 Route::get('/articles', 'articlesController@index')->name('article.index');
->>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf
+Route::get('/article/transaction/{article}', 'TransactionController@create')->name('transaction.create');
+Route::post('transaction/store', 'TransactionController@store')->name('transaction.store');
+
 Route::POST('/article', 'articlesController@store')->name('article.store');
 Route::get('/article/create', 'articlesController@create')->name('article.create');
 Route::get('/article/{id}', 'articlesController@show')->name('article.show');
@@ -33,10 +32,11 @@ Route::get('article/{id}/edit',['uses'=>'articlesController@edit','as'=>'article
 Route::resource('categories', 'CategoriesController', ['except' => ['create']]);
 Auth::routes();
 
-<<<<<<< HEAD
 
 
 
+Route::get('/article/category/{id}', 'articlesController@GetCat')->name('category');
+Route::POST('/article/search', 'articlesController@search')->name('article.search');
 
 
 
@@ -48,10 +48,8 @@ Route::get('/myarticles', 'articlesController@myarticles')->name('article.myarti
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-=======
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/user/{id}','UsersController@show')->name('user.profile');
-
->>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf

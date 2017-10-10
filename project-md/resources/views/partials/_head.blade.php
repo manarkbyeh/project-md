@@ -7,17 +7,9 @@
 <meta name="msapplication-tap-highlight" content="no">
 <link href="./assets/apple-icon-180x180.png" rel="apple-touch-icon">
 <link href="./assets/favicon.ico" rel="icon">
- <meta name="csrf-token" content="{{ csrf_token() }}">
-
-<<<<<<< HEAD
-{!! Html::style('css/bootstrap.min.css') !!}
-
-{!! Html::style('css/simple-sidebar.css') !!}
-
-
+<meta name="csrf-token" content="{{ csrf_token() }}"> {!! Html::style('css/bootstrap.min.css') !!} {!! Html::style('css/simple-sidebar.css') !!} @yield('stylesheets')
 <title>{{ config('app.name', 'Laravel') }} @yield('title')</title>
 
-=======
 
 
 
@@ -25,34 +17,34 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 <style>
-
-    body { padding-top: 4%; }
-
-    .container{
-        margin-top:3%;
-    }
-
-    .jumbotron h1, .jumbotron p{
-        text-align:center;
-
-    }
-
-    .billboard{
-        background-image: url("../../../public/images/hpfoto.jpeg");
-        margin-bottom: 0;
-        min-height: 50%;
-        background-repeat: no-repeat;
-        background-position: center;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    .btn{
-        color:#FFFFFF;
-    }
-
-    .bg-dark{
-        background-color:#000000!important;
-    }
+  body {
+    padding-top: 4%;
+  }
+  
+  .container {
+    margin-top: 3%;
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+  }
+  
+  .billboard {
+    background-image: url("../../../public/images/hpfoto.jpeg");
+    margin-bottom: 0;
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  
+  .btn {
+    color: #FFFFFF;
+  }
+  
+  .bg-dark {
+    background-color: #000000!important;
+  }
 </style>
->>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf

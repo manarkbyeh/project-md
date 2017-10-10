@@ -23,21 +23,14 @@ class RegisterController extends Controller
     use RegistersUsers;
     
     /**
-<<<<<<< HEAD
     * Where to redirect users after registration.
     *
     * @var string
     */
     protected $redirectTo = '/article';
     
-=======
-     * Where to redirect user after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
->>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf
+    
+    
     /**
     * Create a new controller instance.
     *
@@ -57,15 +50,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-<<<<<<< HEAD
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:6|confirmed',
-=======
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:user',
-            'password' => 'required|string|min:6|confirmed',
->>>>>>> 17fcf238a4bb2fe41b5cddd28d8c6be59a0251cf
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:user',
+        'password' => 'required|string|min:6|confirmed',
         ]);
     }
     
