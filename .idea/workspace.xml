@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4864afa-67f5-4ca6-a294-7f700f42d468" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project-md/resources/views/welcome.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap-grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap-grid.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap-reboot.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap-reboot.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/parsley.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/public/css/simple-sidebar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/create.blade.1.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/ForgotPasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/RegisterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/Auth/ResetPasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/TransactionController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/TransactionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Http/Controllers/articlesController.php" afterPath="$PROJECT_DIR$/project-md/app/Http/Controllers/articlesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/app/Transaction.php" afterPath="$PROJECT_DIR$/project-md/app/Transaction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/config/app.php" afterPath="$PROJECT_DIR$/project-md/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/config/auth.php" afterPath="$PROJECT_DIR$/project-md/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/config/database.php" afterPath="$PROJECT_DIR$/project-md/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/config/mail.php" afterPath="$PROJECT_DIR$/project-md/config/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/project-md/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/database/migrations/2017_09_28_075814_create_articles_table.php" afterPath="$PROJECT_DIR$/project-md/database/migrations/2017_09_28_075814_create_articles_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/database/migrations/2017_10_04_113446_create_transactions_table.php" afterPath="$PROJECT_DIR$/project-md/database/migrations/2017_10_04_113446_create_transactions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/CHANGES.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/CHANGES.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/LICENSE.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/build-config.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/build-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/contents.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/contents.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/af.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ar.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/az.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bg.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bn.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bs.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/bs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ca.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/cs.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/cy.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/da.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/de-ch.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/de-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/de.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/el.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-au.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-au.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-ca.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-gb.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/eo.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/es-mx.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/es-mx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/es.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/et.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/eu.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fa.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fi.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fo.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fr-ca.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fr.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/gl.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/gu.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/gu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/he.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hi.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hr.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hu.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/id.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/is.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/it.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ja.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ka.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ka.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/km.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ko.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ku.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/lt.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/lv.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/mk.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/mn.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/mn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ms.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/nb.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/nl.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/no.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/oc.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/oc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pl.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pt-br.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pt.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ro.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ru.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/si.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sk.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sl.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sq.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sr-latn.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sr-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sr.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sv.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/th.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/tr.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/tt.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/tt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ug.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/uk.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/vi.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/zh-cn.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/lang/zh.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/lang/zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/colordialog/dialogs/colordialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/copyformatting/styles/copyformatting.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/preview/preview.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/preview/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/LICENSE.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/README.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/dialogs/dialog.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/dialogs/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/dialogs/toolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/tableselection/styles/tableselection.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/tableselection/styles/tableselection.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/templates/dialogs/templates.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/templates/dialogs/templates.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/LICENSE.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/README.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/ciframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/dialogs/wsc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/css/samples.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/css/samples.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/index.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/js/sample.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/js/sample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/ajax.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/api.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/appendto.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/appendto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/assets/posteddata.php" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/assets/posteddata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/datafiltering.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/datafiltering.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/dialog/assets/my_dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/dialog/dialog.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/dialog/dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/divreplace.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/divreplace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/enterkey/enterkey.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/enterkey/enterkey.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/htmlwriter/outputforflash.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/htmlwriter/outputforflash.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/htmlwriter/outputhtml.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/htmlwriter/outputhtml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/index.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlineall.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlineall.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlinebycode.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlinebycode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlinetextarea.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/inlinetextarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/jquery.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/jquery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/magicline/magicline.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/magicline/magicline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/readonly.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/readonly.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/replacebyclass.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/replacebyclass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/replacebycode.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/replacebycode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample_posteddata.php" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/sample_posteddata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/tabindex.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/tabindex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/toolbar/toolbar.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/toolbar/toolbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/uicolor.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/uicolor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/uilanguages.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/uilanguages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/wysiwygarea/fullpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/xhtmlstyle.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/old/xhtmlstyle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/css/fontello.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/index.html" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_ie.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_ie8.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_ie8.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/dialog_iequirks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_gecko.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_gecko.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_ie.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_ie8.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_ie8.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_iequirks.css" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/editor_iequirks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/readme.md" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/skins/moono-lisa/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/ckeditor/styles.js" afterPath="$PROJECT_DIR$/project-md/public/ckeditor/styles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/css/custom.css" afterPath="$PROJECT_DIR$/project-md/public/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/public/index.php" afterPath="$PROJECT_DIR$/project-md/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/assets/index.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/assets/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/assets/sass/_variables.scss" afterPath="$PROJECT_DIR$/project-md/resources/assets/sass/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/create.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/edit.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/auth.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/auth.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/categories/index.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/categories/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/main.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/main.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/partials/_categorys.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/partials/_categorys.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/partials/_footer.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/partials/_footer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/partials/_head.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/partials/_head.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/partials/_javascript.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/partials/_javascript.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/partials/_nav.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/partials/_nav.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/routes/web.php" afterPath="$PROJECT_DIR$/project-md/routes/web.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="main.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/main.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1507820918857" expanded="true" signature="30:50" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="74:90" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="118:133" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="146:166" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="176:185" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="226:244" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="255:277" ph="..." />
+                <marker date="1507820918857" expanded="true" signature="287:296" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3225">
+              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding>
+                <marker date="1507820918839" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507820918839" expanded="true" signature="26:48" ph="..." />
+                <marker date="1507820918839" expanded="true" signature="546:555" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507060402532" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="26:51" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="62:71" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="108:124" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="213:268" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="343:375" ph="..." />
+                <marker date="1507060402532" expanded="true" signature="434:461" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myarticles.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507669851613" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="26:53" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="64:73" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="226:249" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="345:354" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="393:413" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="451:472" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="699:722" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="755:767" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="772:794" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="820:843" ph="..." />
+                <marker date="1507669851613" expanded="true" signature="912:943" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507669171808" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="26:54" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="65:74" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="230:253" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="368:377" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="412:432" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="454:477" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="560:595" ph="..." />
+                <marker date="1507669171808" expanded="true" signature="711:759" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507658967142" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="26:53" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="64:73" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="141:248" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="255:357" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="363:397" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="402:475" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="480:546" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="551:614" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="619:686" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="635:684" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="887:902" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="908:925" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="1547:1602" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="1693:1748" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="1837:1948" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="2004:2076" ph="..." />
+                <marker date="1507658967142" expanded="true" signature="2118:2133" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507657056803" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="26:54" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="65:78" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="83:115" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="140:149" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="201:296" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="392:495" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="597:682" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="791:894" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1092:1107" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1113:1130" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1638:1737" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1819:1834" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1859:1868" ph="..." />
+                <marker date="1507657056803" expanded="true" signature="1873:1908" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_09_28_075814_create_articles_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project-md/database/migrations/2017_09_28_075814_create_articles_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <marker date="1507053725929" expanded="true" signature="9:15" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="26:48" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="62:71" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="123:134" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="150:162" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="214:249" ph="..." />
+                <marker date="1507053725929" expanded="true" signature="324:359" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-md/resources/views/auth.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507042820418" expanded="true" signature="30:50" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="74:90" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="162:177" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="358:378" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="387:396" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="567:589" ph="..." />
+                <marker date="1507042820418" expanded="true" signature="598:607" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/.env" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/main.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/public/css/custom.css" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/partials/_head.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/partials/_footer.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/routes/web.php" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/partials/_nav.blade.php" />
+        <option value="$PROJECT_DIR$/project-md/resources/views/partials/_javascript.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Articles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-md" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../backup/project-md" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4864afa-67f5-4ca6-a294-7f700f42d468" name="Default" comment="" />
+      <created>1507638031615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507638031615</updated>
+      <workItem from="1507638033184" duration="2920000" />
+      <workItem from="1507820216056" duration="1984000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4904000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/main.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507820918857" expanded="true" signature="30:50" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="74:90" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="118:133" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="146:166" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="176:185" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="226:244" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="255:277" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="287:296" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/auth.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507042820418" expanded="true" signature="30:50" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="74:90" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="162:177" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="358:378" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="387:396" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="567:589" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="598:607" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507021620914" expanded="true" signature="148:170" ph="..." />
+            <marker date="1507021620914" expanded="true" signature="209:223" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507820918872" expanded="true" signature="287:294" ph="..." />
+            <marker date="1507820918872" expanded="true" signature="592:622" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_javascript.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_messages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506812975645" expanded="true" signature="108:133" ph="..." />
+            <marker date="1506812975645" expanded="true" signature="305:313" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507821006881" expanded="true" signature="572:607" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="708:751" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="880:920" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="1031:1074" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="1204:1248" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1507053725929" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="26:48" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="62:71" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="123:134" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="150:162" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="214:249" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="324:359" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/simple-sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2467">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/blog-home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4425">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/bootstrap-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/bootstrap-reboot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3750">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="7" column="1661" lean-forward="true" selection-start-line="7" selection-start-column="1661" selection-end-line="7" selection-end-column="1661" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/parsley.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/public/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1507820918872" expanded="true" signature="287:294" ph="..." />
+            <marker date="1507820918872" expanded="true" signature="592:622" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_javascript.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="204" lean-forward="false" selection-start-line="16" selection-start-column="204" selection-end-line="16" selection-end-column="204" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_messages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506812975645" expanded="true" signature="108:133" ph="..." />
+            <marker date="1506812975645" expanded="true" signature="305:313" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding>
+            <marker date="1507821006881" expanded="true" signature="572:607" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="708:751" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="880:920" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="1031:1074" ph="..." />
+            <marker date="1507821006881" expanded="true" signature="1204:1248" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507021620914" expanded="true" signature="148:170" ph="..." />
+            <marker date="1507021620914" expanded="true" signature="209:223" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/partials/_categorys.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507024039777" expanded="true" signature="374:414" ph="..." />
+            <marker date="1507024039777" expanded="true" signature="420:437" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/user/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1507053725929" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="26:48" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="62:71" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="123:134" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="150:162" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="214:249" ph="..." />
+            <marker date="1507053725929" expanded="true" signature="324:359" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/auth.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507042820418" expanded="true" signature="30:50" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="74:90" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="162:177" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="358:378" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="387:396" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="567:589" ph="..." />
+            <marker date="1507042820418" expanded="true" signature="598:607" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/main.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1507820918857" expanded="true" signature="30:50" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="74:90" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="118:133" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="146:166" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="176:185" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="226:244" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="255:277" ph="..." />
+            <marker date="1507820918857" expanded="true" signature="287:296" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <marker date="1507820918839" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507820918839" expanded="true" signature="26:48" ph="..." />
+            <marker date="1507820918839" expanded="true" signature="546:555" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507060402532" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="26:51" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="62:71" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="108:124" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="213:268" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="343:375" ph="..." />
+            <marker date="1507060402532" expanded="true" signature="434:461" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507669851613" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="26:53" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="64:73" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="226:249" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="345:354" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="393:413" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="451:472" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="699:722" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="755:767" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="772:794" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="820:843" ph="..." />
+            <marker date="1507669851613" expanded="true" signature="912:943" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507669171808" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="26:54" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="65:74" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="230:253" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="368:377" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="412:432" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="454:477" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="560:595" ph="..." />
+            <marker date="1507669171808" expanded="true" signature="711:759" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507658967142" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="26:53" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="64:73" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="141:248" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="255:357" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="363:397" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="402:475" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="480:546" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="551:614" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="619:686" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="635:684" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="887:902" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="908:925" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="1547:1602" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="1693:1748" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="1837:1948" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="2004:2076" ph="..." />
+            <marker date="1507658967142" expanded="true" signature="2118:2133" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/resources/views/Articles/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507657056803" expanded="true" signature="9:15" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="26:54" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="65:78" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="83:115" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="140:149" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="201:296" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="392:495" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="597:682" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="791:894" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1092:1107" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1113:1130" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1638:1737" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1819:1834" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1859:1868" ph="..." />
+            <marker date="1507657056803" expanded="true" signature="1873:1908" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-md/database/migrations/2017_09_28_075814_create_articles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

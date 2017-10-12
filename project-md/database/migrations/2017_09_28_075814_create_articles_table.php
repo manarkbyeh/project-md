@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string("title");
             $table->string("pic")->default('default.jpg');
             $table->text("text");
+            $table->date('datum');
             $table->integer("user_id");
             $table->integer("active")->default(0);
             $table->timestamps();

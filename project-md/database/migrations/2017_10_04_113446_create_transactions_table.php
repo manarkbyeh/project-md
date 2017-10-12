@@ -21,7 +21,7 @@ class CreateTransactionsTable extends Migration
             $table->integer("article_id");
             $table->date('datum');
             $table->string("comment");
-            $table->dateTime('uur');
+            $table->time('uur');
             $table->integer("status")->default(1);
             $table->timestamps();
         });

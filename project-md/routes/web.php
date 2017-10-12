@@ -12,12 +12,14 @@
 */
 Route::get('/', function () {
     
-    return view('auth.login');
+    return view('welcome');
 });
 
 
 Route::resource('/article', 'articlesController');
 Route::get('/articles', 'articlesController@index')->name('article.index');
+Route::get('/article/transaction/{article}', 'TransactionController@create')->name('transaction.create');
+Route::post('transaction/store', 'TransactionController@store')->name('transaction.store');
 
 Route::POST('/article', 'articlesController@store')->name('article.store');
 Route::get('/article/create', 'articlesController@create')->name('article.create');
