@@ -62,42 +62,35 @@
 
 
 
+
+
+
+
     <section id="vandaag">
         <div class="container">
             <h1 class="orange" id="search">Deze munchies zijn bijna weg!</h1>
             <!-- Example row of columns -->
 
             <div class="row">
+
+                @foreach($articles as $article)
                 <div class="col-md-4">
                     <div class="artikel">
-                        <div class="foto"></div>
+                        <div class="foto">
+                            <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+
+                        </div>
                         <div class="artikel-content">
-                            <p class="datum">28 september</p>
-                            <h2>Verse tomaten uit de tuin</h2>
+                            <p class="datum">{{$article->datum}}</p>
+                            <h2>{{$article->title}}</h2>
+                            <p>{{strip_tags($article->text)}}</p>
                             <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="artikel">
-                        <div class="foto"></div>
-                        <div class="artikel-content">
-                            <p class="datum">28 september</p>
-                            <h2>Verse tomaten uit de tuin</h2>
-                            <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="artikel">
-                        <div class="foto"></div>
-                        <div class="artikel-content">
-                            <p class="datum">28 september</p>
-                            <h2>Verse tomaten uit de tuin</h2>
-                            <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
+                
 
 
             </div>

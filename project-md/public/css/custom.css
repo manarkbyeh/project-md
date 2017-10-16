@@ -29,10 +29,11 @@ h1{
 .artikel{
     width:300px;
 }
-.foto{
+
+.foto img{
     width:300px;
     height:200px;
-    background-color:lightgray;
+
 }
 
 
