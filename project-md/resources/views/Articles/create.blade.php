@@ -1,5 +1,14 @@
 @extends('main') @section('title', '| Create New Post') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
-<h2 class="page_title">Articles Toevoegen</h2> {!! Form::open(array('route' => 'article.store', 'data-parsley-validate' => '', 'files' => true)) !!}
+
+
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <h2 class="page_title">Articles Toevoegen</h2> {!! Form::open(array('route' => 'article.store', 'data-parsley-validate' => '', 'files' => true)) !!}
 <div class="form-group  has-feedback">
   <label class=" control-label">Title : </label>
   {{ Form::text('title',old('title'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
@@ -34,4 +43,8 @@
 </div>
 {{ Form::submit('Toevoegen',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
 <center><i class="fa fa-spinner fa-spin fa-2x loading hidden"></i></center>
-{!! Form::close() !!} @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection
+{!! Form::close() !!}
+
+
+  </div>
+    @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection

@@ -97,7 +97,7 @@
             </div>
 
                 <div class="text-center">
-                    <p><a class="btn btn-warning btn-lg" href="#" role="button">BEKIJK ALLE MUNCHIES</a></p>
+                    <p><a class="btn btn-warning btn-lg" href="/articles" role="button">BEKIJK ALLE MUNCHIES</a></p>
                 </div>
 
         </div>

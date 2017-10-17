@@ -12,26 +12,21 @@
 
         <h1>Profiel</h1>
 
-        <div class="profiel">
+        <div class="profiel">  <a href="{{url('')}}"><img src="/images/edit.png" alt=""></a>
             <div class="profiel-foto">
-                <h2>FOTO</h2>
+
             </div>
             <div class="profiel-content">
                 <p>{{$user->name}}</p>
                 <p>{{$user->email}}</p>
+                <p>
+                    <a class="btn btn-success " href="{{ route('article.myarticles', $user->id) }}" role="button">Mijn munchies</a>
+                    <a class="btn btn-warning " href="{{ route('article.index', $user->id) }}" role="button">Mijn transacties</a>
+                </p>
+
             </div>
         </div>
 
-        <div class="mijn-munchies">
-            <h2>Mijn munchies</h2>
-            <a class="btn btn-success" href="{{ route('article.index', $user->id) }}" role="button">TOEVOEGEN</a>
-
-
-        </div>
-
-       <div class="mijn-verzoeken">
-           <h2>Mijn verzoeken</h2>
-       </div>
 
 
 

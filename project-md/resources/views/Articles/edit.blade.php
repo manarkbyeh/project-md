@@ -1,5 +1,12 @@
 @extends('main') @section('title', '| Edit Blog Post') @section('content')
 
+     <div class="container">
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
 <h2 class="page_title">Edit Article </h2>
 <div class="row">
   {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!} {!! Form::model($articles,['route'=>['article.update',$articles->id],'method' => 'PATCH','files'=>true]) !!} {{ Form::label('title', 'Title:')
@@ -50,7 +57,7 @@
   {!! Form::close() !!}
 </div>
 <!-- end of .row (form) -->
-
+     </div>
 
 
 @endsection
