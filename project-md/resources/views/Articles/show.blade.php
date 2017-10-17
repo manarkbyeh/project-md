@@ -65,7 +65,7 @@
                             <div class="artikel-content-ver">
                                 <p class="datum">{{$articles->datum}}</p>
                                 <h4>{{$articles->title}}</h4>
-                                <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
+                                <p class="datum_locatie">{{$articles->tijdstip}}<strong>{{$articles->locatie}}</strong></p>
                             </div>
                         </div>
                     </a>

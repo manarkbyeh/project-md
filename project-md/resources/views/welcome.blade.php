@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| All Posts')
+@extends('main') @section('title', '')
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <section id="hero">
@@ -6,8 +6,8 @@
         <div class="container">
             <h1 class="display-3">Welkom bij MunchDaily!</h1>
             <p>MunchDaily geeft de mogelijkheid om het te veel aan voedsel aan iemand anders te schenken.</p>
-            <p><a class="btn btn-success btn-lg btn-hero" href="#" role="button">GEVEN</a>
-                <a class="btn btn-warning btn-lg btn-hero" href="#" role="button">ONTVANGEN</a></p>
+            <p><a class="btn btn-success btn-lg btn-hero" href="/article/create" role="button">GEVEN</a>
+                <a class="btn btn-warning btn-lg btn-hero" href="/articles" role="button">ONTVANGEN</a></p>
         </div>
     </div>
 </section>
@@ -84,7 +84,7 @@
                                 <p class="datum">{{$article->datum}}</p>
                                 <h2>{{$article->title}}</h2>
                                 <p>{{strip_tags($article->text)}}</p>
-                                <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
+                                <p class="datum_locatie">{{$article->tijdstip}}<strong>{{$article->locatie}}</strong></p>
                             </div>
                         </div>
                     </a>

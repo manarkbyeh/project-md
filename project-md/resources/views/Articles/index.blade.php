@@ -41,7 +41,7 @@
                 <p class="datum">{{$article->datum}}</p>
                 <h2>{{$article->title}}</h2>
                 <p>{{strip_tags($article->text)}}</p>
-                <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
+                <p class="datum_locatie">{{$article->tijdstip}}<strong>{{$article->locatie}}</strong></p>
               </div>
             </div>
           </a>
