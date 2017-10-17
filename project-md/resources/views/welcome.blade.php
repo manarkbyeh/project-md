@@ -75,18 +75,19 @@
 
                 @foreach($articles as $article)
                 <div class="col-md-4">
-                    <div class="artikel">
-                        <div class="foto">
-                            <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
-
+                    <a href="/article/{{$article->id}}">
+                        <div class="artikel">
+                            <div class="foto">
+                                <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+                            </div>
+                            <div class="artikel-content">
+                                <p class="datum">{{$article->datum}}</p>
+                                <h2>{{$article->title}}</h2>
+                                <p>{{strip_tags($article->text)}}</p>
+                                <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
+                            </div>
                         </div>
-                        <div class="artikel-content">
-                            <p class="datum">{{$article->datum}}</p>
-                            <h2>{{$article->title}}</h2>
-                            <p>{{strip_tags($article->text)}}</p>
-                            <p class="datum_locatie">21:00 - 22:00 <strong>Deurne</strong></p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 @endforeach
 

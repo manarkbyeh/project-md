@@ -4,16 +4,40 @@
 
 @section('content')
 
-    <h1>Profile</h1>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <h2>FOTO</h2>
-    <p>{{$user->name}}</p>
-    <p>{{$user->email}}</p>
+        <h1>Profiel</h1>
+
+        <div class="profiel">
+            <div class="profiel-foto">
+                <h2>FOTO</h2>
+            </div>
+            <div class="profiel-content">
+                <p>{{$user->name}}</p>
+                <p>{{$user->email}}</p>
+            </div>
+        </div>
+
+        <div class="mijn-munchies">
+            <h2>Mijn munchies</h2>
+            <a class="btn btn-success" href="{{ route('article.index', $user->id) }}" role="button">TOEVOEGEN</a>
+
+
+        </div>
+
+       <div class="mijn-verzoeken">
+           <h2>Mijn verzoeken</h2>
+       </div>
 
 
 
-    <p><a class="btn btn-success" href="{{ route('article.index', $user->id) }}" role="button">Mijn artikels</a>
-    <a class="btn btn-warning" href="{{ route('article.index', $user->id) }}" role="button">Mijn transacties</a></p>
 
+
+
+    </div>
 
 @stop

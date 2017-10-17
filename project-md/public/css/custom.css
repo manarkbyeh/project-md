@@ -25,6 +25,7 @@ h1{
     padding-top:1em;
 }
 
+/*----------ARTIKEL-------*/
 
 .artikel{
     width:300px;
@@ -42,6 +43,39 @@ h1{
     padding:1em 2em;
     text-align:center;
 }
+
+/*-------VERGELIJLBAAR------*/
+
+.artikel-ver{
+
+    width:230px;
+    margin-bottom:2em;
+    margin-top:2em;
+
+}
+
+.artikel-content-ver p{
+   margin-bottom:0;
+}
+
+.artikel-content-ver h4{
+    padding: 0.5em 0;
+}
+
+.foto-ver img{
+    width:230px;
+    height:150px;
+}
+
+
+.artikel-content-ver{
+    background-color:#FFFFFF;
+    text-align:center;
+    padding:1em;
+}
+
+/*---*/
+
 
 .rechts{
     float:right;
@@ -84,10 +118,10 @@ a:hover{
 .btn-hero{
     margin: 0 2em;
 }
+
 .btn-success{
     background-color:#1C9B48;
     border-color:#1C9B48;
-
 }
 
 .btn-warning{
@@ -101,11 +135,9 @@ a:hover{
     color:#FFFFFF;
 }
 
-
 .jumbotron h1, .jumbotron p{
     text-align:center;
     color:#FFFFFF;
-
 }
 
 .jumbotron{
@@ -118,7 +150,6 @@ a:hover{
     background-size: cover;
     background-color:#000000;
 }
-
 
 #doel-text{
     background-color:#E69723;
@@ -141,10 +172,8 @@ a:hover{
 }
 
 .bg-dark{
-    background-color:transparent!important;
+    background-color:#000000!important;
 }
-
-
 
 .row.categorie{
     background-color:#1C9B48;
@@ -156,14 +185,13 @@ a:hover{
 .bg-orange{
     background-color: #E69723;
 }
+
 .orange{
     color:#E69723;
 }
 
 
 /*------------- ICONS -------------*/
-
-
 
 .all-icons {
     text-align: center;
@@ -182,6 +210,11 @@ a:hover{
     color: white;
 }
 
+.details .icon-wrapper p{
+    color:black;
+    margin-top:0.5em;
+}
+
 .icon-wrapper h4, h3{
     margin-top: 0.5em;
 }
@@ -190,8 +223,9 @@ a:hover{
     color:#1C9B48;
 }
 
-#categorie{
+/*-------------------------*/
 
+#categorie{
     padding: 6rem 0;
     background-color:#1C9B48;
 }
@@ -216,13 +250,11 @@ a:hover{
 
 #zoekveld h1{
     text-align:center;
-
 }
 
 .textfield_form{
     width:900px!important;
     padding:20px;
-
 }
 
 .btn-lg{
@@ -231,26 +263,27 @@ a:hover{
 
 
 /*------------- MUNCHIE -------------*/
-.munchie-foto{
-    height:400px;
-    width:55%;
-    background-color:gray;
-    display:inline-block;
+
+
+.munchie-foto img{
+    height:330px;
+    width:640px;
+
 }
 
 .munchie-content{
-    height:400px;
+    height:460px;
+    width:640px;
     background-color:white;
-    display:inline-block;
-    width:44%;
-    padding-left:150px;
-    padding-top:5em;
-    vertical-align:top;
+    text-align:center;
 }
 
 .green{
     color:#1C9B48;
 }
+
+
+
 
 /*------------- PROFIEL -------------*/
 .profiel-foto{
@@ -271,7 +304,19 @@ a:hover{
 }
 
 
+.berichten{
+    margin-top:2em;
+    width:640px;
+    background-color:#FFFFFF;
+
+}
+
+p.cat {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 55px;
 
 
+}
 
 
