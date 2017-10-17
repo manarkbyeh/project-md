@@ -105,7 +105,7 @@ class articlesController extends Controller
         'datum'         => 'required',
         'category_id'   => 'required|integer',
         'text'          => 'required',
-        'locatie'      => 'required',
+        'locatie'       => 'required',
         'tijdstip'      => 'required'
         ));
         

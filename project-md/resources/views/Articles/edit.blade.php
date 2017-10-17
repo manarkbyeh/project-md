@@ -1,63 +1,99 @@
 @extends('main') @section('title', '| Edit Blog Post') @section('content')
 
-     <div class="container">
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-<h2 class="page_title">Edit Munchie </h2>
-<div class="row">
-  {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!} {!! Form::model($articles,['route'=>['article.update',$articles->id],'method' => 'PATCH','files'=>true]) !!} {{ Form::label('title', 'Title:')
-  }} {{ Form::text('title', old('title'), ["class" => 'form-control input-lg']) }} {{ Form::date('datum',old('datum'),array('class' =>'form-control '))}} {{ Form::label('text', "Body:", ['class' => 'form-spacing-top']) }} {{ Form::textarea('text',old('text'),
-  ['class' => 'form-control']) }}
-  <div class="form-group">
-    <label class=" control-label">Category : </label>
-    <select class="form-control" name="category_id">
-      @foreach($categories as $category)
-      <option value='{{ $category->id }}'>{{ $category->name }}</option>
-      @endforeach
-    </select>
-  </div>
 
-  <div class="form-group  has-feedback">
-    <label class=" control-label">Image : </label>
-    <div class="input-group" id="img" style="padding:0 ">
-      <label class="input-group-btn" style="display: table-cell;">
-        <span class="btn btn-primary">Browse&hellip;
-<input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
-</span>
-      </label>
-      <input type="text" class="form-control" readonly="true" />
-    </div>
-  </div>
+    <h2 class="page_title green">Munchie Wijzigen</h2>
 
-  <div class="well">
-    <dl class="dl-horizontal">
-      <dt>Created At:</dt>
-      <dd>{{ date('M j, Y h:ia', strtotime($articles->created_at)) }}</dd>
-    </dl>
+    <p class="lead">
+      Hebt u een foutje gemaakt? Hier kunt u uw artikel aanpassen.
+    </p>
 
-    <dl class="dl-horizontal">
-      <dt>Last Updated:</dt>
-      <dd>{{ date('M j, Y h:ia', strtotime($articles->updated_at)) }}</dd>
-    </dl>
-    <hr>
-    <div class="row">
-      <div class="col-sm-6">
-        {!! Html::linkRoute('article.show', 'Cancel', array($articles->id), array('class' => 'btn btn-danger btn-block')) !!}
+
+    {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!}
+
+
+    <div class="form-group  has-feedback">
+      <label class="control-label">Foto</label>
+      <div class="input-group" id="img" style="padding:0 ">
+        <input type="text" class="form-control" readonly="true" />
+        <label class="input-group-btn" style="display: table-cell;">
+        <span class="btn btn-success">Browse&hellip;
+          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
+        </span>
+        </label>
       </div>
-      <div class="col-sm-6">
-        {{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
-      </div>
+      <small id="fileHelp" class="form-text text-muted">Kies hier een afbeelding voor uw munchie.</small>
     </div>
 
+
+
+
+    <div class="form-group  has-feedback">
+
+      <label class=" control-label">Titel munchie</label>
+      {{ Form::text('title',old('title'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      <small id="fileHelp" class="form-text text-muted">Kies een passende titel.</small>
+
+    </div>
+
+
+
+    <div class="form-group  has-feedback">
+      <label class=" control-label">Omschrijving </label>
+      {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
+    </div>
+
+
+    <div class="form-group  has-feedback">
+      <label class=" control-label"> Houdbaarheidsdatum </label>
+      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class=" control-label">Categorie</label>
+      <select class="form-control" name="category_id">
+        @foreach($categories as $category)
+          <option value='{{ $category->id }}'>{{ $category->name }}</option>
+        @endforeach
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class=" control-label"> Locatie </label>
+      {{ Form::text('locatie',old('locatie'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      <small id="fileHelp" class="form-text text-muted">Waar mogen ze dit artikel komen halen?</small>
+    </div>
+
+
+    <div class="form-group">
+      <label class=" control-label"> Tijdstip </label>
+      {{ Form::text('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
+    </div>
+
+
+
+
+
+
+    {{ Form::submit('WIJZIGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
+    <center><i class="fa fa-spinner fa-spin fa-2x loading hidden"></i></center>
+    {!! Form::close() !!}
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
   </div>
-  {!! Form::close() !!}
-</div>
-<!-- end of .row (form) -->
-     </div>
 
 
 @endsection
