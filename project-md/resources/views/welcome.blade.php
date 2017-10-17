@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-3">Welkom bij MunchDaily!</h1>
-            <p>MunchDaily geeft de mogelijkheid om het te veel aan voedsel aan iemand anders te schenken.</p>
+            <h5>MunchDaily geeft de mogelijkheid om het te veel aan voedsel aan iemand anders te schenken.</h5>
             <p><a class="btn btn-success btn-lg btn-hero" href="/article/create" role="button">GEVEN</a>
                 <a class="btn btn-warning btn-lg btn-hero" href="/articles" role="button">ONTVANGEN</a></p>
         </div>
@@ -45,13 +45,13 @@
 
     <section id="doel-text">
         <div class="container">
-        <h6>"Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wilt gooien, een betere plek kan
+        <h5>"Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wilt gooien, een betere plek kan
         krijgen bij iemand anders. Door de mogelijkheid te creëren om eten weg te geven proberen we
             voedselverspilling tegen te gaan.
-        </h6>
-        <h6>Word ook lid en schenk je overschotten aan anderen die dit wel nodig hebben, zo help je mee
+        </h5>
+        <h5>Word ook lid en schenk je overschotten aan anderen die dit wel nodig hebben, zo help je mee
         de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu zal je dankbaar zijn!
-        </h6>
+        </h5>
 
             <div class="text-center">
                 <p><a class="btn btn-warning btn-lg" href="#" role="button">LID WORDEN</a>
@@ -59,10 +59,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
 
 
@@ -84,7 +80,7 @@
                                 <p class="datum">{{$article->datum}}</p>
                                 <h2>{{$article->title}}</h2>
                                 <p>{{strip_tags($article->text)}}</p>
-                                <p class="datum_locatie">{{$article->tijdstip}}<strong>{{$article->locatie}}</strong></p>
+                                <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
                             </div>
                         </div>
                     </a>
