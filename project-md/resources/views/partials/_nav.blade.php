@@ -13,19 +13,19 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" class="{{ Request::is('/') ? "active" : " " }}">
-        <a class="nav-link" href="/"> HOME </a>
+        <a class="nav-link" href="{{ url('/') }}"> HOME </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/about"> ABOUT </a>
+        <a class="nav-link" href="{{ url('about') }}"> ABOUT </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/werking"> WERKING </a>
+        <a class="nav-link" href="{{ url('werking') }}"> WERKING </a>
       </li>
+  
 
-
-      @guest
+              @if (!Auth::guest())
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/articles"> MUNCHIES </a>
+        <a class="nav-link" href="{{ url('articles') }}"> MUNCHIES </a>
       </li>
 
 
@@ -35,9 +35,9 @@
             MUNCHIES
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/articles">BEKIJK ALLE MUNCHIES</a>
-            <a class="dropdown-item" href="/myarticles">MIJN MUNCHIES</a>
-            <a class="dropdown-item" href="/article/create">VOEG EEN MUNCHIE TOE</a>
+            <a class="dropdown-item" href="{{ url('articles') }}">BEKIJK ALLE MUNCHIES</a>
+            <a class="dropdown-item" href="{{ url('myarticles') }}">MIJN MUNCHIES</a>
+            <a class="dropdown-item" href="{{ url('article/create') }}">VOEG EEN MUNCHIE TOE</a>
           </div>
         </li>
         @endguest
@@ -46,7 +46,7 @@
 
 
         <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
-          <a href="/"><img class="nav-link" src="/images/search.png" alt="SEARCH"></a>
+          <a href="{{ url('/') }}"><img class="nav-link" src="{{ asset('images/search.png') }}" alt="SEARCH"></a>
         </li>
 
 
@@ -54,35 +54,46 @@
 
 
 
-        @guest
+        @if (Auth::guest())
         <li class="nav-item dropdown" class="{{ Request::is('/login') ? "active" : " " }}">
-          <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="nav-link" href="/user/{id}" src="/images/avatar.png" alt="PROFIEL">
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/login">AANMELDEN</a>
-            <a class="dropdown-item" href="/register">REGISTREREN</a>
-          </div>
+         <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
+
+            <a href="{{ url('login') }}">AANMELDEN</a>
+            </li>
+            <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
+
+            <a href="{{ url('register') }}">REGISTREREN</a>
         </li>
 
         @else
 
-          <li class="nav-item dropdown" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
-            <a class="nav-link dropdown-toggle" href="/user/{id}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="nav-link" href="/user/{id}" src="/images/avatar.png" alt="PROFIEL">
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/user/{id}">MIJN PROFIEL</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/logout">AFMELDEN</a>
-            </div>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+{{ Auth::user()->name }} <span class="caret"></span>
+</a>
+
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+document.getElementById('logout-form').submit();">
+Logout
+</a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+            </form>
           </li>
+        </ul>
+
+      </li>
 
 
-          @endguest
+      @endif
 
 
+        
 
+           
 
 
     </ul>

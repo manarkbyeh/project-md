@@ -56,6 +56,7 @@ Route::POST('/article/search', 'articlesController@search')->name('article.searc
 Route::get('/article', 'articlesController@index')->name('article');
 
 Route::get('/myarticles', 'articlesController@myarticles')->name('article.myarticles');
+Route::get('/myorders', 'articlesController@myOrders')->name('article.myOrders');
 
 
 

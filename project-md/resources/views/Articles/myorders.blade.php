@@ -32,7 +32,6 @@
                 <p>{{strip_tags($article->text)}}</p>
                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
-                <a href="{{url('/article/'.$article->id.'/edit')}}"><img src="/images/edit.png" alt="">Edit</a>
                 <a href="{{url('/article/'.$article->id)}}"><img src="/images/garbage.png" alt="">View</a>
               </div>
             </div>

@@ -42,6 +42,8 @@
                 <h2>{{$article->title}}</h2>
                 <p>{{strip_tags($article->text)}}</p>
                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
+                @if(Auth::check() && (Auth::user()->id != $article->user_id))
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
               </div>
             </div>
           </a>

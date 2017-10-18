@@ -75,7 +75,7 @@
                 <a href="{{url('/article/'.$article->id)}}">
                         <div class="artikel">
                             <div class="foto">
-                                <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+                                <img src="{{asset('/images/'.$article->pic)}}" alt="munchie">
                             </div>
                             <div class="artikel-content">
                                 <p class="datum">{{$article->datum}}</p>
@@ -87,8 +87,9 @@
                                  <strong>
                                  {{ (strlen($article->locatie)>10) ? substr($article->locatie, 0, 10).'...' :$article->locatie}}</strong>
                                  </p>
-                                @if(Auth::check())
-    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success"> VERZOEK </a> @endif
+                         
+                @if(Auth::check() && (Auth::user()->id != $article->user_id))
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
                             </div>
                         </div>
                     </a>

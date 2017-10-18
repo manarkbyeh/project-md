@@ -53,7 +53,15 @@ class articlesController extends Controller
         return view('Articles.myarticles')->withArticles($articles)->withCategories($categories);
     }
     
-    
+    public function myOrders()
+    {
+        $articles = Article::selectRaw('*')
+        ->join('transactions', 'articles.id', '=', 'transactions.article_id')
+        ->where('transactions.user_reciever_id' , '=',Auth::User()->id)->get();
+        
+        $categories = Category::all();
+        return view('Articles.myorders')->withArticles($articles)->withCategories($categories);
+    }
     /**
     * Display a listing of the resource.
     *
