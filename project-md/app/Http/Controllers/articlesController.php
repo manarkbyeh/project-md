@@ -13,9 +13,14 @@ use App\Article;
 use App\Category;
 use App\User;
 use App\Http\Requests\ArticleRequest;
-
+use Carbon\Carbon;
 class articlesController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     
     /**
     * Display a listing of the resource.
@@ -24,8 +29,11 @@ class articlesController extends Controller
     */
     public function index()
     {
+        $current_date = Carbon::now();
         
-        $articles = Article::all();
+        $current_date = $current_date->toDateString();
+        $articles = Article::where('datum', '>=',  $current_date)->get();
+        
         $categories = Category::all();
         return view('Articles.index')->withArticles($articles)->withCategories($categories);
     }
@@ -94,7 +102,7 @@ class articlesController extends Controller
     {
         $this->validate($request, array(
         'title'         => 'required|max:255',
-        
+        'datum'         => 'required',
         'category_id'   => 'required|integer',
         'text'          => 'required'
         ));
@@ -111,6 +119,7 @@ class articlesController extends Controller
         
         $articles->title = $request->title;
         $articles->text = $request->text;
+        $articles->datum = $request->datum;
         $articles->category_id = $request->category_id;
         
         $articles->user_id = auth()->user()->id;
@@ -172,6 +181,7 @@ class articlesController extends Controller
         }
         
         $articles->title = $request->title;
+        $articles->datum = $request->datum;
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');
         

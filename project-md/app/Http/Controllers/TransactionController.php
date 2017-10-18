@@ -41,45 +41,55 @@ class TransactionController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
- 
+    
+    
     
     public function store(Request $request)
     {
-  
+        
+        $this->validate($request, array(
+        'datum'         => 'required',
+        'uur'           =>   'required',
+        'aantal'   => 'required|integer',
+        'comment'          => 'required'
+        
+        
+        ));
+        
         $transaction = new Transaction();
-
-
+        
+        
         $transaction->user_giver_id = $request->user_giver_id;
         $transaction->user_reciever_id = Auth::user()->id;
         $transaction->article_id = $request->article_id;
-        $transaction->aantal = $request->aantal;
-        $transaction->datum = $request->date;
+        $transaction->datum = $request->datum;
         $transaction->uur = $request->uur;
-        $transaction->comment = $request->text;
+        $transaction->aantal = $request->aantal;
+        $transaction->comment = $request->comment;
         
         if ($transaction->save()) {
-
+            
             $user_giver = User::find($request->user_giver_id);
             $user_reciever = User::find(Auth::user()->id);
-
+            
             Mail::send('emails.email_for_giver', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever], function ($message) use ($user_giver)
-                {
-
-                    $message->from('dailymunch1@gmail.com', 'DailyMunch');
-
-                    $message->to($user_giver['email'])->subject('DailyMunch');
-
+            {
+                
+                $message->from('dailymunch1@gmail.com', 'DailyMunch');
+                
+                $message->to($user_giver['email'])->subject('DailyMunch');
+                
             });
-
+            
             Mail::send('emails.email_for_reciever', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever], function ($message) use ($user_reciever)
-                {
-
-                    $message->from('dailymunch1@gmail.com', 'DailyMunch');
-
-                    $message->to($user_reciever['email'])->subject('DailyMunch');
-
+            {
+                
+                $message->from('dailymunch1@gmail.com', 'DailyMunch');
+                
+                $message->to($user_reciever['email'])->subject('DailyMunch');
+                
             });
-
+            
             session()->flash('success','Done .. !!');
             return redirect('/myarticles');
         }

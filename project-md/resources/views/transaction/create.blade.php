@@ -8,15 +8,16 @@
 </div>
 <div class="form-group  has-feedback">
   <label class=" control-label">Date : </label>
-  {{ Form::text('date',old('date'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
 </div>
 <div class="form-group  has-feedback">
   <label class=" control-label">uur : </label>
-  {{ Form::text('uur',old('uur'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::time('uur',old('uur'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
 </div>
+
 <div class="form-group  has-feedback">
   <label class=" control-label">commentaar: </label>
-  {{ Form::textarea('text',old('text'),array('class' =>'form-control','required' => ''))}}
+  {{ Form::textarea('comment',old('comment'),array('class' =>'form-control','required' => ''))}}
 </div>
 
 

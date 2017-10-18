@@ -11,24 +11,33 @@
         <a class="nav-link" href="{{url('/article')}}"> ARTICLE </a>
       </li>
 
+      @guest
+      <li class="nav-item" class="{{ Request::is('/login') ? " active " : " " }}">
+        <a class="nav-link" href="{{ url('/login') }}"> Login </a>
+      </li>
+      <li class="nav-item" class="{{ Request::is('/register') ? " active " : " " }}">
+        <a class="nav-link" href="{{ url('/register') }}"> Register </a>
+      </li>
+
+      @else
+
       <li class="nav-item" class="{{ Request::is('/articles') ? " active " : " " }}">
         <a class="nav-link" href="{{url('/myarticles')}}"> MY ARTICLE </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? " active " : " " }}">
         <a class="nav-link" href="{{url('/article/create')}}"> ADD ARTICLE </a>
       </li>
-
-      @guest
-      <li class="nav-item" class="{{ Request::is('/login') ? " active " : " " }}">
-        <a class="nav-link" href="/login"> Login </a>
-      </li>
-      <li class="nav-item" class="{{ Request::is('/register') ? " active " : " " }}">
-        <a class="nav-link" href="/register"> Register </a>
-      </li>
-
-      @else
       <li class="nav-item" class="{{ Request::is('/user/{id}') ? " active " : " " }}">
         <a class="nav-link" href="/user/{id}"> PROFILE </a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+document.getElementById('logout-form').submit();">Sign Out</a>
+
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          {{ csrf_field() }}
+        </form>
+
       </li>
       @endguest
 
