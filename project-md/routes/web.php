@@ -15,6 +15,17 @@
     return view('welcome');
 });*/
 
+Route::get('/about', function () {
+
+    return view('about');
+});
+
+Route::get('/werking', function () {
+
+    return view('werking');
+});
+
+
 Route::get('/','HomeController@index')->name('home.index');
 
 
@@ -55,3 +66,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/user/{id}','UsersController@show')->name('user.profile');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

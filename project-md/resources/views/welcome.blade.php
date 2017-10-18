@@ -83,7 +83,7 @@
                                 <p>{{ substr(strip_tags($article->text), 0, 100) }}{{ strlen(strip_tags($article->text)) > 30 ? "..." : "" }}</p>
                                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
                                 @if(Auth::check())
-    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success"> VERZOEK </a> @endif
                             </div>
                         </div>
                     </a>
@@ -105,49 +105,18 @@
     <section id="categorie">
         <div class="container">
             <div class="all-icons">
-                <div class="icon-wrapper ">
+
                 @foreach($categories as $category)
+                <div class="icon-wrapper ">
                     <a href="{{ url('article/category/'.$category->id) }}">
-                        <img src="/images/apple.png" alt="" class="icon">
+                        <img src="/images/{{$category->name}}.png" alt="" class="icon">
                         <h4>{{ $category->name }}</h4>
                     </a>
-                    @endforeach
-                </div>
- 
-                <div class="icon-wrapper">
-                    <a href="/">
-                        <img src="/images/carrot.png" alt="" class="icon">
-                        <h4>groenten</h4>
-                    </a>
-                </div>
 
-                <div class="icon-wrapper">
-                    <a href="/">
-                        <img src="/images/meat.png" alt="" class="icon">
-                        <h4>vlees</h4>
-                    </a>
                 </div>
+                @endforeach
 
-                <div class="icon-wrapper">
-                    <a href="/">
-                        <img src="/images/chocolate.png" alt="" class="icon">
-                        <h4>snacks</h4>
-                    </a>
-                </div>
 
-                <div class="icon-wrapper">
-                    <a href="/">
-                        <img src="/images/coffee-cup.png" alt="" class="icon">
-                        <h4>drinken</h4>
-                    </a>
-                </div>
-
-                <div class="icon-wrapper">
-                    <a href="/">
-                        <img src="/images/apple.png" alt="" class="icon">
-                        <h4>andere</h4>
-                    </a>
-                </div>
             </div>
         </div>
     </section>

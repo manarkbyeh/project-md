@@ -12,7 +12,7 @@
 
         <h1>Profiel</h1>
 
-        <div class="profiel">  <a href="{{url('')}}"><img src="/images/edit.png" alt=""></a>
+        <div class="profiel">
             <div class="profiel-foto">
 
             </div>
