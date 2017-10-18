@@ -1,27 +1,11 @@
 @extends('main') @section('title', '| Edit Blog Post') @section('content')
 
-<<<<<<< HEAD
-<h2 class="page_title">Edit Article </h2>
-<div class="row">
-  {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!} {!! Form::model($articles,['route'=>['article.update',$articles->id],'method' => 'PATCH','files'=>true]) !!} {{ Form::label('title', 'Title:')
-  }} {{ Form::text('title', old('title'), ["class" => 'form-control input-lg']) }} {{ Form::date('datum',old('datum'),array('class' =>'form-control '))}} {{ Form::label('text', "Body:", ['class' => 'form-spacing-top']) }} {{ Form::textarea('text',old('text'),
-  ['class' => 'form-control']) }}
-  <div class="form-group">
-    <label class=" control-label">Category : </label>
-    <select class="form-control" name="category_id">
-      @foreach($categories as $category)
-      <option value='{{ $category->id }}'>{{ $category->name }}</option>
-      @endforeach
-    </select>
-  </div>
-=======
   <div class="container">
     <br>
     <br>
     <br>
     <br>
     <br>
->>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
 
 
     <h2 class="page_title green">Munchie Wijzigen</h2>
@@ -34,18 +18,7 @@
     {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!}
 
 
-    <div class="form-group  has-feedback">
-      <label class="control-label">Foto</label>
-      <div class="input-group" id="img" style="padding:0 ">
-        <input type="text" class="form-control" readonly="true" />
-        <label class="input-group-btn" style="display: table-cell;">
-        <span class="btn btn-success">Browse&hellip;
-          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
-        </span>
-        </label>
-      </div>
-      <small id="fileHelp" class="form-text text-muted">Kies hier een afbeelding voor uw munchie.</small>
-    </div>
+    {{ Form::label('pic','image post:',["class" => 'form-space'])}} {{ Form::file('pic')}}
 
 
 

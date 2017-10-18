@@ -27,6 +27,7 @@
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">Browse&hellip;
           <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
+      
         </span>
         </label>
       </div>
@@ -47,25 +48,8 @@
 
 
 <div class="form-group  has-feedback">
-<<<<<<< HEAD
-  <label class=" control-label">Inhoud: </label>
-  {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => ''))}}
-</div>
-<div class="form-group  has-feedback">
-  <label class=" control-label"> Expire Date : </label>
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
-</div>
-<div class="form-group">
-  <label class=" control-label">Category : </label>
-  <select class="form-control" name="category_id">
-    @foreach($categories as $category)
-    <option value='{{ $category->id }}'>{{ $category->name }}</option>
-    @endforeach
-  </select>
-=======
   <label class=" control-label">Omschrijving </label>
   {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
->>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
 </div>
 
 

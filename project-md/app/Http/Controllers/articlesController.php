@@ -98,7 +98,7 @@ class articlesController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
-    public function store(ArticleRequest $request)
+    public function store(request $request)
     {
         $this->validate($request, array(
         'title'         => 'required|max:255',
@@ -122,11 +122,8 @@ class articlesController extends Controller
         $articles->title = $request->title;
         $articles->text = $request->text;
         $articles->datum = $request->datum;
-<<<<<<< HEAD
-=======
         $articles->locatie = $request->locatie;
         $articles->tijdstip = $request->tijdstip;
->>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
         $articles->category_id = $request->category_id;
         
         $articles->user_id = auth()->user()->id;
@@ -189,11 +186,8 @@ class articlesController extends Controller
         
         $articles->title = $request->title;
         $articles->datum = $request->datum;
-<<<<<<< HEAD
-=======
         $articles->locatie = $request->locatie;
         $articles->tijdstip = $request->tijdstip;
->>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');
         

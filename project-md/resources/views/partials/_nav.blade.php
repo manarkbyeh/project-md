@@ -11,49 +11,18 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
 
-<<<<<<< HEAD
-      @guest
-      <li class="nav-item" class="{{ Request::is('/login') ? " active " : " " }}">
-        <a class="nav-link" href="{{ url('/login') }}"> Login </a>
-      </li>
-      <li class="nav-item" class="{{ Request::is('/register') ? " active " : " " }}">
-        <a class="nav-link" href="{{ url('/register') }}"> Register </a>
-      </li>
-
-      @else
-
-      <li class="nav-item" class="{{ Request::is('/articles') ? " active " : " " }}">
-        <a class="nav-link" href="{{url('/myarticles')}}"> MY ARTICLE </a>
-      </li>
-      <li class="nav-item" class="{{ Request::is('/articles') ? " active " : " " }}">
-        <a class="nav-link" href="{{url('/article/create')}}"> ADD ARTICLE </a>
-      </li>
-      <li class="nav-item" class="{{ Request::is('/user/{id}') ? " active " : " " }}">
-        <a class="nav-link" href="/user/{id}"> PROFILE </a>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-document.getElementById('logout-form').submit();">Sign Out</a>
-
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-          {{ csrf_field() }}
-        </form>
-
-      </li>
-      @endguest
-=======
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" class="{{ Request::is('/') ? "active" : " " }}">
-        <a class="nav-link" href="/"> HOME </a>
+        <a class="nav-link" href="{{ route('home.index') }}"> HOME </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/articles"> ABOUT </a>
+        <a class="nav-link" href="{{ route('article.index') }}"> ABOUT </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/articles"> WERKING </a>
+        <a class="nav-link" href="{{ route('article.index') }}"> WERKING </a>
       </li>
       <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-        <a class="nav-link" href="/articles"> MUNCHIES </a>
+        <a class="nav-link" href="{{ route('article.index') }}"> MUNCHIES </a>
       </li>
 
       <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
@@ -74,7 +43,6 @@ document.getElementById('logout-form').submit();">Sign Out</a>
 
         </li>
         @endguest
->>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
 
 
 

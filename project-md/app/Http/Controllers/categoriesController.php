@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use Image;
 use Session;
 
 class categoriesController extends Controller
@@ -39,11 +40,23 @@ class categoriesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
+            'pic' =>'required|image|mimes:jpeg,png,jpg,gif|',
             'name' => 'required|max:255'
             ));
+        
 
         $category = new Category;
+      
+        if ($request->hasFile('pic')) {
 
+            $pic = $request->file('pic');
+          
+            
+            $fileName = time() . '.'.$pic->getClientOriginalExtension();
+            if (Image::make($pic)->save(public_path('images/'.$fileName))) {
+                $category->pic = $fileName;
+            }
+        }
         $category->name = $request->name;
         $category->save();
 

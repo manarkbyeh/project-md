@@ -6,11 +6,12 @@
         <div class="container">
             <h1 class="display-3">Welkom bij MunchDaily!</h1>
             <h5>MunchDaily geeft de mogelijkheid om het te veel aan voedsel aan iemand anders te schenken.</h5>
-            <p><a class="btn btn-success btn-lg btn-hero" href="/article/create" role="button">GEVEN</a>
-                <a class="btn btn-warning btn-lg btn-hero" href="/articles" role="button">ONTVANGEN</a></p>
+            <p><a class="btn btn-success btn-lg btn-hero" href="{{ route('article.create') }}" role="button">GEVEN</a>
+                <a class="btn btn-warning btn-lg btn-hero" href="{{ route('article.index') }}" role="button">ONTVANGEN</a></p>
         </div>
     </div>
 </section>
+
 
 @section('content')
 
@@ -78,9 +79,11 @@
                             </div>
                             <div class="artikel-content">
                                 <p class="datum">{{$article->datum}}</p>
-                                <h2>{{$article->title}}</h2>
-                                <p>{{strip_tags($article->text)}}</p>
+                                <h2>{{ substr(strip_tags($article->title), 0, 30) }}{{ strlen(strip_tags($article->title)) > 30 ? "..." : "" }}</h2>
+                                <p>{{ substr(strip_tags($article->text), 0, 100) }}{{ strlen(strip_tags($article->text)) > 30 ? "..." : "" }}</p>
                                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
+                                @if(Auth::check())
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
                             </div>
                         </div>
                     </a>
@@ -93,7 +96,7 @@
             </div>
 
                 <div class="text-center">
-                    <p><a class="btn btn-warning btn-lg" href="/articles" role="button">BEKIJK ALLE MUNCHIES</a></p>
+                    <p><a class="btn btn-warning btn-lg" href="{{ route('article.index') }}" role="button">BEKIJK ALLE MUNCHIES</a></p>
                 </div>
 
         </div>
@@ -103,12 +106,14 @@
         <div class="container">
             <div class="all-icons">
                 <div class="icon-wrapper ">
-                    <a href="/">
+                @foreach($categories as $category)
+                    <a href="{{ url('article/category/'.$category->id) }}">
                         <img src="/images/apple.png" alt="" class="icon">
-                        <h4>fruit</h4>
+                        <h4>{{ $category->name }}</h4>
                     </a>
+                    @endforeach
                 </div>
-
+ 
                 <div class="icon-wrapper">
                     <a href="/">
                         <img src="/images/carrot.png" alt="" class="icon">
@@ -150,15 +155,20 @@
     <section id="zoekveld">
         <div class="container">
 
-            <form class="form-inline">
+         
+            <form action="{{url('/article/search')}}"  class="form-inline"  method="post">
+                 {!! csrf_field() !!}
                 <div class="col-sm-12">
                     <h1 class="orange" id="search">Niet gevonden waar je naar opzoek was?</h1>
+             
                     <div class="form-group">
-                        <input type="text" placeholder="Typ het hier en wij helpen zoeken" class="form-control form-control-lg textfield_form" >
-                        <a class="btn btn-warning btn-lg" href="#" role="button">ZOEKEN</a>
+                        <input type="text" placeholder="Typ het hier en wij helpen zoeken" class="form-control form-control-lg textfield_form" name="search" >
+                     
+                        
+                        <button type="submit" class="btn btn-warning btn-lg" >ZOEKEN!</button>
                     </div>
                 </div>
-            </form>
+                </form>
         </div>
 
 

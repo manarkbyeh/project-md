@@ -25,10 +25,14 @@
 
   <div class="col-md-3">
     <div class="well">
-      {!! Form::open(['route' => 'categories.store', 'method' => 'POST']) !!}
-      <h2>New Category</h2> {{ csrf_field() }} {{ Form::label('name', 'Name:') }} {{ Form::text('name', null, ['class' => 'form-control']) }} {{ Form::submit('Create New Category', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }} {!! Form::close() !!}
+   
+      {!! Form::open(array('route' => 'categories.store', 'data-parsley-validate' => '', 'files' => true)) !!}
+      <h2>New Category</h2> {{ csrf_field() }} 
+      {{ Form::label('pic', 'Upload a Featured Image') }} {{ Form::file('pic') }}
+      {{ Form::label('name', 'Name:') }} {{ Form::text('name', null, ['class' => 'form-control']) }}
+       {{ Form::submit('Create New Category', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }} {!! Form::close() !!}
     </div>
   </div>
 </div>
 
-@endsection
+@endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection
