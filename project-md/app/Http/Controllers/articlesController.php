@@ -104,7 +104,9 @@ class articlesController extends Controller
         'title'         => 'required|max:255',
         'datum'         => 'required',
         'category_id'   => 'required|integer',
-        'text'          => 'required'
+        'text'          => 'required',
+        'locatie'       => 'required',
+        'tijdstip'      => 'required'
         ));
         
         $articles = new Article();
@@ -120,6 +122,11 @@ class articlesController extends Controller
         $articles->title = $request->title;
         $articles->text = $request->text;
         $articles->datum = $request->datum;
+<<<<<<< HEAD
+=======
+        $articles->locatie = $request->locatie;
+        $articles->tijdstip = $request->tijdstip;
+>>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
         $articles->category_id = $request->category_id;
         
         $articles->user_id = auth()->user()->id;
@@ -182,6 +189,11 @@ class articlesController extends Controller
         
         $articles->title = $request->title;
         $articles->datum = $request->datum;
+<<<<<<< HEAD
+=======
+        $articles->locatie = $request->locatie;
+        $articles->tijdstip = $request->tijdstip;
+>>>>>>> 232f49e662bbbc2b8c2320066660948992c5bc3f
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');
         
