@@ -53,7 +53,7 @@ class categoriesController extends Controller
           
             
             $fileName = time() . '.'.$pic->getClientOriginalExtension();
-            if (Image::make($pic)->save(public_path('images/'.$fileName))) {
+            if (Image::make($pic)->resize(200, 200)->save(public_path('images/'.$fileName))) {
                 $category->pic = $fileName;
             }
         }

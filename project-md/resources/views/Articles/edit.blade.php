@@ -18,8 +18,21 @@
     {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!}
 
 
-    {{ Form::label('pic','image post:',["class" => 'form-space'])}} {{ Form::file('pic')}}
 
+
+    <div class="form-group  has-feedback">
+      <label class="control-label">Foto</label>
+      <div class="input-group" id="img" style="padding:0 ">
+        <input type="text" class="form-control" readonly="true" />
+        <label class="input-group-btn" style="display: table-cell;">
+        <span class="btn btn-success">Browse&hellip;
+          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
+      
+        </span>
+        </label>
+      </div>
+      <small id="fileHelp" class="form-text text-muted">Kies hier een afbeelding voor uw munchie.</small>
+    </div>
 
 
 

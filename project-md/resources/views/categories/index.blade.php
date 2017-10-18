@@ -28,7 +28,22 @@
    
       {!! Form::open(array('route' => 'categories.store', 'data-parsley-validate' => '', 'files' => true)) !!}
       <h2>New Category</h2> {{ csrf_field() }} 
-      {{ Form::label('pic', 'Upload a Featured Image') }} {{ Form::file('pic') }}
+ 
+
+      <div class="form-group  has-feedback">
+      <label class="control-label">Foto</label>
+      <div class="input-group" id="img" style="padding:0 ">
+        <input type="text" class="form-control" readonly="true" />
+        <label class="input-group-btn" style="display: table-cell;">
+        <span class="btn btn-success">Browse&hellip;
+          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
+      
+        </span>
+        </label>
+      </div>
+      <small id="fileHelp" class="form-text text-muted">Kies hier een afbeelding voor uw munchie.</small>
+    </div>
+
       {{ Form::label('name', 'Name:') }} {{ Form::text('name', null, ['class' => 'form-control']) }}
        {{ Form::submit('Create New Category', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }} {!! Form::close() !!}
     </div>

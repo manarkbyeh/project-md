@@ -75,9 +75,9 @@ class articlesController extends Controller
     public function search(Request $request)
     {
         
-        $articles = Article::where('title' ,'like','%'.$request->search.'%')
+        $articles = Article::where('title' ,'like','%'.$request->search.'%')->orWhere('locatie','like','%'.$request->search.'%')->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
         ->orWhere('category_id','=',Category::where('name'  ,'like','%'.$request->search.'%')->pluck('id')->first())->get();
-        session()->flash('success','results for '.$request->search);
+       
             $categories = Category::all();
         return view('Articles.index')->withArticles($articles)->withCategories($categories);
     }
@@ -98,7 +98,7 @@ class articlesController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
-    public function store(request $request)
+    public function store(ArticleRequest $request)
     {
         $this->validate($request, array(
         'title'         => 'required|max:255',
@@ -173,6 +173,8 @@ class articlesController extends Controller
     */
     public function update(ArticleRequest $request, $id)
     {
+
+            
         
         $articles = Article::find($id);
         if($request->hasFile('pic')){
