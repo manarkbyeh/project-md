@@ -13,10 +13,7 @@ class HomeController extends Controller
     *
     * @return void
     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     
     /**
     * Show the application dashboard.
@@ -27,7 +24,8 @@ class HomeController extends Controller
     {
 
 
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->limit(3)->get();
+  
 
         $categories = Category::all();
         return view('welcome')->withArticles($articles)->withCategories($categories);

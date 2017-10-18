@@ -20,6 +20,7 @@
 
 
 
+
     <div class="form-group  has-feedback">
       <label class="control-label">Foto</label>
       <div class="input-group" id="img" style="padding:0 ">

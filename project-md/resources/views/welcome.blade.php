@@ -113,12 +113,12 @@
 
                 @foreach($categories as $category)
                 <div class="icon-wrapper ">
+               
                     <a href="{{ url('article/category/'.$category->id) }}">
-<<<<<<< HEAD
-                        <img src="{{url('/images/'.$category->pic)}}" alt="" class="icon">
-=======
-                        <img src="/images/{{$category->name}}.png" alt="" class="icon">
->>>>>>> 7d98db379548cd8a8c96ef8fa0d6fde3c6504e53
+                       
+                        <div class="foto-category">
+                        <img src=" {{url('/images/'.$category->pic)}}" alt="" class="icon">
+                            </div>
                         <h4>{{ $category->name }}</h4>
                     </a>
 

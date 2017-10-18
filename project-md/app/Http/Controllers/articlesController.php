@@ -12,7 +12,8 @@ use Image;
 use App\Article;
 use App\Category;
 use App\User;
-use App\Http\Requests\ArticleRequest;
+use App\Http\Requests\CreateRequest;
+use App\Http\Requests\EditRequest;
 use Carbon\Carbon;
 class articlesController extends Controller
 {
@@ -32,7 +33,7 @@ class articlesController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        $articles = Article::where('datum', '>=',  $current_date)->get();
+        $articles = Article::where('datum', '>=',  $current_date)->limit(4)->get();
         
         $categories = Category::all();
         return view('Articles.index')->withArticles($articles)->withCategories($categories);
@@ -98,16 +99,9 @@ class articlesController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
-    public function store(ArticleRequest $request)
+    public function store(CreateRequest $request)
     {
-        $this->validate($request, array(
-        'title'         => 'required|max:255',
-        'datum'         => 'required',
-        'category_id'   => 'required|integer',
-        'text'          => 'required',
-        'locatie'       => 'required',
-        'tijdstip'      => 'required'
-        ));
+    
         
         $articles = new Article();
         if ($request->hasFile('pic')) {
@@ -171,7 +165,7 @@ class articlesController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(ArticleRequest $request, $id)
+    public function update(EditRequest $request, $id)
     {
 
             
