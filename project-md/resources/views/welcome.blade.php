@@ -89,7 +89,7 @@
                                  </p>
                          
                 @if(Auth::check() && (Auth::user()->id != $article->user_id))
-    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">VERZOEK</a> @endif
                             </div>
                         </div>
                     </a>
@@ -117,9 +117,9 @@
                
                     <a href="{{ url('article/category/'.$category->id) }}">
                        
-                        <div class="foto-category">
+
                         <img src=" {{url('/images/'.$category->pic)}}" alt="" class="icon">
-                            </div>
+
                         <h4>{{ $category->name }}</h4>
                     </a>
 

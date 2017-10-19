@@ -17,7 +17,6 @@ class CreateTransactionsTable extends Migration
             $table->increments('id');
             $table->integer("user_giver_id");
             $table->integer("user_reciever_id");
-            $table->integer("aantal");
             $table->integer("article_id");
             $table->date('datum');
             $table->string("comment");

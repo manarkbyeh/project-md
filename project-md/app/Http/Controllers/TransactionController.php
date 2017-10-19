@@ -50,7 +50,6 @@ class TransactionController extends Controller
         $this->validate($request, array(
         'datum'         => 'required',
         'uur'           =>   'required',
-        'aantal'   => 'required|integer',
         'comment'          => 'required'
         
         
@@ -64,7 +63,6 @@ class TransactionController extends Controller
         $transaction->article_id = $request->article_id;
         $transaction->datum = $request->datum;
         $transaction->uur = $request->uur;
-        $transaction->aantal = $request->aantal;
         $transaction->comment = $request->comment;
         
         if ($transaction->save()) {

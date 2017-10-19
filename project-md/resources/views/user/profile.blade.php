@@ -21,7 +21,7 @@
                 <p>{{$user->email}}</p>
                 <p>
                     <a class="btn btn-success " href="{{ route('article.myarticles', $user->id) }}" role="button">Mijn munchies</a>
-                    <a class="btn btn-warning " href="{{ route('article.index', $user->id) }}" role="button">Mijn transacties</a>
+                    <a class="btn btn-warning " href="{{ route('article.myOrders', $user->id) }}" role="button">Mijn transacties</a>
                 </p>
 
             </div>

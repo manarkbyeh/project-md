@@ -10,11 +10,11 @@
 
 
       <p>
-        <a href="/" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn munchies
+        <a href="/" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn verzoeken
       </p>
 
       <div class="row">
-        <h1 class="orange col-md-6" id="search">Mijn munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
+        <h1 class="orange col-md-6" id="search">Mijn verzoeken</h1>
       </div>
       <div class="row">
 
@@ -31,8 +31,6 @@
                 <h2>{{$article->title}}</h2>
                 <p>{{strip_tags($article->text)}}</p>
                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
-
-                <a href="{{url('/article/'.$article->id)}}"><img src="/images/garbage.png" alt="">View</a>
               </div>
             </div>
           </a>
@@ -41,6 +39,7 @@
 
 
     </div>
+      </div>
   </section>
 
 @endsection

@@ -15,7 +15,7 @@
     <div class="row">
 
 
-      <h1 class="orange col-md-6" id="search">Munchies</h1>
+      <h1 class="orange col-md-6" id="search">Munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
 
       <p class="col-md-6 cat">
         <a href="" class="green">alles</a>
@@ -43,7 +43,7 @@
                 <p>{{strip_tags($article->text)}}</p>
                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
                 @if(Auth::check() && (Auth::user()->id != $article->user_id))
-    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">Order &rarr;</a> @endif
+    <a href="{{url('/article/transaction/'.$article->id)}}" class="btn btn-success">VERZOEK</a> @endif
               </div>
             </div>
           </a>
