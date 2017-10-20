@@ -1,149 +1,157 @@
+
 body {
+
     /*padding-top: 4%;*/
-    font-family: Roboto, sans-serif;
+    font-family: Roboto,sans-serif;
     /*    font-family: Roboto !important;
         font-size: 8pt !important;
         font-weight: 200 !important;*/
     background-color: #F4F4F4;
+
 }
 
-* {
-    border-radius: 0!important;
+*{
+    border-radius:0!important;
 }
 
-#vandaag {
-    height: 1300px;
+.container.extra{
+    margin-top:10em;
 }
 
-#vandaag .btn-warning {
-    margin-top: 2em;
+#vandaag{
+
+    height:auto;
 }
 
-h1 {
-    padding-top: 1em;
+#vandaag .btn-warning{
+
+    margin-top:2em;
+    margin-bottom:2em;
 }
 
 
 /*----------ARTIKEL-------*/
 
-.artikel {
-    width: 300px;
-    margin-top: 4em;
+.artikel{
+    width:300px;
+    margin-top:4em;
 }
 
-.foto img {
-    width: 300px;
-    height: 200px;
+.foto img{
+    width:300px;
+    height:200px;
+
 }
 
-.foto-category {
-    width: 10px;
-    height: 10px;
-}
 
-.artikel-content {
-    background-color: #FFFFFF;
-    padding: 1em 2em;
-    text-align: center;
+.artikel-content{
+    background-color:#FFFFFF;
+    padding:1em 2em;
+    text-align:center;
 }
-
 
 /*-------VERGELIJLBAAR------*/
 
-.artikel-ver {
-    width: 230px;
-    margin-bottom: 2em;
-    margin-top: 2em;
+.artikel-ver{
+
+    width:230px;
+    margin-bottom:2em;
+    margin-top:2em;
+
 }
 
-.artikel-content-ver p {
-    margin-bottom: 0;
+.artikel-content-ver p{
+    margin-bottom:0;
 }
 
-.artikel-content-ver h4 {
+.artikel-content-ver h4{
     padding: 0.5em 0;
 }
 
-.foto-ver img {
-    width: 230px;
-    height: 150px;
+.foto-ver img{
+    width:230px;
+    height:150px;
 }
 
-.artikel-content-ver {
-    background-color: #FFFFFF;
-    text-align: center;
-    padding: 1em;
-}
 
+.artikel-content-ver{
+    background-color:#FFFFFF;
+    text-align:center;
+    padding:1em;
+}
 
 /*---*/
 
-.rechts {
-    float: right;
-    padding: 1em;
-    color: #E69723;
+
+.rechts{
+    float:right;
+    padding:1em;
+    color:#E69723;
     text-decoration: underline;
 }
 
-a {
-    color: #000000;
+a{
+    color:#000000;
 }
 
-a:hover {
-    color: #1C9B48;
+a:hover{
+    color:#1C9B48;
 }
 
-.logo {
-    width: 70%;
-    height: 70%;
+.logo{
+    width:70%;
+    height:70%;
 }
 
-.container {
-    margin-top: 3%;
+.container.home{
+    margin-top:3%;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
+.navbar-dark .navbar-nav .nav-link{
+    color:white;
+
 }
+
 
 .hero-front-page img {
     /* margin-bottom: -3.3%; */
 }
 
-.jumbotron h5,
-.jumbotron p {
-    padding-top: 1em;
-    padding-bottom: 1em;
+.jumbotron h5, .jumbotron p{
+    padding-top:1em;
+    padding-bottom:1em;
 }
 
-.btn-hero {
+.btn-hero{
     margin: 0 2em;
 }
 
-.btn-success {
-    background-color: #1C9B48;
-    border-color: #1C9B48;
+.btn-success{
+    background-color:#1C9B48;
+    border-color:#1C9B48;
 }
 
-.btn-warning {
-    background-color: #E69723;
-    border-color: #E69723;
+.btn-warning{
+    background-color:#E69723;
+    border-color:#E69723;
 }
 
-.btn-warning:hover {
-    background-color: #d38a1f;
-    border-color: #d38a1f;
-    color: #FFFFFF;
+.btn-warning:hover{
+    background-color:#d38a1f;
+    border-color:#d38a1f;
+    color:#FFFFFF;
 }
 
-.jumbotron h1,
-.jumbotron p,
-.jumbotron h5 {
-    text-align: center;
-    color: #FFFFFF;
+.jumbotron h1, .jumbotron p, .jumbotron h5{
+    text-align:center;
+    color:#FFFFFF;
 }
 
-.jumbotron {
+.jumbotron h1{
+    padding-top:1em;
+}
+
+.jumbotron{
     background-image: url("../images/MDhero2.jpg");
     margin-bottom: 0;
     min-height: 50%;
@@ -151,45 +159,50 @@ a:hover {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    background-color: #000000;
+    background-color:#000000;
 }
 
-#doel-text {
+#doel-text{
+    background-color:#E69723;
+    padding:2em;
+    color:#FFFFFF;
+}
+
+#doel-text .btn-warning{
+    border-color:#FFFFFF;
+    margin-top:2em;
+}
+
+#doel-icons .icon-wrapper{
+    margin-top:0;
+}
+
+#search{
+    margin-bottom:2em;
+}
+
+
+.btn{
+    color:#FFFFFF;
+}
+
+.bg-dark{
+    background-color:#000000!important;
+}
+
+.row.categorie{
+    background-color:#1C9B48;
+    padding:60px 20px 60px 20px;
+    text-align:center;
+    color:white;
+}
+
+.bg-orange{
     background-color: #E69723;
-    padding: 3em;
-    color: #FFFFFF;
 }
 
-#doel-text .btn-warning {
-    border-color: #FFFFFF;
-    margin-top: 2em;
-}
-
-#search {
-    margin-bottom: 2em;
-}
-
-.btn {
-    color: #FFFFFF;
-}
-
-.bg-dark {
-    background-color: #000000!important;
-}
-
-.row.categorie {
-    background-color: #1C9B48;
-    padding: 60px 20px 60px 20px;
-    text-align: center;
-    color: white;
-}
-
-.bg-orange {
-    background-color: #E69723;
-}
-
-.orange {
-    color: #E69723;
+.orange{
+    color:#E69723;
 }
 
 
@@ -197,6 +210,7 @@ a:hover {
 
 .all-icons {
     text-align: center;
+
 }
 
 .icon-wrapper {
@@ -212,109 +226,145 @@ a:hover {
     color: white;
 }
 
-.details .icon-wrapper p {
-    color: black;
+.details .icon-wrapper p{
+    color:black;
+    margin-top:0.5em;
+}
+
+.icon-wrapper h4, h3{
     margin-top: 0.5em;
 }
 
-.icon-wrapper h4,
-h3 {
-    margin-top: 0.5em;
-}
-
-.icon-wrapper h4 {
-    color: #1C9B48;
+.icon-wrapper h4{
+    color:#1C9B48;
 }
 
 
 /*-------------------------*/
 
-#categorie {
-    padding: 6rem 0;
-    background-color: #1C9B48;
+#categorie{
+
+    background-color:#1C9B48;
 }
 
-#categorie h4 {
-    color: #FFFFFF;
+#categorie h4{
+    color:#FFFFFF;
 }
 
-a:hover {
+a:hover{
     text-decoration: none;
 }
 
 
 /*------------- ZOEKVELD -------------*/
 
-#zoekveld {
-    height: 400px;
-    margin-top: 6em;
-    text-align: center;
+
+#zoekveld{
+    height: auto;
+    margin:6rem 0;
+    text-align:center;
 }
 
-#zoekveld h1 {
-    text-align: center;
+#zoekveld h1{
+    text-align:center;
 }
 
-.textfield_form {
-    width: 900px!important;
-    padding: 20px;
+.textfield_form{
+    width:80%!important;
+    padding:1.2rem;
 }
 
-.btn-lg {
+.btn.btn-lg{
     padding: 1.2rem 3rem;
 }
+
+.btn{
+    padding: 0.5rem 1.5rem;
+}
+
+#vandaag .btn{
+    margin: 0.5rem;
+}
+
+#vandaag .btn.btn-lg{
+    margin:2rem;
+}
+
 
 
 /*------------- MUNCHIE -------------*/
 
-.munchie-foto img {
-    height: 330px;
-    width: 640px;
+.munchie.btn-success{
+    margin-bottom:2em;
 }
 
-.munchie-content {
-    height: 460px;
-    width: 640px;
-    background-color: white;
-    text-align: center;
+.munchie-foto img{
+    height:350px;
+    width:640px;
+
 }
 
-.green {
-    color: #1C9B48;
+.munchie-content{
+    height:auto;
+    width:640px;
+    background-color:white;
+    text-align:center;
+    padding:2em;
+
 }
+
+.green{
+    color:#1C9B48;
+}
+
+
 
 
 /*------------- PROFIEL -------------*/
 
-.profiel-foto {
-    height: 280px;
-    width: 20%;
-    background-color: gray;
-    display: inline-block;
+.profiel-foto img{
+    height:auto;
+    width:30%;
+    display:inline-block;
+    float:left;
+
+}
+
+.profiel{
+    background-color:white;
+    min-height:300px;
+
+    display:block;
 }
 
 .profiel-content {
-    height: 280px;
-    background-color: white;
+    height: auto;
+
     display: inline-block;
-    width: 78%;
-    padding-left: 150px;
-    padding-top: 5em;
+    width: 70%;
+    padding: 3em 5em;
     vertical-align: top;
 }
 
-.berichten {
-    margin-top: 2em;
-    width: 640px;
-    background-color: #FFFFFF;
+
+.berichten{
+    margin-top:2em;
+    width:640px;
+    background-color:#FFFFFF;
+
 }
 
-p.cat {
-    display: table-cell;
+.cat{
+    padding-top:0.5em;
+
+}
+.cat p{
+    display:inline;
     vertical-align: middle;
-    padding: 55px;
+    padding-right:0.5em;
 }
 
+<<<<<<< HEAD
 .profiel {
     height: 400px;
 }
@@ -331,4 +381,19 @@ p.cat {
     height: 400px;
     margin-top: 6em;
     text-align: center;
+=======
+.cat img{
+    width:2em;
+    height:2em;
+}
+
+
+
+.footer{
+    clear:both;
+    position:relative;
+    width:100%;
+    display:inline-block;
+    margin-top:10%;
+>>>>>>> 85dd9a71d312a5c3db4282e6ba4e7448cbe20dca
 }
