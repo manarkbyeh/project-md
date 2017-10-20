@@ -21,6 +21,8 @@ class CreateArticlesTable extends Migration
             $table->string("locatie");
             $table->date('datum');
             $table->string("tijdstip");
+            $table->string("littude");
+            $table->string("latitud");
             $table->integer("user_id");
             $table->integer("active")->default(0);
             $table->timestamps();

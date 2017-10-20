@@ -60,3 +60,5 @@
         }
     );
     </script> 
+  <script src="{{ asset('http://maps.google.com/maps/api/js') }}"></script>
+  <script src="{{ asset('js/gmaps.min.js') }}"></script>
