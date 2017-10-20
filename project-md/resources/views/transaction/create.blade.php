@@ -1,10 +1,8 @@
 @extends('main') @section('title', '| Create New Post') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
 
-  <br>
-  <br>
-  <br>
 
-  <div class="container">
+
+  <div class="container extra">
 <h1 class="">Verzoek<small> {{ $article->title }} </small></h1>
 
     <p class="lead">

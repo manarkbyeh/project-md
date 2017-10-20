@@ -1,10 +1,6 @@
 @extends('main') @section('content')
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <div class="container">
+    <div class="container extra">
 
 
 
