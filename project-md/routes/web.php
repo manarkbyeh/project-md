@@ -19,10 +19,7 @@ Route::get('/about', function () {
 
     return view('about');
 });
-Route::get('/about', function () {
 
-    return view('about');
-});
 Route::get('/werking', function () {
 
     return view('werking');
@@ -66,7 +63,7 @@ Route::get('/myorders', 'articlesController@myOrders')->name('article.myOrders')
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/user/{id}','UsersController@show')->name('user.profile');
