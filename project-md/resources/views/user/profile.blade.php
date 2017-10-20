@@ -4,17 +4,14 @@
 
 @section('content')
 
-    <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
+    <div class="container extra">
 
         <h1>Profiel</h1>
 
+
         <div class="profiel">
             <div class="profiel-foto">
-
+                <img src="/images/{{$user->pic}}" alt="">
             </div>
             <div class="profiel-content">
                 <p>{{$user->name}}</p>
@@ -25,6 +22,8 @@
                 </p>
 
             </div>
+
+
         </div>
 
 

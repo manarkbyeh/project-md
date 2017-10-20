@@ -1,12 +1,7 @@
 @extends('main') @section('title', '| Create New Post') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
 
 
-  <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <div class="container extra">
 
 
     <h2 class="page_title">Munchie Toevoegen</h2>

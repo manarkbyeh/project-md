@@ -4,11 +4,8 @@
 
 @section('content')
 
-    <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
+    <div class="container extra">
+
 
         <h1>WAT DOEN WIJ?</h1>
 

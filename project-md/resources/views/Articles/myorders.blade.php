@@ -1,12 +1,9 @@
 @extends('main') @section('title', '| Edit Blog Post') @section('content')
 
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <section id="vandaag">
-    <div class="container">
+    <div class="container extra">
 
 
       <p>
