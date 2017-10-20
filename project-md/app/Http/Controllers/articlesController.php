@@ -33,7 +33,7 @@ class articlesController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        $articles = Article::where('datum', '>=',  $current_date)->limit(6)->get();
+        $articles = Article::where('datum', '>=',  $current_date)->limit(4)->get();
         
         $categories = Category::all();
         return view('Articles.index')->withArticles($articles)->withCategories($categories);

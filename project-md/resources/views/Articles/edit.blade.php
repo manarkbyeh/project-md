@@ -1,6 +1,11 @@
 @extends('main') @section('title', '| Edit Blog Post') @section('content')
 
-  <div class="container extra">
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <h2 class="page_title green">Munchie Wijzigen</h2>

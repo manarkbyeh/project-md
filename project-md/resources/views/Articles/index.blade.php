@@ -4,29 +4,30 @@
 
 <!-- Blog Post -->
 <section id="vandaag">
-  <div class="container extra">
+  <div class="container">
 
-
+    <br>
+    <br>
+    <br>
+    <br>
     <p><a href="/" class="green">Home</a> > Munchies </p>
 
-
     <div class="row">
-      <h1 class="orange col-md-6">Munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
-
-      <div class="cat">
-            @foreach($categories as $category)
-                <a href="{{ url('article/category/'.$category->id) }}">
-                  <img src="/images/{{ $category->pic }} " alt="">
-                  <p>{{$category->name}}</p>
-                </a>
-            @endforeach
-      </div>
 
 
-   </div>
+      <h1 class="orange col-md-6" id="search">Munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
 
+      <p class="col-md-6 cat">
+        <a href="" class="green">alles</a>
+        <a href="">fruit</a>
+        <a href="">groenten</a>
+        <a href="">vlees</a>
+        <a href="">snacks</a>
+        <a href="">drinken</a>
+        <a href="">anderen</a>
+      </p>
 
-  <div class="container">
+    </div>
     <div class="row">
 
       @foreach($articles as $article)

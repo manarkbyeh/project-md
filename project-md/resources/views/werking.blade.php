@@ -4,7 +4,11 @@
 
 @section('content')
 
-    <div class="container extra">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
 
         <h1>WERKING</h1>
 

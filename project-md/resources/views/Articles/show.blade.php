@@ -1,8 +1,13 @@
 @extends('main') @section('title', '| View Article') @section('content')
 
 
-    <div class="container extra">
+    <div class="container">
 
+
+        <br>
+        <br>
+        <br>
+        <br>
 
         <p><a href="/" class="green">Home</a> > <a href="/articles" class="green">Munchies</a> > {{$articles->title}}</p>
         <br>

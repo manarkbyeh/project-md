@@ -1,7 +1,11 @@
 @extends('main') @section('content')
+    <br>
+    <br>
+    <br>
+    <br>
 
 
-    <div class="container extra">
+    <div class="container">
         <div class="panel panel-default">
             <h1>Registreren</h1>
             <div class="panel-body">
