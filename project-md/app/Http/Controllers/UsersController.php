@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     //
-    public function show($id){
-        return view('user.profile', ['user' => User::findOrFail($id)]);
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+      
+        return view('user.profile')->withUser($user);
     }
 
 

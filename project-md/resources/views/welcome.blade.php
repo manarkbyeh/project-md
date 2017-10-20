@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-3">Welkom bij MunchDaily!</h1>
-            <h5>MunchDaily geeft de mogelijkheid om het te veel aan voedsel aan iemand anders te schenken.</h5>
+            <h5>MunchDaily geeft de mogelijkheid om het teveel aan voedsel aan iemand anders te schenken.</h5>
             <p><a class="btn btn-success btn-lg btn-hero" href="{{ route('article.create') }}" role="button">GEVEN</a>
                 <a class="btn btn-warning btn-lg btn-hero" href="{{ route('article.index') }}" role="button">ONTVANGEN</a></p>
         </div>
@@ -21,21 +21,21 @@
             <div class="all-icons">
                 <div class="icon-wrapper ">
                     <a href="/">
-                        <img src="/images/waste.png" alt="" class="icon">
+                        <img src="images/waste.png" alt="" class="icon">
                         <h4>Stop voedselverspilling</h4>
                     </a>
                 </div>
 
                 <div class="icon-wrapper">
                     <a href="/">
-                        <img src="/images/world.png" alt="" class="icon">
+                        <img src="images/world.png" alt="" class="icon">
                         <h4>Zorg voor het milieu</h4>
                     </a>
                 </div>
 
                 <div class="icon-wrapper">
                     <a href="/">
-                        <img src="/images/family.png" alt="" class="icon">
+                        <img src="images/family.png" alt="" class="icon">
                         <h4>Maak anderen blij</h4>
                     </a>
                 </div>
@@ -46,11 +46,11 @@
 
     <section id="doel-text">
         <div class="container">
-        <h5>"Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wilt gooien, een betere plek kan
-        krijgen bij iemand anders. Door de mogelijkheid te creëren om eten weg te geven proberen we
+        <h5>"Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wil gooien, een betere plek 
+        verdient bij iemand anders. Door de mogelijkheid te creëren om eten weg te geven, proberen we
             voedselverspilling tegen te gaan.
         </h5>
-        <h5>Word ook lid en schenk je overschotten aan anderen die dit wel nodig hebben, zo help je mee
+        <h5>Word ook lid en schenk je overschotten aan anderen, die dit wel nodig hebben. Zo help je mee
         de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu zal je dankbaar zijn!
         </h5>
 
