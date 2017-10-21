@@ -33,33 +33,32 @@ class articlesController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        //$articles = Article::where('datum', '>=',  $current_date)->limit(6)->get();
-        $articles = Article::all();
-		
-		    $markers = [] ;
-			
-		    if($articles){
-			   
-			   foreach($articles as $key => $value ) : 
-			     
-				$marker = [ $value->id , $value->latlngLng , $value->latlngLat  ] ; 
-				
-				// push info to array 
-				$markers[] = $marker ; 
-				
-				unset($marker) ;
-				
-			   
-			   endforeach ;
-			   
-		    }
+        $articles = Article::where('datum', '>=',  $current_date)->where('active', '=', 0)->limit(6)->get();
+      
     
         $categories = Category::all();
         return view('Articles.index')->withArticles($articles)
-		->withCategories($categories)->withMarkers($markers);
+		->withCategories($categories);
     }
     
-    
+    public function active($id){
+        
+       
+            try{
+                $articles = Article::find($id);
+                if($articles){
+                    $articles->active = 1;
+                    $articles->save();
+                }else{
+                    echo 'false';
+                    exit;
+                }
+            }catch(Exception $e) {
+                echo 'false';
+            }
+            echo 'true';
+        
+    }
     /**
     * Display a listing of the resource.
     *
@@ -170,9 +169,10 @@ class articlesController extends Controller
     */
     public function show($id)
     {
-        $articles = Article::findOrFail($id);
+        $article = Article::findOrFail($id);
+        $articles = Article::where('category_id', '=', $article->category_id)->where('id', '!=', $article->id)->take(4)->get();
         $categories = Category::all();
-        return view('Articles.show')->withArticles($articles)->withCategories($categories);
+        return view('Articles.show')->withArticle($article)->withArticles($articles)->withCategories($categories);
     }
     
     /**

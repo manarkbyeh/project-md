@@ -107,7 +107,7 @@
       var markers = [];
 
       function initMap() {
-        var haightAshbury = {lat:51.2194, lng:4.4025};
+        var haightAshbury = {lat:50.5039, lng:4.4699};
 
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,

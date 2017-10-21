@@ -4,7 +4,7 @@
     <div class="container extra">
 
 
-        <p><a href="/" class="green">Home</a> > <a href="/articles" class="green">Munchies</a> > {{$articles->title}}</p>
+        <p><a href="/" class="green">Home</a> > <a href="/articles" class="green">Munchies</a> > {{$article->title}}</p>
         <br>
         <br>
 
@@ -12,16 +12,16 @@
             <div class="munchie col-md-8">
 
                 <div class="munchie-foto">
-                    <img src="{{url('/images/'.$articles['pic'])}}" alt="">
+                    <img src="{{url('/images/'.$article['pic'])}}" alt="">
                 </div>
                 <div class="munchie-content">
-                    <h1>{{$articles->title}}</h1>
-                    <p class="lead">{{strip_tags($articles->text)}} </p>
+                    <h1>{{$article->title}}</h1>
+                    <p class="lead">{{strip_tags($article->text)}} </p>
 
                     <div class="details">
                         <div class="icon-wrapper"><a href=""><img src="/images/carrot-black.png" alt="" class="icon"><p>groenten</p></a></div>
                         <div class="icon-wrapper"><a href=""><img src="/images/location.png" alt="" class="icon"><p>Deurne</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="/images/calendar.png" alt="" class="icon"><p>{{$articles->datum}}</p></a></div>
+                        <div class="icon-wrapper"><a href=""><img src="/images/calendar.png" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
                         <div class="icon-wrapper"><a href=""><img src="/images/clock.png" alt="" class="icon"><p>21:00 - 22:00 </p></a></div>
                     </div>
 
@@ -49,18 +49,18 @@
             <div class="vergelijkbaar col-md-4">
                 <h4>Vergelijkbare munchies</h4>
 
-                @foreach($articles as $article)
+                @foreach($articles as $art)
 
-                    <a href="/article/{{$articles->id}}">
+                    <a href="/article/{{$art->id}}">
                         <div class="artikel-ver">
                             <div class="foto-ver">
-                                <img src="{{url('/images/'.$articles['pic'])}}" alt="">
+                                <img src="{{url('/images/'.$art['pic'])}}" alt="">
                             </div>
 
                             <div class="artikel-content-ver">
-                                <p class="datum">{{$articles->datum}}</p>
-                                <h4>{{$articles->title}}</h4>
-                                <p class="datum_locatie">{{$articles->tijdstip}} <strong>{{$articles->locatie}}</strong></p>
+                                <p class="datum">{{$art->datum}}</p>
+                                <h4>{{$art->title}}</h4>
+                                <p class="datum_locatie">{{$art->tijdstip}} <strong>{{$art->locatie}}</strong></p>
                             </div>
                         </div>
                     </a>

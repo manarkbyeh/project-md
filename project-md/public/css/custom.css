@@ -359,3 +359,7 @@ a:hover {
 #map {
     height: 400px;
 }
+
+.orange {
+    background-color: #d38a1f;
+}
