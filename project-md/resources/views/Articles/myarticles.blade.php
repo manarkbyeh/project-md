@@ -25,7 +25,7 @@
               <div class="foto">
                 <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
               </div>
-              <div class="artikel-content @if( $article->active== 0) orange @endif">
+              <div class="artikel-content @if( $article->active== 0) deactiveren @endif">
                 <p class="datum">{{$article->datum}}</p>
                 <h2>{{$article->title}}</h2>
                 <p>{{strip_tags($article->text)}}</p>
@@ -35,7 +35,7 @@
                 <a href="{{url('/article/'.$article->id)}}"><img src="/images/garbage.png" alt=""></a>
                 @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
                 <span class="btn btn-primary btn-sm jsActive" data-id="{{$article->id}}">
-Active
+                Deactiveren 
 </span>
 @endif
               </div>

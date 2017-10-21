@@ -41,7 +41,7 @@
                     </div>
 
                 </div>
-
+                <div class="fb-comments" data-href="https://www.facebook.com/DailyMunch-146808462720538/?ref=settings/{{ $article->id }}" data-numposts="5"></div>
             </div>
 
 

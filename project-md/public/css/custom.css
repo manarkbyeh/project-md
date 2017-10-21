@@ -360,6 +360,8 @@ a:hover {
     height: 400px;
 }
 
-.orange {
-    background-color: #d38a1f;
+.deactiveren {
+    border: 1px solid #d38a1f;
+    background: #d38a1f;
+    color: white;
 }
