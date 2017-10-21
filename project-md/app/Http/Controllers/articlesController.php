@@ -124,9 +124,12 @@ class articlesController extends Controller
         $articles->title = $request->title;
         $articles->text = $request->text;
         $articles->datum = $request->datum;
-        $articles->locatie = $request->locatie;
+        $articles->latLngLat = $request->latLngLat;
+        $articles->latLngLng = $request->latLngLng;
+
         $articles->tijdstip = $request->tijdstip;
         $articles->category_id = $request->category_id;
+     
         
         $articles->user_id = auth()->user()->id;
         if ($articles->save()) {
@@ -190,7 +193,7 @@ class articlesController extends Controller
         
         $articles->title = $request->title;
         $articles->datum = $request->datum;
-        $articles->locatie = $request->locatie;
+    
         $articles->tijdstip = $request->tijdstip;
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');

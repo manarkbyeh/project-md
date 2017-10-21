@@ -1,8 +1,6 @@
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-<script src="js/main.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -10,6 +8,10 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
+<script src="{{ asset('js/main.js') }}"></script>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -45,20 +47,6 @@
         });
 
     </script>
-<script type="text/javascript">
-    CKEDITOR.replace( "text", {
-         toolbar :
-    [
-      { name: "basicstyles", items : [ "Bold","Italic" ] },
-      { name: "styles", items: [ "Format" ] },
-      { name: "colors",      items : [ "TextColor","BGColor" ] },
-      { name: "paragraph", groups: [ "list", "indent", "blocks", "align", "bidi" ], items: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote" ] },
-      { name: "tools", items : [ "Maximize","Source", "Undo", "Redo" ] },
-      { name: "links", items : ["Link","Unlink" ] }
-      
-    ]
-        }
-    );
-    </script> 
-  <script src="{{ asset('http://maps.google.com/maps/api/js') }}"></script>
-  <script src="{{ asset('js/gmaps.min.js') }}"></script>
+
+
+

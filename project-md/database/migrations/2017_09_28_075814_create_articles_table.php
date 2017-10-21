@@ -18,11 +18,10 @@ class CreateArticlesTable extends Migration
             $table->string("title");
             $table->string("pic")->default('default.jpg');
             $table->text("text");
-            $table->string("locatie");
-            $table->date('datum');
+             $table->date('datum');
             $table->string("tijdstip");
-            $table->string("littude");
-            $table->string("latitud");
+            $table->string("latlngLng");
+            $table->string("latlngLat");
             $table->integer("user_id");
             $table->integer("active")->default(0);
             $table->timestamps();
