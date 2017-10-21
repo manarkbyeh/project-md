@@ -33,10 +33,30 @@ class articlesController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        $articles = Article::where('datum', '>=',  $current_date)->limit(6)->get();
-        
+        //$articles = Article::where('datum', '>=',  $current_date)->limit(6)->get();
+        $articles = Article::all();
+		
+		    $markers = [] ;
+			
+		    if($articles){
+			   
+			   foreach($articles as $key => $value ) : 
+			     
+				$marker = [ $value->id , $value->latlngLng , $value->latlngLat  ] ; 
+				
+				// push info to array 
+				$markers[] = $marker ; 
+				
+				unset($marker) ;
+				
+			   
+			   endforeach ;
+			   
+		    }
+    
         $categories = Category::all();
-        return view('Articles.index')->withArticles($articles)->withCategories($categories);
+        return view('Articles.index')->withArticles($articles)
+		->withCategories($categories)->withMarkers($markers);
     }
     
     
@@ -193,7 +213,8 @@ class articlesController extends Controller
         
         $articles->title = $request->title;
         $articles->datum = $request->datum;
-    
+        $articles->latLngLat = $request->latLngLat;
+        $articles->latLngLng = $request->latLngLng;
         $articles->tijdstip = $request->tijdstip;
         $articles->text = $request->text;
         $articles->category_id = $request->input('category_id');

@@ -107,7 +107,7 @@
       var markers = [];
 
       function initMap() {
-        var haightAshbury = {lat: 50.5039, lng: 4.4699};
+        var haightAshbury = {lat:51.2194, lng:4.4025};
 
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
@@ -161,6 +161,6 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrlEu5sqpVPMAjVsZD3pevyN0IWA6wumM&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
     @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection

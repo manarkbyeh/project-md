@@ -1,5 +1,7 @@
 @extends('main') @section('title', 'Home')
 
+
+
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <section id="hero">
   <div class="jumbotron">
@@ -168,44 +170,90 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
 
 </section>
 
-@endsection @section('scripts')
-<script>
-myLatLng= new google.maps.LatLng(-34.397, 150.644);
-$(document).ready(function() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: myLatLng,
-    zoom: 8
-  });
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-  var request = {
-    location: pyrmont,
-    radius: '500',
-    type: ['restaurant']
-  };
+@endsection 
+@section('scripts')
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:4,
+        center:{lat: 51.509865,lng:-0.118092}
+      }
 
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
 
-  function callback(results, status) {
-    console.log(results);
-  /*if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      createMarker(results[i]);
+ 
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+      // Array of markers
+	   var markers = {!! $markers !!};
+      /*var markers = [
+        {
+          coords:{lat:42.4668,lng:-70.9495},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:42.8584,lng:-70.9300},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:42.7762,lng:-71.0773}
+        }
+      ];*/
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+		if(markers[i][1] == "" || markers[i][2] == "" ) continue ;
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+	  
+	    
+		var coord = {
+		  lat: Number(props[2]) ,lng: Number(props[1] )
+		}
+		console.log(coord)
+        var marker = new google.maps.Marker({
+          position:coord,
+          map:map,
+          //icon:props.iconImage
+        });
+ 
+ 
+         var infoWindow = new google.maps.InfoWindow({
+            content:"<a href='./article/"+props[0]+"'>go to the post</a>"
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          }); 
+         
+      }
     }
-  }*/
-}
-});
-   
-   
-
-
-
-
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
 
 @endsection

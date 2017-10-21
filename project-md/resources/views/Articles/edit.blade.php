@@ -63,11 +63,7 @@
       </select>
     </div>
 
-    <div class="form-group">
-      <label class=" control-label"> Locatie </label>
-      {{ Form::text('locatie',old('locatie'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
-      <small id="fileHelp" class="form-text text-muted">Waar mogen ze dit artikel komen halen?</small>
-    </div>
+
 
 
     <div class="form-group">
