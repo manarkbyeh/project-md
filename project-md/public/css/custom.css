@@ -109,10 +109,13 @@ a:hover{
 
 .logo{
     width:70%;
-    height:70%;
 }
 
 
+
+label.input-group-btn{
+    margin-bottom:0;
+}
 
 .container.home{
     margin-top:3%;
