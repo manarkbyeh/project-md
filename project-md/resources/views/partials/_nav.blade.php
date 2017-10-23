@@ -83,13 +83,15 @@
 
 
                     <li class="nav-item">
-                        <form action="{{url('/article/search')}}" class="form-inline my-2 my-lg-0" method="post">
+                    <form action="{{url('/article/search')}}"  class="form-inline"  method="post">
                             {!! csrf_field() !!}
-                            <input class="form-control" type="text" placeholder="ik ben op zoek naar...">
-                            <button class="btn btn-success my-2 my-sm-0" type="submit">ZOEKEN</button>
+                            <input class="form-control" name="search" type="text" placeholder="ik ben op zoek naar...">
+                            <button type="submit"  class="btn btn-success my-2 my-sm-0">ZOEKEN</button>
                         </form>
 
                     </li>
+                  
+
 
 
 

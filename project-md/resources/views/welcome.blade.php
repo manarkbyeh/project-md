@@ -137,22 +137,19 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
   <div class="container home">
 
 
-    <form action="{{url('/article/search')}}" class="form-inline" method="post">
-      {!! csrf_field() !!}
-      <div class="col-md-12">
-        <h1 class="orange" id="search">Niet gevonden waar je naar opzoek was?</h1>
+  <form action="{{url('/article/search')}}"  class="form-inline"  method="post">
+  {!! csrf_field() !!}
+ <div class="col-sm-12">
+     <h1 class="orange" id="search">Niet gevonden waar je naar opzoek was?</h1>
 
-        <div class="form-group">
-
-          <input type="text" placeholder="Typ het hier en wij helpen zoeken" class="form-control form-control-lg textfield_form" name="search">
-
-
-          <button type="submit" class="btn btn-warning btn-lg">ZOEKEN</button>
-        </div>
-      </div>
-
-
-    </form>
+     <div class="form-group">
+         <input type="text" placeholder="Typ het hier en wij helpen zoeken" class="form-control form-control-lg textfield_form" name="search" >
+      
+         
+         <button type="submit" class="btn btn-warning btn-lg" >ZOEKEN!</button>
+     </div>
+ </div>
+ </form>
   </div>
 
 
