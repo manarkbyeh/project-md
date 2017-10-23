@@ -6,10 +6,11 @@
 
     <div class="container extra">
 
-        <h1>WERKING</h1>
+
 
         <div class="werking">
-
+            <h1 class="green">Werking</h1>
+            
             <h4>Maak een account</h4>
             <p>Door een account te maken kunt u pas echt deelnemen!
                 Maar wat houdt dit precies in? Dat kiest u volledig zelf!

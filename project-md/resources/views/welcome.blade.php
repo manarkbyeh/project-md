@@ -16,27 +16,27 @@
 
 
 @section('content')
-
+  @guest
 
 <section id="doel-icons">
   <div class="container home">
     <div class="all-icons">
       <div class="icon-wrapper ">
-        <a href="/">
+        <a href="{{url('about')}}">
           <img src="{{asset('/images/waste.png')}}" alt="" class="icon">
           <h4>Stop voedselverspilling</h4>
         </a>
       </div>
 
       <div class="icon-wrapper">
-        <a href="/">
+        <a href="{{url('about')}}">
           <img src="{{asset('/images/world.png')}}" alt="" class="icon">
           <h4>Zorg voor het milieu</h4>
         </a>
       </div>
 
       <div class="icon-wrapper">
-        <a href="/">
+        <a href="{{url('about')}}">
           <img src="{{asset('/images/family.png')}}" alt="" class="icon">
           <h4>Maak anderen blij</h4>
         </a>
@@ -57,13 +57,13 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
 </h5>
 
     <div class="text-center">
-      <p><a class="btn btn-warning btn-lg" href="{{ route('register') }}" role="button">LID WORDEN</a>
+      <p><a class="btn btn-warning btn-lg" href="{{url('register')}}" role="button">LID WORDEN</a>
 
     </div>
   </div>
 </section>
 
-
+@endguest
 
 <section id="vandaag">
   <div class="container home">

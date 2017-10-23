@@ -10,10 +10,11 @@
 
 
         <div class="profiel">
-            <div class="profiel-foto">
-                <img src="/images/{{$user->pic}}" alt="">
-            </div>
+
             <div class="profiel-content">
+                <div class="profiel-foto">
+                    <img src="/images/{{$user->pic}}" alt="">
+                </div>
                 <p>{{$user->name}}</p>
                 <p>{{$user->email}}</p>
                 <p>
