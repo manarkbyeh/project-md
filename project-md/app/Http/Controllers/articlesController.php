@@ -172,7 +172,9 @@ class articlesController extends Controller
         $article = Article::findOrFail($id);
         $articles = Article::where('category_id', '=', $article->category_id)->where('id', '!=', $article->id)->take(4)->get();
         $categories = Category::all();
-        return view('Articles.show')->withArticle($article)->withArticles($articles)->withCategories($categories);
+
+        $user = User::where('id', '=', $article->user_id)->get();
+        return view('Articles.show')->withArticle($article)->withArticles($articles)->withCategories($categories)->withUser($user);
     }
     
     /**

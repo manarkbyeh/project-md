@@ -16,8 +16,14 @@
                 </div>
                 <div class="munchie-content">
                     <h1>{{$article->title}}</h1>
-                    <p class="lead">{{strip_tags($article->text)}} </p>
 
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img class="profielfoto" src="{{url('/images/profile.jpeg')}}" alt="">
+                        </div>
+                        <div class="col-md-10"><p class="lead content-text">"{{strip_tags($article->text)}}"</p> </div>
+
+                </div>
                     <div class="details">
                         <div class="icon-wrapper"><a href=""><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></a></div>
                         <div class="icon-wrapper"><a href=""><img src="{{asset('/images/location.png')}}" alt="" class="icon"><p>Deurne</p></a></div>
@@ -29,19 +35,15 @@
                 </div>
 
 
-                <!-- BERICHTEN -->
+                    <!-- BERICHTEN -->
                 <div class="berichten">
 
-                    <p>hier komen de berichten</p>
-                    <div class="bericht-foto">
 
-                    </div>
-                    <div class="bericht-content">
+                        <div class="fb-comments" data-href="https://www.facebook.com/DailyMunch-146808462720538/?ref=settings/{{ $article->id }}" data-numposts="5"></div>
 
-                    </div>
 
                 </div>
-                <div class="fb-comments" data-href="https://www.facebook.com/DailyMunch-146808462720538/?ref=settings/{{ $article->id }}" data-numposts="5"></div>
+
             </div>
 
 

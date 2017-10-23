@@ -310,6 +310,7 @@ a:hover{
 .munchie-foto img{
     height:350px;
     width:640px;
+    object-fit:cover;
 
 }
 
@@ -358,6 +359,7 @@ a:hover{
 
 .berichten{
     margin-top:2em;
+    padding:3em;
     width:640px;
     background-color:#FFFFFF;
 
@@ -384,7 +386,17 @@ a:hover{
 }
 
 
+.profielfoto{
+    height:100px;
+    width:100px;
+    display:inline-block;
+    float:left;
+    padding:0.5em;
+}
 
+.content-text{
+    padding:1em;
+}
 
 .footer-distributed{
     background-color: #E69723;
@@ -557,16 +569,15 @@ a:hover{
 
 }
 
-
-
-
-
-
-
 #map {
    height:400px;
 }
 
 .deactiveren {
-
+    opacity: 0.5;
 }
+
+.deactiveren .foto img{
+    opacity: 0.5;
+}
+
