@@ -3,7 +3,7 @@
 
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand " href="/"><img class="logo" src="../images/logomd.png" alt="MUNCHDAILY"></a>
+    <a class="navbar-brand " href="/"><img class="logo" src="{{asset('/images/logomd.png')}}" alt="MUNCHDAILY"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,81 +12,84 @@
 
 
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item" class="{{ Request::is('/') ? "active" : " " }}">
-                <a class="nav-link" href="{{url('/home')}}"> HOME </a>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{url('/')}}"> Home </a>
             </li>
-            <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-                <a class="nav-link" href="{{url('/about')}}"> ABOUT </a>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{url('about')}}"> About </a>
             </li>
-            <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-                <a class="nav-link" href="{{url('/werking')}}"> WERKING </a>
+            <li class="nav-item ">
+                <a class="nav-link {{ Request::is('werking') ? 'active' : '' }}" href="{{url('werking')}}"> Werking </a>
             </li>
-            
+
 
             @guest
-            <li class="nav-item" class="{{ Request::is('/articles') ? "active" : " " }}">
-                <a class="nav-link" href="{{url('/articles')}}"> MUNCHIES </a>
+            <li class="nav-item ">
+                <a class="nav-link {{ Request::is('/articles') ? "active" : "" }}" href="{{url('/articles')}}"> Munchies </a>
             </li>
 
 
             @else
-                <li class="nav-item dropdown" class="{{ Request::is('/articles') ? "active" : " " }}">
-                    <a class="nav-link dropdown-toggle" href="/articles" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        MUNCHIES
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ Request::is('/articles') ? "active" : " " }}" href="/articles" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Munchies
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{url('/articles')}}">BEKIJK ALLE MUNCHIES</a>
-                      
-                        <a class="dropdown-item" href="{{url('/myarticles')}}">MIJN MUNCHIES</a>
-                    
-                        <a class="dropdown-item" href="{{url('/myorders')}}">MIJN BESTELLING</a>
-                        <a class="dropdown-item" href="{{url('/article/create')}}">VOEG EEN MUNCHIE TOE</a>
-                    </div>  
+                        <a class="dropdown-item" href="{{url('/articles')}}">Bekijk alle munchies</a>
+
+                        <a class="dropdown-item" href="{{url('/myarticles')}}">Mijn munchies</a>
+
+                        <a class="dropdown-item" href="{{url('/myorders')}}">Mijn bestelling</a>
+                        <a class="dropdown-item" href="{{url('/article/create')}}">Voeg een munchie toe</a>
+                    </div>
                 </li>
                 @endguest
 
 
 
 
-                <li class="nav-item" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
-                    <a href="/"><img class="nav-link" src="images/search.png" alt="SEARCH"></a>
-                </li>
-          
-
-
 
 
 
                 @guest
-                <li class="nav-item dropdown" class="{{ Request::is('/login') ? "active" : " " }}">
-                    <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="nav-link" href="{{url('/user/{id}')}}" src="/images/avatar.png" alt="PROFIEL">
-                     
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ Request::is('/login') ? "active" : " " }}" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{url('/login')}}">AANMELDEN</a>
-                       
-                        <a class="dropdown-item" href=" {{url('/register')}}">REGISTREREN</a>
+                        <a class="dropdown-item" href="{{url('/login')}}">Aanmelden</a>
+
+                        <a class="dropdown-item" href=" {{url('/register')}}">Registreren</a>
                     </div>
                 </li>
 
                 @else
-              
-                    <li class="nav-item dropdown" class="{{ Request::is('/user/{id}') ? "active" : " " }}">
-                        <a class="nav-link dropdown-toggle" href="{{url('/user/{id}')}}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="nav-link" href="{{url('/user/{id}')}}" src="/images/avatar.png" alt="PROFIEL">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ Request::is('user/'. Auth::user()->id) ? "active" : " " }}" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{route('user.profile',Auth::user()->id)}}">MIJN PROFIEL</a>
-                          
+                            <a class="dropdown-item" href="{{route('user.profile',Auth::user()->id)}}">Mijn profiel</a>
+
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('logout') }}">AFMELDEN</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Afmelden</a>
                         </div>
                     </li>
 
 
                     @endguest
 
+
+                    <li class="nav-item">
+                        <form action="{{url('/article/search')}}" class="form-inline my-2 my-lg-0" method="post">
+                            {!! csrf_field() !!}
+                            <input class="form-control" type="text" placeholder="ik ben op zoek naar...">
+                            <button class="btn btn-success my-2 my-sm-0" type="submit">ZOEKEN</button>
+                        </form>
+
+                    </li>
 
 
 

@@ -20,7 +20,7 @@
 
   <label class=" control-label">Ophaaldatum</label>
   {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
-  <small id="fileHelp" class="form-text text-muted">Wanneer wil je de munchie ophalen?</small>
+  <small id="fileHelp" class="form-text text-muted">Wanneer wil je de munchie ophalen? (De munchie is houbaar tot: {{$article->datum}})</small>
 </div>
 <div class="form-group  has-feedback">
   <label class=" control-label">Gewenste uur</label>

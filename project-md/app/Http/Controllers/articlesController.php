@@ -153,7 +153,7 @@ class articlesController extends Controller
         $articles->user_id = auth()->user()->id;
         if ($articles->save()) {
             
-            session()->flash('success','Article added successfuly !!');
+            session()->flash('success','Uw munchie werd toegevoegd!');
             return redirect('/myarticles');
         }
         
@@ -221,7 +221,7 @@ class articlesController extends Controller
         
         $articles->user_id = Auth::user()->id;
         if(  $articles->save()){
-            session()->flash('success','Article Updated successfuly !!');
+            session()->flash('success','Uw munchie werd geupdate!');
             return redirect('myarticles');
         }
         
@@ -243,7 +243,7 @@ class articlesController extends Controller
         $articles = Article::find($id);
         $articles_id= $articles->id;
         $articles->delete();
-        session()->flash('success','Article Deleted successfuly !!');
+        session()->flash('success','Uw munchie werd verwijderd');
         return redirect('myarticles');
         
         

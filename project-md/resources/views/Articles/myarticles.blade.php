@@ -10,8 +10,8 @@
       </p>
 
       <div class="row">
-        <h1 class="orange col-md-6" id="search">Mijn munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
-      </div>
+        <h1 class="orange col-md-6"">Mijn munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
+    </div>
       <div class="row">
 
 
@@ -20,7 +20,7 @@
 
     
         <div class="col-md-4">
-          <a href="/article/{{$article->id}}">
+          <a href="{{url('/article/'.$article->id.'/edit')}}">
             <div class="artikel">
               <div class="foto">
                 <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
@@ -31,11 +31,11 @@
                 <p>{{strip_tags($article->text)}}</p>
                 <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
-                <a href="{{url('/article/'.$article->id.'/edit')}}"><img src="/images/edit.png" alt=""></a>
-                <a href="{{url('/article/'.$article->id)}}"><img src="/images/garbage.png" alt=""></a>
+                <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">WIJZIG</a>
+
                 @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
-                <span class="btn btn-primary btn-sm jsActive" data-id="{{$article->id}}">
-                Deactiveren 
+                <span class="btn btn-warning btn-sm jsActive" data-id="{{$article->id}}">
+                VOLTOOIEN
 </span>
 @endif
               </div>
@@ -46,6 +46,7 @@
       @endforeach
 
 
+    </div>
     </div>
   </section>
 

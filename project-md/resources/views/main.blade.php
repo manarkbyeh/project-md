@@ -18,8 +18,8 @@
 @include('partials._nav')
 
 
-@include('partials._messages')
 
+@include('partials._messages')
 @yield('content')
 
 

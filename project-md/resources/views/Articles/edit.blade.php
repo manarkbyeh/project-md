@@ -81,10 +81,7 @@
     <center><i class="fa fa-spinner fa-spin fa-2x loading hidden"></i></center>
     {!! Form::close() !!}
 
-    <br>
-    <br>
-    <br>
-    <br>
+
 
 
   </div>

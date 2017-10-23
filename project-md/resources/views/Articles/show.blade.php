@@ -19,10 +19,10 @@
                     <p class="lead">{{strip_tags($article->text)}} </p>
 
                     <div class="details">
-                        <div class="icon-wrapper"><a href=""><img src="/images/carrot-black.png" alt="" class="icon"><p>groenten</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="/images/location.png" alt="" class="icon"><p>Deurne</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="/images/calendar.png" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="/images/clock.png" alt="" class="icon"><p>21:00 - 22:00 </p></a></div>
+                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></a></div>
+                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/location.png')}}" alt="" class="icon"><p>Deurne</p></a></div>
+                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
+                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>21:00 - 22:00 </p></a></div>
                     </div>
 
                     <a class="btn btn-success btn-lg" href="#" role="button">VERZOEK STUREN</a>

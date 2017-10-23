@@ -23,21 +23,21 @@
     <div class="all-icons">
       <div class="icon-wrapper ">
         <a href="/">
-          <img src="images/waste.png" alt="" class="icon">
+          <img src="{{asset('/images/waste.png')}}" alt="" class="icon">
           <h4>Stop voedselverspilling</h4>
         </a>
       </div>
 
       <div class="icon-wrapper">
         <a href="/">
-          <img src="images/world.png" alt="" class="icon">
+          <img src="{{asset('/images/world.png')}}" alt="" class="icon">
           <h4>Zorg voor het milieu</h4>
         </a>
       </div>
 
       <div class="icon-wrapper">
         <a href="/">
-          <img src="images/family.png" alt="" class="icon">
+          <img src="{{asset('/images/family.png')}}" alt="" class="icon">
           <h4>Maak anderen blij</h4>
         </a>
       </div>
@@ -160,17 +160,13 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
 </section>
 
 <section id="googlemaps">
-  <div class="container">
 
     <div id="map"></div>
 
-  </div>
-
-
-
 </section>
 
-@endsection 
+@endsection
+
 @section('scripts')
   <script>
     function initMap(){

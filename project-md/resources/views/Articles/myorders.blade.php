@@ -11,7 +11,7 @@
       </p>
 
       <div class="row">
-        <h1 class="orange col-md-6" id="search">Mijn verzoeken</h1>
+        <h1 class="orange col-md-6">Mijn verzoeken</h1>
       </div>
       <div class="row">
 
