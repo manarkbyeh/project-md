@@ -33,8 +33,7 @@ class articlesController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        $articles = Article::where('datum', '>=',  $current_date)->where('active', '=', 0)->limit(6)->get();
-      
+        $articles = Article::where('datum', '>=',  $current_date)->where('active', '=', 0)->paginate(2);
     
         $categories = Category::all();
         return view('Articles.index')->withArticles($articles)
@@ -173,7 +172,7 @@ class articlesController extends Controller
         $articles = Article::where('category_id', '=', $article->category_id)->where('id', '!=', $article->id)->take(4)->get();
         $categories = Category::all();
 
-        $user = User::where('id', '=', $article->user_id)->get();
+        $user = User::where('id', '=', $article->user_id);
         return view('Articles.show')->withArticle($article)->withArticles($articles)->withCategories($categories)->withUser($user);
     }
     
