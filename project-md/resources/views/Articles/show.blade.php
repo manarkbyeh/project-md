@@ -4,7 +4,7 @@
     <div class="container extra">
 
 
-        <p><a href="/" class="green">Home</a> > <a href="/articles" class="green">Munchies</a> > {{$article->title}}</p>
+        <p><a href="{{url('/')}}" class="green">Home</a> > <a href="{{url('/article')}}" class="green">Munchies</a> > {{$article->title}}</p>
         <br>
         <br>
 
@@ -18,16 +18,14 @@
                     <h1>{{$article->title}}</h1>
 
                     <div class="row">
-                        <div class="col-md-2">
-                            <img class="profielfoto" src="{{url('/images/profile.jpeg')}}" alt="">
-                        </div>
-                        <div class="col-md-10"><p class="lead content-text">"{{strip_tags($article->text)}}"</p> </div>
+
+                        <div class="col-md-12"><p class="lead content-text">{{strip_tags($article->text)}}</p> </div>
 
                     </div>
                     <div class="details">
-                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
-                        <div class="icon-wrapper"><a href=""><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></a></div>
+                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></a></div>
+                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
+                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></a></div>
                     </div>
 
                     <a class="btn btn-success btn-lg" href="{{url('/article/transaction/'.$article->id)}}" role="button">VERZOEK</a>

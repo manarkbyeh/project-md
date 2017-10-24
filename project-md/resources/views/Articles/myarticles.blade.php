@@ -6,7 +6,7 @@
 
 
       <p>
-        <a href="/" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn munchies
+        <a href="{{url('/')}}" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn munchies
       </p>
 
       <div class="row">

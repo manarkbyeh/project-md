@@ -23,7 +23,9 @@ body {
     margin-top: 5.7em;
 }
 
-
+.icon-wrapper.show{
+    margin:0!important;
+}
 
 #vandaag {
     height: auto;

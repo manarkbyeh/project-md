@@ -7,7 +7,7 @@
 
 
       <p>
-        <a href="/" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn verzoeken
+        <a href="{{url('/')}}" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn verzoeken
       </p>
 
       <div class="row">
@@ -18,7 +18,7 @@
 
       @foreach($articles as $article)
         <div class="col-md-4">
-          <a href="/article/{{$article->id}}">
+          <a href="{{url('/article/'.$article->id)}}">
             <div class="artikel">
               <div class="foto">
                 <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
