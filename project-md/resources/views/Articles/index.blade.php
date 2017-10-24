@@ -46,26 +46,5 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-      @endforeach
-
-
-
-
-
-    </div>
-
-  </div>
-
-
-
-
-  </div>
-</section>
-
-
-
-=======
     </section>
->>>>>>> a550b4136f75af4982a591a75fc98ce3b3077a64
 @endsection
