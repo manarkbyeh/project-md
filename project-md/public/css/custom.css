@@ -19,6 +19,12 @@ body {
     margin-top: 5.7em;
 }
 
+.alert-danger.extra {
+    margin-top: 5.7em;
+}
+
+
+
 #vandaag {
     height: auto;
     min-height: 300px;

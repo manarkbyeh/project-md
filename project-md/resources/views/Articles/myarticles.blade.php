@@ -48,20 +48,31 @@
 
                     <?php } ?>
 
-                  <form action="{{url('/article/'.$article->id)}}" method="post">
-                    {{csrf_field()}} {{method_field('DELETE')}}
-                    <button type="submit" class="btn btn-danger" title="">DELETE</button>
-                  </form>
+
+
+                      <form action="{{url('/article/'.$article->id)}}" method="post">
+                        {{csrf_field()}} {{method_field('DELETE')}}
+                        <button type="submit" class="btn btn-danger" title="">DELETE</button>
+                      </form>
 
 
 
-                  <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">WIJZIG</a>
+
+
+
+
+
+                    <div class="row">
+
+                        <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">WIJZIG</a>
 
                   @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
                     <span class="btn btn-warning btn-sm jsActive" data-id="{{$article->id}}">
                 VOLTOOIEN
 </span>
                   @endif
+                    </div>
+
                 </div>
               </div>
             </a>
