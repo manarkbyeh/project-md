@@ -96,27 +96,16 @@ a:hover {
     color: #1C9B48;
 }
 
-<<<<<<< HEAD
 .logo {
     width: 70%;
 }
 
+label.input-group-btn {
+    margin-bottom: 0;
+}
+
 .container.home {
     margin-top: 3%;
-=======
-.logo{
-    width:70%;
-}
-
-
-
-label.input-group-btn{
-    margin-bottom:0;
-}
-
-.container.home{
-    margin-top:3%;
->>>>>>> 6eb8d2a7722ac644a630647d53adb4c8e4904f3d
 }
 
 .navbar-dark .navbar-nav .nav-link {
