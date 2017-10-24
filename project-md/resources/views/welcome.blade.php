@@ -16,7 +16,6 @@
 
 
 @section('content')
-  @guest
 
 <section id="doel-icons">
   <div class="container home">
@@ -63,7 +62,7 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
   </div>
 </section>
 
-@endguest
+
 
 <section id="vandaag">
   <div class="container home">
