@@ -68,7 +68,7 @@
 
     <div class="form-group">
       <label class=" control-label"> Tijdstip </label>
-      {{ Form::text('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
 
@@ -78,7 +78,7 @@
 
 
     {{ Form::submit('WIJZIGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
-    <center><i class="fa fa-spinner fa-spin fa-2x loading hidden"></i></center>
+
     {!! Form::close() !!}
 
 
