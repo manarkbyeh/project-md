@@ -30,7 +30,7 @@
                         <div class="icon-wrapper"><a href=""><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></a></div>
                     </div>
 
-                    <a class="btn btn-success btn-lg" href="#" role="button">VERZOEK STUREN</a>
+                    <a class="btn btn-success btn-lg" href="{{url('/article/transaction/'.$article->id)}}" role="button">VERZOEK</a>
                 </div>
 
 
