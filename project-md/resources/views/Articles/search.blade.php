@@ -6,7 +6,7 @@
   <section id="vandaag">
     <div class="container extra">
 
-      <p><a href="/" class="green">Home</a> > Zoekresultaten </p>
+      <p><a href="{{url('/')}}" class="green">Home</a> > Zoekresultaten </p>
 
       <div class="row">
 
@@ -18,7 +18,7 @@
 
         @foreach($articles as $article)
           <div class="col-md-4">
-            <a href="/article/{{$article->id}}">
+            <a href="{{url('/article'.$article->id)}}">
               <div class="artikel">
                 <div class="foto">
                   <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
