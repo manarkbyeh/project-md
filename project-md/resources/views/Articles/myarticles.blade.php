@@ -10,71 +10,95 @@
       </p>
 
       <div class="row">
-        <h1 class="orange col-md-6"">Mijn munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
-    </div>
+        <h1 class="orange col-md-6">Mijn munchies <a href="{{url('/article/create')}}" class="btn btn-success">TOEVOEGEN</a></h1>
+      </div>
       <div class="row">
 
 
-      @foreach($articles as $article)
-    
+        @foreach($articles as $article)
 
-    
-        <div class="col-md-4">
-          <a href="{{url('/article/'.$article->id.'/edit')}}">
-            <div class="artikel">
-              <div class="foto">
-                <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
-              </div>
-              <div class="artikel-content @if( $article->active== 0) deactiveren @endif">
-                <p class="datum">{{$article->datum}}</p>
-                <h2>{{$article->title}}</h2>
-                <p>{{strip_tags($article->text)}}</p>
-                <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
-                <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">WIJZIG</a>
 
-                @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
-                <span class="btn btn-warning btn-sm jsActive" data-id="{{$article->id}}">
+          <div class="col-md-4">
+            <a href="{{url('/article/'.$article->id.'/edit')}}">
+              <div class="artikel">
+                <div class="foto">
+                  <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+                </div>
+                <div class="artikel-content @if( $article->active== 1) deactiveren @endif">
+                  <p class="datum">{{$article->datum}}</p>
+                  <h2>{{$article->title}}</h2>
+                  <p>{{strip_tags($article->text)}}</p>
+                  <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
+
+
+                    <?php
+                    $current_date = Carbon\Carbon::now();
+
+                    $current_date = $current_date->toDateString();
+
+                    if($article->datum > $current_date || $article->active==0){ ?>
+
+                  <?php } else
+
+                    { ?>
+
+
+                  <h5 class="rood">Dit product is vervallen</h5>
+
+                    <?php } ?>
+
+             
+                  <a href="javascript:void(0)" data-idimg="{{$article->id}}" class="btndelete" data-token="{{ csrf_token() }}">
+                    <i class="fa fa-remove fa-lg"></i>
+                  </a>
+
+
+
+                  <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">WIJZIG</a>
+
+                  @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
+                    <span class="btn btn-warning btn-sm jsActive" data-id="{{$article->id}}">
                 VOLTOOIEN
 </span>
-@endif
+                  @endif
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-      
-      @endforeach
+            </a>
+          </div>
+
+        @endforeach
 
 
-    </div>
+      </div>
     </div>
   </section>
 
 @endsection
 @section('scripts')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-          $(document).ready(function() {
-            var root = "{{ url('article/')}}" + "/";
-            $('span.jsActive').click(function() {
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          var root = "{{ url('article/')}}" + "/";
+          $('span.jsActive').click(function() {
               var id = this.dataset.id,
-                self = this;
+                  self = this;
 
               $.ajax({
-                url: root + id + '/active',
-                method: "get"
+                  url: root + id + '/active',
+                  method: "get"
               }).done(function(msg) {
-                if (msg == 'true') {
-                  self.parentElement.removeChild(self);
-                } else {
-                  alert("Try again");
-                }
+                  if (msg == 'true') {
+                      self.parentElement.removeChild(self);
+                  } else {
+                      alert("Try again");
+                  }
               }).fail(function(jqXHR, textStatus) {
-                alert("Try again");
+                  alert("Try again");
               });
 
-            });
-
           });
-        </script>
-         @endsection
+
+      });
+  </script>
+@endsection

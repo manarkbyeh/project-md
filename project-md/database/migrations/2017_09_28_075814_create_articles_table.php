@@ -25,6 +25,7 @@ class CreateArticlesTable extends Migration
             $table->integer("user_id");
             $table->integer("active")->default(0);
             $table->timestamps();
+ $table->softDeletes();
             
         });
     }

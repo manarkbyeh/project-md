@@ -100,6 +100,14 @@ a:hover {
     width: 70%;
 }
 
+.container.home {
+    margin-top: 3%;
+}
+
+.logo {
+    width: 70%;
+}
+
 label.input-group-btn {
     margin-bottom: 0;
 }
