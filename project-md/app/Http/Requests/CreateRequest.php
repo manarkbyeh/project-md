@@ -28,6 +28,10 @@ class CreateRequest extends FormRequest
         'title' => 'required|max:225',
         'category_id'   => 'required|integer',
         'text' => 'required',
+        'latLngLat' => 'required',
+        'latLngLng' => 'required',
+     
+
         ];
     }
 }

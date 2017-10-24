@@ -28,6 +28,8 @@ class EditRequest extends FormRequest
         'title' => 'required|max:225',
         'category_id'   => 'required|integer',
         'text' => 'required',
+   
+     
         ];
     }
 }
