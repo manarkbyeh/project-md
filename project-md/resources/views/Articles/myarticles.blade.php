@@ -48,10 +48,10 @@
 
                     <?php } ?>
 
-             
-                  <a href="javascript:void(0)" data-idimg="{{$article->id}}" class="btndelete" data-token="{{ csrf_token() }}">
-                    <i class="fa fa-remove fa-lg"></i>
-                  </a>
+                  <form action="{{url('/article/'.$article->id)}}" method="post">
+                    {{csrf_field()}} {{method_field('DELETE')}}
+                    <button type="submit" class="btn btn-danger" title="">DELETE</button>
+                  </form>
 
 
 
