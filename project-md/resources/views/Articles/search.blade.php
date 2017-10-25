@@ -18,7 +18,7 @@
 
         @foreach($articles as $article)
           <div class="col-md-4">
-            <a href="{{url('/article'.$article->id)}}">
+            <a href="{{url('/article/'.$article->id)}}">
               <div class="artikel">
                 <div class="foto">
                   <img src="{{url('/images/'.$article->pic)}}" alt="munchie">

@@ -168,7 +168,7 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
     function initMap(){
       // Map options
       var options = {
-        zoom:4,
+        zoom:6,
         center:{lat: 51.2194,lng:4.4699}
       }
 

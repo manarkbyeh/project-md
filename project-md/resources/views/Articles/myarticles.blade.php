@@ -17,6 +17,12 @@
 
         @foreach($articles as $article)
 
+        <?php
+                    $current_date = Carbon\Carbon::now();
+
+                    $current_date = $current_date->toDateString();
+
+                   ?>
 
 
           <div class="col-md-4">
@@ -25,19 +31,16 @@
                 <div class="foto">
                   <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
                 </div>
-                <div class="artikel-content @if( $article->active== 1) deactiveren @endif">
+                <div class="artikel-content @if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
                   <p class="datum">{{$article->datum}}</p>
-                  <h2>{{$article->title}}</h2>
-                  <p>{{strip_tags($article->text)}}</p>
+                  <h2>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 40).'...' :strip_tags($article->title)}}</h2>
+                  <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
                   <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
 
                     <?php
-                    $current_date = Carbon\Carbon::now();
-
-                    $current_date = $current_date->toDateString();
-
-                    if($article->datum > $current_date || $article->active==0){ ?>
+                
+                    if($article->datum > $current_date){ ?>
 
                   <?php } else
 
