@@ -3,7 +3,11 @@
 		<strong>Success:</strong> {{ Session::get('success') }}
 	</div>
 @endif
-
+@if (Session::has('status'))
+	<div class="alert alert-danger extra" role="alert">
+		{{ Session::get('status') }}
+	</div>
+@endif
 @if (count($errors) > 0)
 	<div class="alert alert-danger extra" role="alert">
 		<strong>Errors:</strong>
