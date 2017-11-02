@@ -48,7 +48,7 @@ class TransactionController extends Controller
     {
         
         $this->validate($request, array(
-        'datum'         => 'required',
+        'datum'         => 'required|date|after_or_equal:'.\Carbon\Carbon::today(),
         'uur'           =>   'required',
         'comment'          => 'required'
         
@@ -88,7 +88,7 @@ class TransactionController extends Controller
                 
             });
             
-            session()->flash('success','Done .. !!');
+            session()->flash('success','Uw verzoek is verzonden !!');
             return redirect('/myarticles');
         }
         
