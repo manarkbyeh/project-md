@@ -11,9 +11,9 @@
       Vul alle velden in zodat andere gebruikers precies weten welk product u ter beschikking stelt.
     </p>
 
-    <div id="article_div"></div>
 
     {!! Form::open(array('route' => 'article.store', 'id' => 'article', 'files' => true)) !!}
+
 
     <div class="form-group  has-feedback">
       <label class="control-label">Foto</label>
@@ -90,7 +90,10 @@
       
     </div>
 
-<a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">Save</a>
+
+{{ Form::submit('TOEVOEGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
+{!! Form::close() !!}
+
     <br>
     <br>
     <br>
@@ -104,54 +107,6 @@
 
       <script>
     $(document).ready(function() {
-
-      $('body').on('click', '.btn-submit', function(e){
-        
-        e.preventDefault();
-
-        var valid = $("#article").valid();
-        var latv = $("#latLngLat").val();
-
-        if(valid && latv != '') {
-            $('#article')[0].submit();
-        } else {
-            if(latv == ''){
-              $('#mapvalidation').addClass('alert alert-danger');
-              $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
-            }
-              if (
-              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-              && 
-              location.hostname == this.hostname
-            ) {
-              // Figure out element to scroll to
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-              // Does a scroll target exist?
-              if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $('html, body').animate({
-                  scrollTop: (target.offset().top - 80)
-                }, 1000, function() {
-                  // Callback after animation
-                  // Must change focus!
-                  var $target = $(target);
-                  $target.focus();
-                  if ($target.is(":focus")) { // Checking if the target was focused
-                    return false;
-                  } else {
-                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                    $target.focus(); // Set focus again
-                  };
-                });
-              }
-            }
-
-          }
-          
-      });
-
         $('#article').validate({
             
             rules: {
@@ -206,79 +161,54 @@
             }    
           },
 
+           submitHandler: function(form) {
+
+            $('#article')[0].submit();
+            }
     
         });
 
     });
 
-      var map;
-      var markers = [];
 
+var map, infoWindow;
       function initMap() {
-        var haightAshbury = {lat:51.2194, lng:4.4025};
-
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: haightAshbury,
-          mapTypeId: 'terrain'
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
         });
+        infoWindow = new google.maps.InfoWindow;
 
-        // This event listener will call addMarker() when the map is clicked.
-        map.addListener('click', function(event) {
-          addMarker(event.latLng);
-       
-          latLngLat = event.latLng.lat();
-          latLngLng = event.latLng.lng();
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
-          $('#latLngLat').val(latLngLat);
-          $('#latLngLng').val(latLngLng);
-        });
-
-        // Adds a marker at the center of the map.
-        addMarker(haightAshbury);
-      }
-
-      // Adds a marker to the map and push to the array.
-      function addMarker(location) {
-
-        deleteMarkers();
-
-        var marker = new google.maps.Marker({
-          position: location,
-          map: map
-        });
-        markers.push(marker);
-      }
-
-      // Sets the map on all markers in the array.
-      function setMapOnAll(map) {
-        for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(map);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
         }
       }
 
-      // Removes the markers from the map, but keeps them in the array.
-      function clearMarkers() {
-        setMapOnAll(null);
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
       }
-
-      // Deletes all markers in the array by removing references to them.
-      function deleteMarkers() {
-        clearMarkers();
-        markers = [];
-      }
-    //  $('#submit').click(function(e){
-    //     var latv = $("#latLngLat").val();
-    //   if(latv == ''){
-    //     $('#mapvalidation').addClass('alert alert-danger');
-    //     $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
-    //     return e.preventDefault();
-    //   }
-    //   });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
-
-    
  @endsection

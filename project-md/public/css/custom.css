@@ -23,8 +23,8 @@ body {
     margin-top: 5.7em;
 }
 
-.icon-wrapper.show{
-    margin:0!important;
+.icon-wrapper.show {
+    margin: 0!important;
 }
 
 #vandaag {
@@ -137,9 +137,11 @@ label.input-group-btn {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.btn{
-    display:inline-block!important  ;
+
+.btn {
+    display: inline-block!important;
 }
+
 .btn-hero {
     margin: 0 2em;
 }
@@ -294,7 +296,6 @@ a:hover {
 .btn.btn-lg {
     padding: 1.2rem 3rem;
 }
-
 
 #vandaag .btn {
     margin: 0.5rem;
@@ -605,4 +606,12 @@ a:hover {
     -webkit-background-size: cover;
     background-size: cover;
     background-color: #000000;
+}
+
+.error .error,
+.img_error {
+    color: red;
+    font-style: italic;
+    font-size: 11px;
+    font-weight: bold;
 }

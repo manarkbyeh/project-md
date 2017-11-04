@@ -57,20 +57,20 @@ class TransactionController extends Controller
         
         $transaction = new Transaction();
         
-        $transaction->id = $request->id;
+        //$transaction->id = $request->id;
         $transaction->user_giver_id = $request->user_giver_id;
         $transaction->user_reciever_id = Auth::user()->id;
         $transaction->article_id = $request->article_id;
         $transaction->datum = $request->datum;
         $transaction->uur = $request->uur;
         $transaction->comment = $request->comment;
-        
-        if ($transaction->save()) {
-            
+        $saveTransaction = $transaction->save();
+        if ($saveTransaction) {
+            $transactionId = $transaction->id;
             $user_giver = User::find($request->user_giver_id);
             $user_reciever = User::find(Auth::user()->id);
             $article = Article::find($request->article_id);
-            $transaction = Transaction::find($request->id);
+            $transaction = Transaction::find($transactionId);
 
             Mail::send('emails.email_for_giver', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever, 'article' => $article, 'transaction' => $transaction], function ($message) use ($user_giver, $article, $transaction)
             {

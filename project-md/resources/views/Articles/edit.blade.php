@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Wijzig munchie ') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
+@extends('main') @section('title', '| Wijzig munchie ') @section('content')
 
   <div class="container extra">
 
@@ -8,9 +8,10 @@
     <p class="lead">
       Hebt u een foutje gemaakt of wilt u een wijziging aanbrengen? Hier kunt u uw artikel aanpassen.
     </p>
+    <div id="article_div"></div>
 
 
-    {!! Form::model($article, ['route' => ['article.update', 'data-parsley-validate' => '', $article->id], 'method' => 'PATCH','files'=>true]) !!}
+    {!! Form::model($article, ['route' => ['article.update', $article->id], 'method' => 'PATCH', 'id' => 'article', 'files'=>true]) !!}
 
 
 
@@ -19,9 +20,9 @@
     <div class="form-group  has-feedback">
       <label class="control-label">Foto</label>
       <div class="input-group" id="img" style="padding:0 ">
-        <input type="text"  class="form-control" readonly="true" />
+        <input type="text" name="pic2" value="{{ $article->pic }}" class="form-control" readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
-        <span class="btn btn-success">ZOEK EEN FOTO
+        <span class="btn btn-success">Browse&hellip;
           <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
       
         </span>
@@ -29,6 +30,7 @@
       </div>
       <small id="fileHelp" class="form-text text-muted">Kies hier een afbeelding voor uw munchie.</small>
     </div>
+    <div class="img_error"></div>
 
 
 
@@ -90,8 +92,8 @@
     </div>
 
 
-    {{ Form::submit('WIJZIGEN',array('class' =>'btn btn-success pull-left','id'=>'submit','style'=>'margin-top:20px'))}}
 
+    <a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">Save</a>
     {!! Form::close() !!}
 
 
@@ -99,10 +101,119 @@
 
   </div>
 
-  @endsection @section('scripts') @section('scripts') {!! Html::script('js/parsley.min.js') !!}
+  @endsection @section('scripts')
+  <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
   <script>
+    $(document).ready(function() {
 
+      $('body').on('click', '.btn-submit', function(e){
+        
+        e.preventDefault();
+
+        var valid = $("#article").valid();
+        var latv = $("#latLngLat").val();
+
+        if(valid && latv != '') {
+            $('#article')[0].submit();
+        } else {
+            if(latv == ''){
+              $('#mapvalidation').addClass('alert alert-danger');
+              $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
+            }
+              if (
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+              && 
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: (target.offset().top - 80)
+                }, 1000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  };
+                });
+              }
+            }
+
+           
+          }
+          
+      });
+
+        $('#article').validate({
+            
+            rules: {
+                title: {
+                  required: true,
+                },
+                
+
+                text: {
+                  required: true,
+
+                },
+                tijdstip: {
+                  required: true,
+
+                },
+                category_id: {
+                  required: true,
+
+                },
+                datum: {
+                  required: true,
+
+                },
+
+                pic2: {
+                  required: true, 
+                  accept: "image/jpg,image/jpeg,image/png,image/gif"
+                  }
+
+            },
+            
+            messages: {
+              title : 'moet een title bevatten.',
+              text : 'moet een omschrijving bevatten.',
+              pic : {required: 'Required!', accept: 'Not an image!'}
+                
+            },
+        highlight: function (input) {
+            $(input).parent().addClass('error');
+        },
+        unhighlight: function (input) {
+            $(input).parent().removeClass('error');
+        },
+        errorPlacement: function (error, element) {
+
+          if(element.attr("name") == "pic2") {
+                error.appendTo($('.img_error'));
+            } else {
+              $(element).parent().append(error);
+
+            }    
+          },
+
+    
+        });
+
+    });
       var map;
       var markers = [];
 
