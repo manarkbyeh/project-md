@@ -57,7 +57,7 @@ class TransactionController extends Controller
         
         $transaction = new Transaction();
         
-        
+        $transaction->id = $request->id;
         $transaction->user_giver_id = $request->user_giver_id;
         $transaction->user_reciever_id = Auth::user()->id;
         $transaction->article_id = $request->article_id;
@@ -69,22 +69,25 @@ class TransactionController extends Controller
             
             $user_giver = User::find($request->user_giver_id);
             $user_reciever = User::find(Auth::user()->id);
-            
-            Mail::send('emails.email_for_giver', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever], function ($message) use ($user_giver)
+            $article = Article::find($request->article_id);
+            $transaction = Transaction::find($request->id);
+
+            Mail::send('emails.email_for_giver', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever, 'article' => $article, 'transaction' => $transaction], function ($message) use ($user_giver, $article, $transaction)
             {
                 
                 $message->from('dailymunch1@gmail.com', 'DailyMunch');
                 
-                $message->to($user_giver['email'])->subject('DailyMunch');
+                $message->to($user_giver['email'])->subject('MunchDaily');
+
                 
             });
             
-            Mail::send('emails.email_for_reciever', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever], function ($message) use ($user_reciever)
+            Mail::send('emails.email_for_reciever', ['user_giver' => $user_giver, 'user_reciever' => $user_reciever, 'article' => $article, 'transaction' => $transaction], function ($message) use ($user_reciever, $article, $transaction)
             {
                 
                 $message->from('dailymunch1@gmail.com', 'DailyMunch');
                 
-                $message->to($user_reciever['email'])->subject('DailyMunch');
+                $message->to($user_reciever['email'])->subject('MunchDaily');
                 
             });
             
