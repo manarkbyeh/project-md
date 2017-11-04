@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Wijzig munchie ') @section('content')
+@extends('main') @section('title', '| Wijzig munchie ') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
 
   <div class="container extra">
 
@@ -10,7 +10,7 @@
     </p>
 
 
-    {!! Form::model($article, ['route' => ['article.update', $article->id], 'method' => 'PATCH','files'=>true]) !!}
+    {!! Form::model($article, ['route' => ['article.update', 'data-parsley-validate' => '', $article->id], 'method' => 'PATCH','files'=>true]) !!}
 
 
 
@@ -19,9 +19,9 @@
     <div class="form-group  has-feedback">
       <label class="control-label">Foto</label>
       <div class="input-group" id="img" style="padding:0 ">
-        <input type="text" class="form-control" readonly="true" />
+        <input type="text"  class="form-control" readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
-        <span class="btn btn-success">Browse&hellip;
+        <span class="btn btn-success">ZOEK EEN FOTO
           <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
       
         </span>
@@ -99,9 +99,7 @@
 
   </div>
 
-  @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
-
-   window.ParsleyValidator.setLocale('fr');
+  @endsection @section('scripts') @section('scripts') {!! Html::script('js/parsley.min.js') !!}
 
   <script>
 

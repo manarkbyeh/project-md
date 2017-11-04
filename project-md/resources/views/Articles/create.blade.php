@@ -18,10 +18,10 @@
     <div class="form-group  has-feedback">
       <label class="control-label">Foto</label>
       <div class="input-group" id="img" style="padding:0 ">
-        <input type="text" class="form-control" readonly="true" />
+        <input type="text" class="form-control"  readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">ZOEK EEN FOTO
-          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" required />
+          <input type="file" name="pic" data-required-message="selecteer een foto aub." Style="display: none;" accept="image/x-png,image/gif,image/jpeg" required />
       
         </span>
         </label>
@@ -35,7 +35,7 @@
 <div class="form-group  has-feedback">
 
   <label class=" control-label">Titel munchie (*)</label>
-  {{ Form::text('title',old('title'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::text('title',old('title'),array('class' =>'form-control ','data-parsley-required-message' => 'moet een title bevatten.', 'required' => '','maxlength'=>'255'))}}
   <small id="fileHelp" class="form-text text-muted">Kies een passende titel.</small>
 
 </div>
@@ -44,13 +44,13 @@
 
 <div class="form-group  has-feedback">
   <label class=" control-label">Omschrijving (*)</label>
-  {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
+  {{ Form::textarea('text',old('text'),array('class' =>'form-control','data-parsley-required-message' => 'moet een omschrijving bevatten.', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
 </div>
 
 
 <div class="form-group  has-feedback">
   <label class=" control-label"> Houdbaarheidsdatum (*) </label>
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control ','min'=>'2017-04-01', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control ' , 'data-parsley-required-message' => 'moet een datum bevatten.','min'=>'2017-04-01', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
   <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
 </div>
 
@@ -68,7 +68,7 @@
 
     <div class="form-group">
       <label class=" control-label"> Tijdstip (*) </label>
-      {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'data-parsley-required-message' => 'moet een uur bevatten.', 'required' => '','maxlength'=>'255'))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
      
@@ -81,7 +81,7 @@
         width: 100%;
        }
       </style>
-      <label class=" control-label"> Please Select your location  </label>
+      <label class=" control-label"> Selecteer je locatie aub.  </label>
       <div id="mapvalidation"></div>
       <div id="map"></div>
       <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
@@ -164,7 +164,7 @@
         var latv = $("#latLngLat").val();
       if(latv == ''){
         $('#mapvalidation').addClass('alert alert-danger');
-        $('#mapvalidation').html('It is important to define your location.');
+        $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
         return e.preventDefault();
       }
       });
