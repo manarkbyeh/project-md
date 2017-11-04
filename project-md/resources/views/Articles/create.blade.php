@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Nieuwe munchie') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
+@extends('main') @section('title', '| Create New Post') @section('stylesheets') {!! Html::style('css/parsley.css') !!} @endsection @section('content')
 
 
   <div class="container extra">
@@ -11,7 +11,7 @@
       Vul alle velden in zodat andere gebruikers precies weten welk product u ter beschikking stelt.
     </p>
 
-  
+
     {!! Form::open(array('route' => 'article.store', 'data-parsley-validate' => '', 'files' => true)) !!}
 
 
@@ -22,6 +22,7 @@
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">ZOEK EEN FOTO
           <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" required />
+      
         </span>
         </label>
       </div>
@@ -42,21 +43,19 @@
 
 
 <div class="form-group  has-feedback">
-  <label class=" control-label">Omschrijving (*) </label>
+  <label class=" control-label">Omschrijving (*)</label>
   {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
 </div>
 
 
 <div class="form-group  has-feedback">
   <label class=" control-label"> Houdbaarheidsdatum (*) </label>
-    <div class="input-group date">
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control', 'min' => '2017-11-04', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
-    </div>
-        <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control ','min'=>'2017-04-01', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
+  <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
 </div>
 
     <div class="form-group has-feedback">
-      <label class=" control-label">Categorie (*)</label>
+      <label class=" control-label">Categorie</label>
       <select class="form-control" name="category_id">
         @foreach($categories as $category)
           <option value='{{ $category->id }}'>{{ $category->name }}</option>
@@ -68,7 +67,7 @@
 
 
     <div class="form-group">
-      <label class=" control-label"> Tijdstip(*)</label>
+      <label class=" control-label"> Tijdstip (*) </label>
       {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
@@ -76,33 +75,32 @@
 
     
     <div class="form-group">
-    <style>
-     #map {
-      height: 400px;
-      width: 100%;
-     }
-    </style>
-    <label class=" control-label"> Selecteer uw locatie op de kaart(*)</label>
+      <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+      </style>
+      <label class=" control-label"> Please Select your location  </label>
+      <div id="mapvalidation"></div>
+      <div id="map"></div>
+      <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
+      <input type="hidden" id="latLngLng" name="latLngLng" value="" required>
+      
+    </div>
 
 
-  @if ($errors->has('latLngLat'))   <div id="mapvalidation" class="alert alert-danger">Duid alstublieft uw locatie aan op de kaart.</div>@endif
-   <div id="maperror"></div>
-    <div id="map"></div>
-    <input type="hidden" id="latLngLat" name="latLngLat" value="" >
-    <input type="hidden" id="latLngLng" name="latLngLng" value="" >
-    
-  </div>
-
-
-{{ Form::submit('TOEVOEGEN',array('class' =>'btn addnewsbtn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
+{{ Form::submit('TOEVOEGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
 {!! Form::close() !!}
 
     <br>
     <br>
+    <br>
+    <br>
 
 
   </div>
-  @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} {!! Html::script('js/main.js') !!}
+  @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
 
       <script>
 
@@ -165,17 +163,13 @@
       $('#submit').click(function(e){
         var latv = $("#latLngLat").val();
       if(latv == ''){
-        $('#maperror').addClass('alert alert-danger');
-        $('#maperror').html('Duid alstublieft uw locatie aan op de kaart.');
-       
+        $('#mapvalidation').addClass('alert alert-danger');
+        $('#mapvalidation').html('It is important to define your location.');
+        return e.preventDefault();
       }
-
       });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
-
-
-
  @endsection
