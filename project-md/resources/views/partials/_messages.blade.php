@@ -10,7 +10,7 @@
 @endif
 @if (count($errors) > 0)
 	<div class="alert alert-danger extra" role="alert">
-		<strong>Errors:</strong>
+		<strong>Deze fouten zijn opgetreden:</strong>
 		<ul>
 		@foreach ($errors->all() as $error)
 			<li>{{ $error }}</li>

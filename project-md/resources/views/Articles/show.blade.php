@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| View Article') @section('content')
+@extends('main') @section('title', '| Munchie') @section('content')
 
 
     <div class="container extra">
@@ -23,9 +23,9 @@
 
                     </div>
                     <div class="details">
-                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></a></div>
-                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></a></div>
-                        <div class="icon-wrapper show"><a href=""><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></a></div>
+                        <div class="icon-wrapper show"><img src="{{asset('/images/carrot-black.png')}}" alt="" class="icon"><p>groenten</p></div>
+                        <div class="icon-wrapper show"><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></div>
+                        <div class="icon-wrapper show"><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></div>
                     </div>
 
                     <a class="btn btn-success btn-lg" href="{{url('/article/transaction/'.$article->id)}}" role="button">VERZOEK</a>

@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Edit Blog Post') @section('content')
+@extends('main') @section('title', '| Mijn verzoeken') @section('content')
 
 
 

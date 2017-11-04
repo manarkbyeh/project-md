@@ -36,11 +36,6 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{url('/articles')}}">Bekijk alle munchies</a>
-
-                        <a class="dropdown-item" href="{{url('/myarticles')}}">Mijn munchies</a>
-
-                        <a class="dropdown-item" href="{{url('/myorders')}}">Mijn bestelling</a>
-                        <a class="dropdown-item" href="{{url('/article/create')}}">Voeg een munchie toe</a>
                     </div>
                 </li>
                 @endguest
@@ -72,6 +67,11 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{route('user.profile',Auth::user()->id)}}">Mijn profiel</a>
+
+                            <a class="dropdown-item" href="{{url('/myarticles')}}">Mijn munchies</a>
+
+                            <a class="dropdown-item" href="{{url('/myorders')}}">Mijn verzoeken</a>
+                            <a class="dropdown-item" href="{{url('/article/create')}}">Voeg een munchie toe</a>
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}">Afmelden</a>

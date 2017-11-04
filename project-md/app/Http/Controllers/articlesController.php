@@ -231,7 +231,7 @@ class articlesController extends Controller
         
         $articles->user_id = Auth::user()->id;
         if(  $articles->save()){
-            session()->flash('success','Uw munchie werd geupdate!');
+            session()->flash('success','Uw munchie werd aangepast!');
             return redirect('myarticles');
         }
         

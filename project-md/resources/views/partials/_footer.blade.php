@@ -12,7 +12,6 @@
       <a href="{{url('/werking')}}">werking</a>
       ·
       <a href="{{url('/articles')}}">munchies</a>
-      .
       @if(Auth::check())
     <a href="{{route('user.profile',Auth::user()->id)}}">profiel</a>
     @endif
@@ -36,7 +35,7 @@
 
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="">DailyMunch@gmail.com</a></p>
+      <p><a href="">MunchDaily@gmail.com</a></p>
     </div>
 
   </div>
@@ -44,7 +43,7 @@
   <div class="footer-right">
 
     <p class="footer-company-about">
-      <span>DailyMunch</span>
+      <span>MunchDaily</span>
       MunchDaily geeft de mogelijkheid om het teveel aan voedsel aan iemand anders te schenken.
     </p>
 

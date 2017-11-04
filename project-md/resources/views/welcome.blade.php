@@ -1,4 +1,4 @@
-@extends('main') @section('title', 'Home')
+@extends('main') @section('title', ' | Home')
 
 
 
@@ -9,7 +9,7 @@
       <h1 class="display-3">Welkom bij MunchDaily!</h1>
       <h5>MunchDaily geeft de mogelijkheid om het teveel aan voedsel aan iemand anders te schenken.</h5>
       <p><a class="btn btn-success btn-lg btn-hero" href="{{ route('article.create') }}" role="button">GEVEN</a>
-        <a class="btn btn-warning btn-lg btn-hero" href="{{ route('article.index') }}" role="button">ONTVANGEN</a></p>
+        <a class="btn btn-warning btn-lg btn-hero" href="{{ route('article.index') }}" role="button">BEKIJK MUNCHIES</a></p>
     </div>
   </div>
 </section>
@@ -17,15 +17,19 @@
 
 @section('content')
 
+  @guest
 <section id="doel-icons">
   <div class="container home">
     <div class="all-icons">
+
+
       <div class="icon-wrapper ">
         <a href="{{url('about')}}">
           <img src="{{asset('/images/waste.png')}}" alt="" class="icon">
           <h4>Stop voedselverspilling</h4>
         </a>
       </div>
+
 
       <div class="icon-wrapper">
         <a href="{{url('about')}}">
@@ -34,12 +38,14 @@
         </a>
       </div>
 
+
       <div class="icon-wrapper">
         <a href="{{url('about')}}">
           <img src="{{asset('/images/family.png')}}" alt="" class="icon">
           <h4>Maak anderen blij</h4>
         </a>
       </div>
+
     </div>
   </div>
 </section>
@@ -47,7 +53,7 @@
 
 <section id="doel-text">
   <div class="container home">
-    <h5>"Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wil gooien, een betere plek
+    <h5>Bij MunchDaily zijn wij er van overtuigd dat het voedsel dat je weg wil gooien, een betere plek
 verdient bij iemand anders. Door de mogelijkheid te creëren om eten weg te geven, proberen we
 voedselverspilling tegen te gaan.
 </h5>
@@ -61,7 +67,7 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
     </div>
   </div>
 </section>
-
+@endguest
 
 
 <section id="vandaag">
@@ -145,7 +151,7 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
          <input type="text" placeholder="Typ het hier en wij helpen zoeken" class="form-control form-control-lg textfield_form" name="search" >
       
          
-         <button type="submit" class="btn btn-warning btn-lg" >ZOEKEN!</button>
+         <button type="submit" class="btn btn-warning btn-lg" >ZOEKEN</button>
      </div>
  </div>
  </form>

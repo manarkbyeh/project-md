@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| All Posts')
+@extends('main') @section('title', '| Mijn profiel')
 
 
 
@@ -6,7 +6,7 @@
 
     <div class="container extra">
 
-        <h1>Profiel</h1>
+        <h1 class="orange">Profiel</h1>
 
 
         <div class="profiel">

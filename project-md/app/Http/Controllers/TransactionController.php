@@ -89,7 +89,7 @@ class TransactionController extends Controller
             });
             
             session()->flash('success','Uw verzoek is verzonden !!');
-            return redirect('/myarticles');
+            return redirect('/articles');
         }
         
     }

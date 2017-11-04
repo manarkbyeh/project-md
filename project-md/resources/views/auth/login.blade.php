@@ -50,6 +50,10 @@
                     <a class="btn btn-link green" href="{{ route('password.request') }}">
                         Bent u uw wachtwoord vergeten?
                     </a>
+
+                    <a class="btn btn-link orange" href="{{ route('register') }}">
+                        Hebt u nog geen account? Registreer!
+                    </a>
                 </div>
             </div>
         </form>

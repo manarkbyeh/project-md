@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Edit Blog Post') @section('content')
+@extends('main') @section('title', '| Wijzig munchie ') @section('content')
 
   <div class="container extra">
 
@@ -6,7 +6,7 @@
     <h2 class="page_title green">Munchie Wijzigen</h2>
 
     <p class="lead">
-      Hebt u een foutje gemaakt? Hier kunt u uw artikel aanpassen.
+      Hebt u een foutje gemaakt of wilt u een wijziging aanbrengen? Hier kunt u uw artikel aanpassen.
     </p>
 
 
@@ -102,7 +102,7 @@
   @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
 
    window.ParsleyValidator.setLocale('fr');
-</script>
+
   <script>
 
       var map;

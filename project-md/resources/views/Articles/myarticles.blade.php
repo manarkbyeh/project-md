@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Edit Blog Post') @section('content')
+@extends('main') @section('title', '| Mijn munchies') @section('content')
 
 
     <section id="vandaag">
@@ -6,7 +6,7 @@
 
 
             <p>
-                <a href="/" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn munchies
+                <a href="{{url('/')}}" class="green">Home</a> > <a href="" class="green">Profiel</a> > Mijn munchies
             </p>
 
             <div class="row">
@@ -17,90 +17,51 @@
 
                 @foreach($articles as $article)
 
-        <?php
+                    <?php
                     $current_date = Carbon\Carbon::now();
-
                     $current_date = $current_date->toDateString();
+                    ?>
 
-                   ?>
 
-
-<<<<<<< HEAD
                     <div class="col-md-4">
                         <a href="{{url('/article/'.$article->id.'/edit')}}">
                             <div class="artikel">
                                 <div class="foto">
-                                    <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+                                    <img src="{{url('/images/'.$article->pic)}}" alt="munchie" class="@if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
                                 </div>
                                 <div class="artikel-content @if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
                                     <p class="datum">{{$article->datum}}</p>
-                                    <h2>{{$article->title}}</h2>
-                                    <p>{{strip_tags($article->text)}}</p>
+                                    <h2>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 40).'...' :strip_tags($article->title)}}</h2>
+                                    <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
                                     <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
 
                                     <?php
-                                    $current_date = Carbon\Carbon::now();
-
-                                    $current_date = $current_date->toDateString();
-
                                     if($article->datum > $current_date){ ?>
-=======
-          <div class="col-md-4">
-            <a href="{{url('/article/'.$article->id.'/edit')}}">
-              <div class="artikel">
-                <div class="foto">
-                  <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
-                </div>
-                <div class="artikel-content @if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
-                  <p class="datum">{{$article->datum}}</p>
-                  <h2>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 40).'...' :strip_tags($article->title)}}</h2>
-                  <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
-                  <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
-
-
-                    <?php
-                
-                    if($article->datum > $current_date){ ?>
->>>>>>> 04a5cb11278511b2d0618556866e0775c745377f
-
-                  <?php } else
-
+                                    <?php } else
                                     { ?>
-
-
                                     <h5 class="rood">Dit product is vervallen</h5>
-
                                     <?php } ?>
 
 
+                                    <div class="btn-group-sm">
+                                        <form action="{{url('/article/'.$article->id)}}" method="post">
+                                            {{csrf_field()}} {{method_field('DELETE')}}
+                                            <button type="submit" class="btn btn-sm btn-danger" title="">
+                                                <img src="{{asset('/images/garbage-white.png')}}" alt="verwijder munchie">
+                                            </button>
 
-                                    <form action="{{url('/article/'.$article->id)}}" method="post">
-                                        {{csrf_field()}} {{method_field('DELETE')}}
-                                        <button type="submit" class="btn btn-danger" title="">
-                                            <img src="{{asset('/images/garbage.png')}}" alt=""></button>
-
-                                    </form>
-
-
-
-
-
-
-
-
-                                    <div class="row">
-
-                                        <a class="btn btn-success" href="{{url('/article/'.$article->id.'/edit')}}">
-
-                                            <img src="{{asset('/images/edit.png')}}" alt="">
+                                        <a class="btn btn-sm btn-success" href="{{url('/article/'.$article->id.'/edit')}}">
+                                            <img src="{{asset('/images/edit-white.png')}}" alt="wijzig munchie">
                                         </a>
 
                                         @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
-                                            <span class="btn btn-warning btn-sm jsActive" data-id="{{$article->id}}">
-
-</span>
+                                            <span class="btn btn-sm btn-warning jsActive" data-id="{{$article->id}}">
+                                                 <img src="{{asset('/images/tick-white.png')}}" alt="voltooi dit verzoek">
+                                            </span>
                                         @endif
+                                        </form>
+
                                     </div>
 
                                 </div>
@@ -124,7 +85,6 @@
             $('span.jsActive').click(function() {
                 var id = this.dataset.id,
                     self = this;
-
                 $.ajax({
                     url: root + id + '/active',
                     method: "get"
@@ -137,9 +97,7 @@
                 }).fail(function(jqXHR, textStatus) {
                     alert("Try again");
                 });
-
             });
-
         });
     </script>
 @endsection

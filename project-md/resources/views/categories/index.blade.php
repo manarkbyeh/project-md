@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| All Categories') @section('content')
+@extends('main') @section('title', '| Categorieën') @section('content')
 
 <div class="row">
   <div class="col-md-8">
