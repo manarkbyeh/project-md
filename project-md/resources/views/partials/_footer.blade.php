@@ -5,15 +5,17 @@
     <img class="logo" src="{{asset('/images/witlogo.png')}}" alt="MUNCHDAILY" style="width:166px; height:92px;">
 
     <p class="footer-links">
-      <a href="">home</a>
+      <a href="{{url('/')}}">home</a>
       ·
-      <a href="">about</a>
+      <a href="{{url('/about')}}">about</a>
       ·
-      <a href="">werking</a>
+      <a href="{{url('/werking')}}">werking</a>
       ·
-      <a href="">munchies</a>
-      ·
-      <a href="">profiel</a>
+      <a href="{{url('/articles')}}">munchies</a>
+      .
+      @if(Auth::check())
+    <a href="{{route('user.profile',Auth::user()->id)}}">profiel</a>
+    @endif
 
     </p>
 

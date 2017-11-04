@@ -20,7 +20,7 @@ class articlesController extends Controller
     
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('index','search');
     }
     
     /**
@@ -104,9 +104,17 @@ class articlesController extends Controller
         
         $articles = Article::where('title' ,'like','%'.$request->search.'%')->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
         ->orWhere('category_id','=',Category::where('name'  ,'like','%'.$request->search.'%')->pluck('id')->first())->get();
-       
+        //return $articles;
+        if(count($articles)){
+     
             $categories = Category::all();
-        return view('Articles.search')->withArticles($articles)->withCategories($categories);
+            return view('Articles.search')->withArticles($articles)->withCategories($categories);
+        }else{
+            return back()->with('status', 'Your Search Term/Query is not found');
+        }
+    
+       
+
     }
     /**
     * Show the form for creating a new resource.
@@ -184,10 +192,11 @@ class articlesController extends Controller
     */
     public function edit($id)
     {
-        $articles = Article::find($id);
-        $this->authorize('update',$articles);
+        $article = Article::find($id);
+    
+        $this->authorize('update',$article);
         $categories = Category::all();
-        return view('Articles.edit')->withArticles($articles)->withCategories($categories);
+        return view('Articles.edit')->withArticle($article)->withCategories($categories);
     }
     
     /**

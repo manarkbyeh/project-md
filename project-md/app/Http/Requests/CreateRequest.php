@@ -30,8 +30,8 @@ class CreateRequest extends FormRequest
         'text' => 'required',
         'latLngLat' => 'required',
         'latLngLng' => 'required',
-     
-
+        'datum'         => 'required|date|after_or_equal:'.\Carbon\Carbon::today(),
+      
         ];
     }
 }

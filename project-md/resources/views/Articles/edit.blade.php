@@ -10,7 +10,7 @@
     </p>
 
 
-    {!! Form::model($articles, ['route' => ['article.update', $articles->id], 'method' => 'PATCH','files'=>true]) !!}
+    {!! Form::model($article, ['route' => ['article.update', $article->id], 'method' => 'PATCH','files'=>true]) !!}
 
 
 
@@ -82,14 +82,15 @@
        }
       </style>
       <label class=" control-label"> Please Select your location  </label>
+      <div id="mapvalidation"></div>
       <div id="map"></div>
-      <input type="hidden" id="latLngLat" name="latLngLat">
-      <input type="hidden" id="latLngLng" name="latLngLng">
+      <input type="hidden" id="latLngLat" name="latLngLat" value="{{$article->latlngLat}}" required>
+      <input type="hidden" id="latLngLng" name="latLngLng" value="{{$article->latlngLng}}" required>
       
     </div>
 
 
-    {{ Form::submit('WIJZIGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
+    {{ Form::submit('WIJZIGEN',array('class' =>'btn btn-success pull-left','id'=>'submit','style'=>'margin-top:20px'))}}
 
     {!! Form::close() !!}
 
@@ -98,7 +99,7 @@
 
   </div>
 
-
+  @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
   <script>
 
       var map;
@@ -157,8 +158,18 @@
         clearMarkers();
         markers = [];
       }
+
+      $('#submit').click(function(e){
+        var latv = $("#latLngLat").val();
+      if(latv == ''){
+        $('#mapvalidation').addClass('alert alert-danger');
+        $('#mapvalidation').html('Het is belangrijk om uw locatie te selecteren .');
+        return e.preventDefault();
+      }
+      });
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
-    @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection
+  @endsection

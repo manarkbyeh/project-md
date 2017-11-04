@@ -28,7 +28,9 @@ class EditRequest extends FormRequest
         'title' => 'required|max:225',
         'category_id'   => 'required|integer',
         'text' => 'required',
-   
+        'latLngLat' => 'required',
+        'latLngLng' => 'required',
+        'datum'         => 'required|date|after_or_equal:'.\Carbon\Carbon::today(),
      
         ];
     }

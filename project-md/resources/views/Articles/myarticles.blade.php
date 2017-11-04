@@ -17,8 +17,15 @@
 
                 @foreach($articles as $article)
 
+        <?php
+                    $current_date = Carbon\Carbon::now();
+
+                    $current_date = $current_date->toDateString();
+
+                   ?>
 
 
+<<<<<<< HEAD
                     <div class="col-md-4">
                         <a href="{{url('/article/'.$article->id.'/edit')}}">
                             <div class="artikel">
@@ -38,6 +45,24 @@
                                     $current_date = $current_date->toDateString();
 
                                     if($article->datum > $current_date){ ?>
+=======
+          <div class="col-md-4">
+            <a href="{{url('/article/'.$article->id.'/edit')}}">
+              <div class="artikel">
+                <div class="foto">
+                  <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
+                </div>
+                <div class="artikel-content @if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
+                  <p class="datum">{{$article->datum}}</p>
+                  <h2>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 40).'...' :strip_tags($article->title)}}</h2>
+                  <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
+                  <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
+
+
+                    <?php
+                
+                    if($article->datum > $current_date){ ?>
+>>>>>>> 04a5cb11278511b2d0618556866e0775c745377f
 
                   <?php } else
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,10 @@ class HomeController extends Controller
     {
 
 
-        $articles = Article::orderBy('created_at', 'desc')->limit(3)->get();
+        $current_date = Carbon::now();
+        
+        $current_date = $current_date->toDateString();
+        $articles = Article::where('datum', '>=',  $current_date)->orderby('datum','ASC')->where('active', '=', 0)->limit(3)->get();
         $articlesMarker = Article::all();
 		
 		    $markers_arr = [] ;

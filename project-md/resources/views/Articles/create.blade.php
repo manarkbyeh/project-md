@@ -21,7 +21,7 @@
         <input type="text" class="form-control" readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">BROWSE&hellip;
-          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
+          <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" required />
       
         </span>
         </label>
@@ -50,7 +50,7 @@
 
 <div class="form-group  has-feedback">
   <label class=" control-label"> Houdbaarheidsdatum </label>
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control ','min'=>'2017-04-01', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
   <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
 </div>
 
@@ -82,14 +82,15 @@
        }
       </style>
       <label class=" control-label"> Please Select your location  </label>
+      <div id="mapvalidation"></div>
       <div id="map"></div>
-      <input type="hidden" id="latLngLat" name="latLngLat">
-      <input type="hidden" id="latLngLng" name="latLngLng">
+      <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
+      <input type="hidden" id="latLngLng" name="latLngLng" value="" required>
       
     </div>
 
 
-{{ Form::submit('TOEVOEGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px'))}}
+{{ Form::submit('TOEVOEGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
 {!! Form::close() !!}
 
     <br>
@@ -99,6 +100,7 @@
 
 
   </div>
+  @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
 
       <script>
 
@@ -106,10 +108,10 @@
       var markers = [];
 
       function initMap() {
-        var haightAshbury = {lat:50.5039, lng:4.4699};
+        var haightAshbury = {lat:51.2194, lng:4.4025};
 
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 8,
           center: haightAshbury,
           mapTypeId: 'terrain'
         });
@@ -158,8 +160,16 @@
         clearMarkers();
         markers = [];
       }
+      $('#submit').click(function(e){
+        var latv = $("#latLngLat").val();
+      if(latv == ''){
+        $('#mapvalidation').addClass('alert alert-danger');
+        $('#mapvalidation').html('It is important to define your location.');
+        return e.preventDefault();
+      }
+      });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
-    @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!} @endsection
+ @endsection

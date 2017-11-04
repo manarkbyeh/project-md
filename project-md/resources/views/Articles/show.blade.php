@@ -4,7 +4,7 @@
     <div class="container extra">
 
 
-        <p><a href="{{url('/')}}" class="green">Home</a> > <a href="{{url('/article')}}" class="green">Munchies</a> > {{$article->title}}</p>
+        <p><a href="{{url('/')}}" class="green">Home</a> > <a href="{{url('/articles')}}" class="green">Munchies</a> > {{$article->title}}</p>
         <br>
         <br>
 
