@@ -50,7 +50,7 @@
 
     <div class="form-group  has-feedback">
       <label class=" control-label"> Houdbaarheidsdatum </label>
-      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','min'=>'2017-04-01', 'max'=>'2018-04-20'))}}
       <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
     </div>
 
@@ -68,7 +68,7 @@
 
     <div class="form-group">
       <label class=" control-label"> Tijdstip </label>
-      {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
+      {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => ''))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
 
@@ -100,6 +100,9 @@
   </div>
 
   @endsection @section('scripts') {!! Html::script('js/parsley.min.js') !!}
+
+   window.ParsleyValidator.setLocale('fr');
+</script>
   <script>
 
       var map;

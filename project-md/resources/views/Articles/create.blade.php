@@ -11,7 +11,7 @@
       Vul alle velden in zodat andere gebruikers precies weten welk product u ter beschikking stelt.
     </p>
 
-
+  
     {!! Form::open(array('route' => 'article.store', 'data-parsley-validate' => '', 'files' => true)) !!}
 
 
@@ -75,22 +75,25 @@
 
     
     <div class="form-group">
-      <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-      </style>
-      <label class=" control-label"> Please Select your location  </label>
-      <div id="mapvalidation"></div>
-      <div id="map"></div>
-      <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
-      <input type="hidden" id="latLngLng" name="latLngLng" value="" required>
-      
-    </div>
+    <style>
+     #map {
+      height: 400px;
+      width: 100%;
+     }
+    </style>
+    <label class=" control-label"> Please Select your location  </label>
 
 
-{{ Form::submit('TOEVOEGEN',array('class' =>'btn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
+  @if ($errors->has('latLngLat'))   <div id="mapvalidation" class="alert alert-danger">It is belangrijk to define your location</div>.@endif
+   <div id="maperror"></div>
+    <div id="map"></div>
+    <input type="hidden" id="latLngLat" name="latLngLat" value="" >
+    <input type="hidden" id="latLngLng" name="latLngLng" value="" >
+    
+  </div>
+
+
+{{ Form::submit('TOEVOEGEN',array('class' =>'btn addnewsbtn btn-success pull-left', 'style'=>'margin-top:20px','id'=>'submit'))}}
 {!! Form::close() !!}
 
     <br>
@@ -163,13 +166,15 @@
       $('#submit').click(function(e){
         var latv = $("#latLngLat").val();
       if(latv == ''){
-        $('#mapvalidation').addClass('alert alert-danger');
-        $('#mapvalidation').html('It is important to define your location.');
-        return e.preventDefault();
+        $('#maperror').addClass('alert alert-danger');
+        $('#maperror').html('It is belangrijk to define your location.');
+       
       }
+
       });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
+
  @endsection

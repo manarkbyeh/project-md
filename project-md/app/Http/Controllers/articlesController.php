@@ -110,7 +110,7 @@ class articlesController extends Controller
             $categories = Category::all();
             return view('Articles.search')->withArticles($articles)->withCategories($categories);
         }else{
-            return back()->with('status', 'Your Search Term/Query is not found');
+            return back()->with('status', 'de zoekterm die je zoekt is niet gevonden ! ');
         }
     
        
@@ -135,8 +135,8 @@ class articlesController extends Controller
     */
     public function store(CreateRequest $request)
     {
-    
-        
+  
+
         $articles = new Article();
         if ($request->hasFile('pic')) {
             $pic = $request->file('pic');
