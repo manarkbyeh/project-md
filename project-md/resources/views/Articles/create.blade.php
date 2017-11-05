@@ -51,7 +51,7 @@
 
 <div class="form-group  has-feedback">
   <label class=" control-label"> Houdbaarheidsdatum (*) </label>
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control ' , 'data-parsley-required-message' => 'moet een datum bevatten.','min'=>'2017-04-01', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control ' , 'data-parsley-required-message' => 'moet een datum bevatten.','min'=>'2017-11-04', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
   <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
 </div>
 
@@ -82,7 +82,7 @@
         width: 100%;
        }
       </style>
-      <label class=" control-label"> Selecteer je locatie aub.  </label>
+      <label class=" control-label">Duid je locatie aan op de kaart. (*)</label>
       <div id="mapvalidation"></div>
       <div id="map"></div>
       <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
@@ -90,7 +90,7 @@
       
     </div>
 
-<a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">Save</a>
+<a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">TOEVOEGEN</a>
     <br>
     <br>
     <br>

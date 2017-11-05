@@ -18,11 +18,11 @@
 
 
     <div class="form-group  has-feedback">
-      <label class="control-label">Foto</label>
+      <label class="control-label">Foto (*)</label>
       <div class="input-group" id="img" style="padding:0 ">
         <input type="text" name="pic2" value="{{ $article->pic }}" class="form-control" readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
-        <span class="btn btn-success">Browse&hellip;
+        <span class="btn btn-success">ZOEK EEN FOTO
           <input type="file" name="pic" Style="display: none;" accept="image/x-png,image/gif,image/jpeg" />
       
         </span>
@@ -36,7 +36,7 @@
 
     <div class="form-group  has-feedback">
 
-      <label class=" control-label">Titel munchie</label>
+      <label class=" control-label">Titel munchie (*) </label>
       {{ Form::text('title',old('title'),array('class' =>'form-control ', 'required' => '','maxlength'=>'255'))}}
       <small id="fileHelp" class="form-text text-muted">Kies een passende titel.</small>
 
@@ -45,14 +45,14 @@
 
 
     <div class="form-group  has-feedback">
-      <label class=" control-label">Omschrijving </label>
+      <label class=" control-label">Omschrijving (*)</label>
       {{ Form::textarea('text',old('text'),array('class' =>'form-control', 'required' => '', 'placeholder'=>'Geef hier een korte omschrijving van het product en vertel ons waarom je het product weg wilt geven.'))}}
     </div>
 
 
     <div class="form-group  has-feedback">
-      <label class=" control-label"> Houdbaarheidsdatum </label>
-      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','min'=>'2017-04-01', 'max'=>'2018-04-20'))}}
+      <label class=" control-label"> Houdbaarheidsdatum (*) </label>
+      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','min'=>'2017-11-04', 'max'=>'2018-04-20'))}}
       <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
     </div>
 
@@ -69,7 +69,7 @@
 
 
     <div class="form-group">
-      <label class=" control-label"> Tijdstip </label>
+      <label class=" control-label"> Tijdstip (*) </label>
       {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'required' => ''))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
@@ -83,7 +83,7 @@
         width: 100%;
        }
       </style>
-      <label class=" control-label"> Please Select your location  </label>
+      <label class=" control-label">Duid je locatie aan op de kaart. (*) </label>
       <div id="mapvalidation"></div>
       <div id="map"></div>
       <input type="hidden" id="latLngLat" name="latLngLat" value="{{$article->latlngLat}}" required>
@@ -93,7 +93,7 @@
 
 
 
-    <a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">Save</a>
+    <a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">OPSLAAN</a>
     {!! Form::close() !!}
 
 
