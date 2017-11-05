@@ -1,4 +1,4 @@
-@extends('main') @section('title', '| Create New Post')  @section('content')
+@extends('main') @section('title', '| Nieuwe munchie')  @section('content')
 
 
   <div class="container extra">

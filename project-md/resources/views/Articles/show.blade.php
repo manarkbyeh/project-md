@@ -50,6 +50,10 @@
 
                 @foreach($articles as $art)
 
+
+                    @if($art->active == 0)
+                        
+
                     <a href="/article/{{$art->id}}">
                         <div class="artikel-ver">
                             <div class="foto-ver">
@@ -63,6 +67,8 @@
                             </div>
                         </div>
                     </a>
+
+                    @endif
                 @endforeach
 
             </div>
