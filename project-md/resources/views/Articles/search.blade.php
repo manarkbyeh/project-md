@@ -17,6 +17,7 @@
       <div class="row">
 
         @foreach($articles as $article)
+          @if($article->active == 0)
           <div class="col-md-4">
             <a href="{{url('/article/'.$article->id)}}">
               <div class="artikel">
@@ -34,8 +35,8 @@
               </div>
             </a>
           </div>
+          @endif
         @endforeach
-
 
 
 

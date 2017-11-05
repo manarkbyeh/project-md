@@ -40,7 +40,7 @@
                                     if($article->datum > $current_date){ ?>
                                     <?php } else
                                     { ?>
-                                    <h5 class="rood">Dit product is vervallen</h5>
+                                    <h5>Dit product is vervallen</h5>
                                     <?php } ?>
 
 
