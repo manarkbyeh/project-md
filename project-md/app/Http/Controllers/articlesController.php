@@ -101,8 +101,8 @@ class articlesController extends Controller
     */
     public function search(Request $request)
     {
-        
-        $articles = Article::where('title' ,'like','%'.$request->search.'%')->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
+
+        $articles = Article::where('title' ,'like','%'.$request->search.'%')->where('active','=',0)->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
         ->orWhere('category_id','=',Category::where('name'  ,'like','%'.$request->search.'%')->pluck('id')->first())->get();
         //return $articles;
         if(count($articles)){
@@ -110,7 +110,7 @@ class articlesController extends Controller
             $categories = Category::all();
             return view('Articles.search')->withArticles($articles)->withCategories($categories);
         }else{
-            return back()->with('status', 'de zoekterm die je zoekt is niet gevonden ! ');
+            return back()->with('status', 'De zoekterm die je zoekt is niet gevonden.');
         }
     
        
