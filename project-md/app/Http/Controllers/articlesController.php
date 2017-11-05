@@ -20,7 +20,7 @@ class articlesController extends Controller
     
     public function __construct()
     {
-        $this->middleware('auth')->except('index','search');
+        $this->middleware('auth')->except('index','search','show');
     }
     
     /**

@@ -52,7 +52,7 @@
 
 
                     @if($art->active == 0)
-                        
+
 
                     <a href="/article/{{$art->id}}">
                         <div class="artikel-ver">
