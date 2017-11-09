@@ -47,16 +47,11 @@
 
 @endsection @section('scripts') 
 <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
-    <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-
-      <script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script >
     $(document).ready(function() {
-        $('#transaction').submit(function(e) {
-            e.preventDefault();
-        }).validate({
+        $('#transaction').validate({
             
             rules: {
                 datum: {
@@ -85,23 +80,19 @@
                 
             },
     
-     /*   highlight: function (input) {
-            $(input).parents('.field-group').addClass('error');
-        },
-        unhighlight: function (input) {
-            $(input).parents('.field-group').removeClass('error');
-        },
-        errorPlacement: function (error, element) {
+            highlight: function (input) {
+                $(input).parent().addClass('error');
+            },
+            unhighlight: function (input) {
+                $(input).parent().removeClass('error');
+            },
+     
 
-                $(element).parents('.field-group').parent().append(error);
-        },*/
-
-           submitHandler: function(form) {
-
-              alert('go');
-            }
+        
     
         });
 
-    });</script>
+    });
+    
+    </script>
 @endsection

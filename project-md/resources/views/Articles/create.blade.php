@@ -100,7 +100,7 @@
   </div>
   @endsection @section('scripts') 
   <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
       <script>
@@ -117,7 +117,7 @@
             $('#article')[0].submit();
         } else {
             if(latv == ''){
-              $('#mapvalidation').addClass('alert alert-danger');
+              $('#mapvalidation').addClass('text-danger');
               $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
             }
               if (
@@ -188,11 +188,11 @@
             messages: {
               title : 'moet een titel bevatten.',
               text : 'moet een omschrijving bevatten.',
-<<<<<<< HEAD
+              datum : 'moet een datum bevatten.',
+              tijdstip : 'moet een tijdstip bevatten.',
               pic2 : 'moet een foto bevatten.'
-=======
-              pic : {required: 'Selecteer een foto.', accept: 'Dit is geen correct foto bestand.'}
->>>>>>> b099b1c188551ce136027b6ca370a274af4a0777
+
+     
                 
             },
         highlight: function (input) {

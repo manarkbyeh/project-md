@@ -46,7 +46,7 @@ Route::delete('/article/{article}', 'articlesController@destroy')->name('article
 Route::get('article/{id}/edit',['uses'=>'articlesController@edit','as'=>'article.edit']);
 Route::get('/article/{id}/active', 'articlesController@active')->name('article.active');
 
-Route::resource('categories', 'CategoriesController', ['except' => ['create']]);
+Route::resource('categories', 'categoriesController', ['except' => ['create']]);
 Auth::routes();
 
 

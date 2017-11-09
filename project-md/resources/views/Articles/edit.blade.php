@@ -119,7 +119,7 @@
             $('#article')[0].submit();
         } else {
             if(latv == ''){
-              $('#mapvalidation').addClass('alert alert-danger');
+              $('#mapvalidation').addClass('text-danger');
               $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
             }
               if (
@@ -191,7 +191,9 @@
             messages: {
               title : 'moet een title bevatten.',
               text : 'moet een omschrijving bevatten.',
-              pic2 : { 'moet een foto bevatten.'}
+              pic2 :  'moet een foto bevatten.',
+              datum : 'moet een datum bevatten.',
+              tijdstip :  'moet een tijdstip bevatten.',
                 
             },
         highlight: function (input) {

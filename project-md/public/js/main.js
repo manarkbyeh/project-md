@@ -1,7 +1,6 @@
-
 $(document).ready(function() {
 
-    $('input#datepicker').datepicker({
+    $('input #datepicker').datepicker({
         showButtonPanel: true,
         changeMonth: true,
         changeYear: true,
