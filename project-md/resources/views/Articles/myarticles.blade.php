@@ -51,11 +51,12 @@
                                                 <img src="{{asset('/images/garbage-white.png')}}" alt="verwijder munchie">
                                             </button>
 
-                                        <a class="btn btn-sm btn-success" href="{{url('/article/'.$article->id.'/edit')}}">
-                                            <img src="{{asset('/images/edit-white.png')}}" alt="wijzig munchie">
-                                        </a>
+                                            @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
+                                            <a class="btn btn-sm btn-success" href="{{url('/article/'.$article->id.'/edit')}}">
+                                                <img src="{{asset('/images/edit-white.png')}}" alt="wijzig munchie">
+                                            </a>
 
-                                        @if(Auth::check() && Auth::User()->id==$article->user_id && $article->active == 0)
+
                                             <span class="btn btn-sm btn-warning jsActive" data-id="{{$article->id}}">
                                                  <img src="{{asset('/images/tick-white.png')}}" alt="voltooi dit verzoek">
                                             </span>

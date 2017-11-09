@@ -15,9 +15,12 @@
 
       </div>
       <div class="row">
+          <?php
+          $current_date = Carbon\Carbon::now();
+          ?>
 
         @foreach($articles as $article)
-          @if($article->active == 0)
+          @if($article->active == 0 && $article->datum >= $current_date)
           <div class="col-md-4">
             <a href="{{url('/article/'.$article->id)}}">
               <div class="artikel">

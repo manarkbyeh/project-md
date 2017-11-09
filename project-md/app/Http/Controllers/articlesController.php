@@ -102,7 +102,8 @@ class articlesController extends Controller
     public function search(Request $request)
     {
 
-        $articles = Article::where('title' ,'like','%'.$request->search.'%')->where('active','=',0)->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
+        $current_date = Carbon::now();
+        $articles = Article::where('title' ,'like','%'.$request->search.'%')->where('datum', '>=',  $current_date)->where('active','=',0)->orWhere('datum','like','%'.$request->search.'%')->orWhere('text','like','%'.$request->search.'%')
         ->orWhere('category_id','=',Category::where('name'  ,'like','%'.$request->search.'%')->pluck('id')->first())->get();
         //return $articles;
         if(count($articles)){

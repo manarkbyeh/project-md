@@ -27,8 +27,9 @@
                         <div class="icon-wrapper show"><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></div>
                         <div class="icon-wrapper show"><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></div>
                     </div>
-
+                    @auth
                     <a class="btn btn-success btn-lg" href="{{url('/article/transaction/'.$article->id)}}" role="button">VERZOEK</a>
+                    @endauth
                 </div>
 
 
