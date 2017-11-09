@@ -51,7 +51,7 @@
 
 <div class="form-group  has-feedback">
   <label class=" control-label"> Houdbaarheidsdatum (*) </label>
-  {{ Form::date('datum',old('datum'),array('class' =>'form-control ' , 'data-parsley-required-message' => 'moet een datum bevatten.','min'=>'2017-11-04', 'max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
+  {{ Form::date('datum',old('datum'),array('class' =>'form-control', 'id'=>'datepicker' , 'data-parsley-required-message' => 'moet een datum bevatten.', 'min'=>'2017-11-10','max'=>'2018-04-20', 'required' => '','maxlength'=>'255'))}}
   <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
 </div>
 
@@ -100,6 +100,7 @@
   </div>
   @endsection @section('scripts') 
   <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
       <script>
