@@ -185,9 +185,9 @@
             },
             
             messages: {
-              title : 'moet een title bevatten.',
+              title : 'moet een titel bevatten.',
               text : 'moet een omschrijving bevatten.',
-              pic : {required: 'Required!', accept: 'Not an image!'}
+              pic : {required: 'Selecteer een foto.', accept: 'Dit is geen correct foto bestand.'}
                 
             },
         highlight: function (input) {
