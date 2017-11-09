@@ -30,14 +30,14 @@
                                     <img src="{{url('/images/'.$article->pic)}}" alt="munchie" class="@if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
                                 </div>
                                 <div class="artikel-content @if( $article->active== 1 || $article->datum < $current_date) deactiveren @endif">
-                                    <p class="datum">{{$article->datum}}</p>
+                                    <p class="datum"> {{ Carbon\Carbon::parse($article->datum)->format('d-m-Y') }}</p>
                                     <h2>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 40).'...' :strip_tags($article->title)}}</h2>
                                     <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
                                     <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>
 
 
                                     <?php
-                                    if($article->datum > $current_date){ ?>
+                                    if($article->datum >= $current_date){ ?>
                                     <?php } else
                                     { ?>
                                     <h5>Dit product is vervallen</h5>

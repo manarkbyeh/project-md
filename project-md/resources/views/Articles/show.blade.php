@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="artikel-content-ver">
-                                <p class="datum">{{$art->datum}}</p>
+                                <p class="datum"> {{ Carbon\Carbon::parse($article->datum)->format('d-m-Y') }}</p>
                                 <h4>{{$art->title}}</h4>
                                 <p class="datum_locatie">{{$art->tijdstip}} <strong>{{$art->locatie}}</strong></p>
                             </div>
