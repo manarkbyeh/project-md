@@ -21,7 +21,7 @@
         <input type="text" name="pic2" class="form-control"  readonly="true" />
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">ZOEK EEN FOTO
-          <input type="file" id="previewpicimg" name="pic" data-required-message="selecteer een foto aub." Style="display: none;" accept="image/x-png,image/gif,image/jpeg" required />
+          <input type="file" id="previewpicimg" name="pic" data-required-message="selecteer een foto aub." Style="display: none;" accept="image/x-png,image/gif,image/jpeg"  required="" />
       
         </span>
         </label>
@@ -187,7 +187,7 @@
             messages: {
               title : 'moet een title bevatten.',
               text : 'moet een omschrijving bevatten.',
-              pic : {required: 'Required!', accept: 'Not an image!'}
+              pic2 : 'moet een foto bevatten.'
                 
             },
         highlight: function (input) {

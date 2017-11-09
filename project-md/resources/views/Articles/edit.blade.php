@@ -191,7 +191,7 @@
             messages: {
               title : 'moet een title bevatten.',
               text : 'moet een omschrijving bevatten.',
-              pic : {required: 'Required!', accept: 'Not an image!'}
+              pic2 : { 'moet een foto bevatten.'}
                 
             },
         highlight: function (input) {
@@ -271,14 +271,14 @@
         markers = [];
       }
 
-      $('#submit').click(function(e){
+     /* $('#submit').click(function(e){
         var latv = $("#latLngLat").val();
       if(latv == ''){
         $('#mapvalidation').addClass('alert alert-danger');
         $('#mapvalidation').html('Het is belangrijk om uw locatie te selecteren .');
         return e.preventDefault();
       }
-      });
+      });*/
 
     </script>
     <script async defer
