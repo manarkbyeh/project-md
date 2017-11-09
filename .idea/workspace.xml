@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4864afa-67f5-4ca6-a294-7f700f42d468" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/myarticles.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/myorders.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/myorders.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/search.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/search.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/Articles/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-md/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/project-md/resources/views/welcome.blade.php" />
-    </list>
+    <list default="true" id="e4864afa-67f5-4ca6-a294-7f700f42d468" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1048,15 +1040,15 @@
       <workItem from="1510054511595" duration="6675000" />
       <workItem from="1510145535438" duration="8212000" />
       <workItem from="1510177670071" duration="2000" />
-      <workItem from="1510220319416" duration="4542000" />
+      <workItem from="1510220319416" duration="4750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151264000" />
+    <option name="totallyTimeSpent" value="151472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22702703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
