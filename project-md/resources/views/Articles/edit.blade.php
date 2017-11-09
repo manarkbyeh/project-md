@@ -52,7 +52,7 @@
 
     <div class="form-group  has-feedback">
       <label class=" control-label"> Houdbaarheidsdatum (*) </label>
-      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','min'=>'2017-11-04', 'max'=>'2018-04-20'))}}
+      {{ Form::date('datum',old('datum'),array('class' =>'form-control ', 'required' => '','min'=>'2017-11-10', 'max'=>'2018-04-20'))}}
       <small id="fileHelp" class="form-text text-muted">Tot op welke datum is dit artikel goed?</small>
     </div>
 

@@ -27,8 +27,9 @@
                         <div class="icon-wrapper show"><img src="{{asset('/images/calendar.png')}}" alt="" class="icon"><p>{{$article->datum}}</p></div>
                         <div class="icon-wrapper show"><img src="{{asset('/images/clock.png')}}" alt="" class="icon"><p>{{$article->tijdstip}}</p></div>
                     </div>
-
+                    @auth
                     <a class="btn btn-success btn-lg" href="{{url('/article/transaction/'.$article->id)}}" role="button">VERZOEK</a>
+                    @endauth
                 </div>
 
 
@@ -61,7 +62,7 @@
                             </div>
 
                             <div class="artikel-content-ver">
-                                <p class="datum">{{$art->datum}}</p>
+                                <p class="datum"> {{ Carbon\Carbon::parse($article->datum)->format('d-m-Y') }}</p>
                                 <h4>{{$art->title}}</h4>
                                 <p class="datum_locatie">{{$art->tijdstip}} <strong>{{$art->locatie}}</strong></p>
                             </div>

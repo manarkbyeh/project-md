@@ -21,7 +21,7 @@
             <label class=" control-label">Ophaaldatum (*)</label>
 
             <div class="input-group date">
-                {{ Form::date('datum',old('datum'),array('class' =>'form-control', 'min' => '2017-11-04', 'max'=>'2018-04-20', 'required' => ''))}}
+                {{ Form::date('datum',old('datum'),array('class' =>'form-control', 'min' => '2017-11-10', 'max'=>'2018-04-20', 'required' => ''))}}
             </div>
 
             <small id="fileHelp" class="form-text text-muted">Wanneer wil je de munchie ophalen? (De munchie is houbaar tot: {{$article->datum}})</small>

@@ -15,9 +15,12 @@
 
       </div>
       <div class="row">
+          <?php
+          $current_date = Carbon\Carbon::now();
+          ?>
 
         @foreach($articles as $article)
-          @if($article->active == 0)
+          @if($article->active == 0 && $article->datum >= $current_date)
           <div class="col-md-4">
             <a href="{{url('/article/'.$article->id)}}">
               <div class="artikel">
@@ -25,7 +28,7 @@
                   <img src="{{url('/images/'.$article->pic)}}" alt="munchie">
                 </div>
                 <div class="artikel-content">
-                  <p class="datum">{{$article->datum}}</p>
+                  <p class="datum"> {{ Carbon\Carbon::parse($article->datum)->format('d-m-Y') }}</p>
                   <h2>{{$article->title}}</h2>
                   <p>{{strip_tags($article->text)}}</p>
                   <p class="datum_locatie">{{$article->tijdstip}} <strong>{{$article->locatie}}</strong></p>

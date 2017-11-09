@@ -85,7 +85,7 @@ de wereld een betere plek te maken. Niet enkel de ontvanger, maar ook het milieu
               <img src="{{asset('/images/'.$article->pic)}}" alt="munchie">
             </div>
             <div class="artikel-content">
-              <p class="datum"> <small>{{$article->datum}}</small></p>
+              <p class="datum"> <small> {{ Carbon\Carbon::parse($article->datum)->format('d-m-Y') }}</small></p>
               <h3>{{ (strlen($article->title)>15) ? substr(strip_tags($article->title), 0, 20).'...' :strip_tags($article->title)}}</h3>
 
               <p>{{ (strlen($article->text)>60) ? substr(strip_tags($article->text), 0, 60).'...' :strip_tags($article->text)}}</p>
