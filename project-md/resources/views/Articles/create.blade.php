@@ -22,7 +22,7 @@
         <label class="input-group-btn" style="display: table-cell;">
         <span class="btn btn-success">ZOEK EEN FOTO
           <input type="file" id="previewpicimg" name="pic" data-required-message="selecteer een foto aub." Style="display: none;" accept="image/x-png,image/gif,image/jpeg"  required="" />
-      
+
         </span>
         </label>
       </div>
@@ -64,7 +64,7 @@
       </select>
     </div>
 
- 
+
 
 
     <div class="form-group">
@@ -72,9 +72,9 @@
       {{ Form::time('tijdstip',old('tijdstip'),array('class' =>'form-control ', 'data-parsley-required-message' => 'moet een uur bevatten.', 'required' => '','maxlength'=>'255'))}}
       <small id="fileHelp" class="form-text text-muted">Om hoe laat mogen ze dit artikel komen halen?</small>
     </div>
-     
 
-    
+
+
     <div class="form-group">
       <style>
        #map {
@@ -87,7 +87,7 @@
       <div id="map"></div>
       <input type="hidden" id="latLngLat" name="latLngLat" value="" required>
       <input type="hidden" id="latLngLng" name="latLngLng" value="" required>
-      
+
     </div>
 
 <a href="#article_div" style="margin-top:20px" class="btn btn-success pull-left btn-submit">TOEVOEGEN</a>
@@ -98,7 +98,7 @@
 
 
   </div>
-  @endsection @section('scripts') 
+  @endsection @section('scripts')
   <script type="text/javascript" src="{{ asset('js/jquery-validation/jquery.validate.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
@@ -107,7 +107,7 @@
     $(document).ready(function() {
 
       $('body').on('click', '.btn-submit', function(e){
-        
+
         e.preventDefault();
 
         var valid = $("#article").valid();
@@ -121,8 +121,8 @@
               $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
             }
               if (
-              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-              && 
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+              &&
               location.hostname == this.hostname
             ) {
               // Figure out element to scroll to
@@ -150,16 +150,16 @@
             }
 
           }
-          
+
       });
 
         $('#article').validate({
-            
+
             rules: {
                 title: {
                   required: true,
                 },
-                
+
 
                 text: {
                   required: true,
@@ -179,21 +179,27 @@
                 },
 
                 pic2: {
-                  required: true, 
+                  required: true,
                   accept: "image/jpg,image/jpeg,image/png,image/gif"
                   }
 
             },
-            
+
             messages: {
               title : 'moet een titel bevatten.',
               text : 'moet een omschrijving bevatten.',
+<<<<<<< HEAD
+              pic2 : 'moet een foto bevatten.',
+              pic : {required: 'Selecteer een foto.', accept: 'Dit is geen correct foto bestand.'}
+
+=======
               datum : 'moet een datum bevatten.',
               tijdstip : 'moet een tijdstip bevatten.',
               pic2 : 'moet een foto bevatten.'
 
      
                 
+>>>>>>> 24b28260e8eea57a41734bae0557d21a64395b52
             },
         highlight: function (input) {
             $(input).parent().addClass('error');
@@ -208,10 +214,10 @@
             } else {
               $(element).parent().append(error);
 
-            }    
+            }
           },
 
-    
+
         });
 
     });
@@ -231,7 +237,7 @@
         // This event listener will call addMarker() when the map is clicked.
         map.addListener('click', function(event) {
           addMarker(event.latLng);
-       
+
           latLngLat = event.latLng.lat();
           latLngLng = event.latLng.lng();
 
@@ -285,5 +291,5 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">
     </script>
 
-    
+
  @endsection
