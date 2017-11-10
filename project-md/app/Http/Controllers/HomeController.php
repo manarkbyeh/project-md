@@ -28,7 +28,8 @@ class HomeController extends Controller
         $current_date = Carbon::now();
         
         $current_date = $current_date->toDateString();
-        $articles = Article::where('datum', '>=',  $current_date)->orderby('datum','ASC')->where('active', '=', 0)->limit(3)->get();
+        $articles = Article::where('datum', '>=',  $current_date)->orderby('datum','ASC')->where('active', 0)->limit(3)->get();
+      
         $articlesMarker = Article::all();
 		
 		    $markers_arr = [] ;
