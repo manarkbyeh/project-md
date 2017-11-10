@@ -278,14 +278,7 @@
         clearMarkers();
         markers = [];
       }
-    //  $('#submit').click(function(e){
-    //     var latv = $("#latLngLat").val();
-    //   if(latv == ''){
-    //     $('#mapvalidation').addClass('alert alert-danger');
-    //     $('#mapvalidation').html('Het is belangrijk dat je je locatie aanduidt.');
-    //     return e.preventDefault();
-    //   }
-    //   });
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9J-fz25ba11CPhJrLzgGkEAmdDdJvK4U&callback=initMap">

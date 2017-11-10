@@ -273,14 +273,7 @@
         markers = [];
       }
 
-     /* $('#submit').click(function(e){
-        var latv = $("#latLngLat").val();
-      if(latv == ''){
-        $('#mapvalidation').addClass('alert alert-danger');
-        $('#mapvalidation').html('Het is belangrijk om uw locatie te selecteren .');
-        return e.preventDefault();
-      }
-      });*/
+ 
 
     </script>
     <script async defer
